@@ -17,7 +17,7 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
     <div className="bg-white">
       
       {/* ================= 제목 섹션 (사진 없이 텍스트만) ================= */}
-      <section className="max-w-4xl mx-auto px-6 pt-32 pb-12 text-center">
+      <section className="max-w-4xl mx-auto px-6 pt-28 pb-12 text-center">
         <h1 className="text-3xl md:text-4xl font-black text-emerald-600 uppercase tracking-widest mb-4">
           Welcome to Energy Engineering Lab
         </h1>
