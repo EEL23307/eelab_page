@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             </div>
             <div>
               <span className="text-xl font-bold text-emerald-900 block leading-tight tracking-tight">EEL</span>
-              <span className="text-[10px] text-gray-400 block uppercase tracking-[0.2em] font-bold">Energy & Environment</span>
+              <span className="text-[10px] text-gray-400 block uppercase tracking-[0.2em] font-bold">Energy Engineering</span>
             </div>
           </div>
 
