@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { NewsItem, ResearchArea, Person, Publication } from './types';
 
-export const LAB_NAME = "Energy & Environment Laboratory";
+export const LAB_NAME = "Energy Engineering Lab";
 export const UNIVERSITY = "Sungkyunkwan University (SKKU)";
 
 export const NEWS: NewsItem[] = [
