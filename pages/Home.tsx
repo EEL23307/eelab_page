@@ -19,7 +19,7 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
       <section className="w-full flex justify-center py-12 bg-gray-50">
         {/* 아래 이미지 경로의 'main-image.jpg'를 실제 이미지 파일 이름으로 바꾸세요 */}
         <img 
-          src="/images/logo.png" 
+          src="/images/logo" 
           className="max-w-4xl w-full h-auto rounded-xl shadow-lg"
         />
       </section>
