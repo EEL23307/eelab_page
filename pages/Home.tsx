@@ -35,33 +35,34 @@ const Home: React.FC = () => {
           <p className="text-2xl font-light text-gray-800 leading-snug">
             We are actively carrying out research on power generation and energy processes using various fuels with high efficiencies and low environmental impacts.
           </p>
+
           <div className="mt-8 text-left bg-gray-50 p-6 rounded-xl border border-gray-100">
-  <p className="font-bold text-gray-900 mb-4">The main research topics include:</p>
-  <ul className="space-y-3 text-gray-700">
-    <li className="flex items-start">
-      <span className="text-emerald-600 mr-2">▶</span> Hydrogen and ammonia combustion
-    </li>
-    <li className="flex items-start">
-      <span className="text-emerald-600 mr-2">▶</span> Ammonia cofiring with coal for low-carbon power generation
-    </li>
-    <li className="flex items-start">
-      <span className="text-emerald-600 mr-2">▶</span> AI-based performance forecast and control of energy processes
-    </li>
-    <li className="flex items-start">
-      <span className="text-emerald-600 mr-2">▶</span> Hydrogen production by reforming, pyrolysis, and cracking of natural gas, biogas, and ammonia
-    </li>
-    <li className="flex items-start">
-      <span className="text-emerald-600 mr-2">▶</span> Low NOx combustion and control technologies for industrial boilers and furnaces
-    </li>
-    <li className="flex items-start">
-      <span className="text-emerald-600 mr-2">▶</span> Design and diagnostics of energy system using computational fluid dynamics (CFD)
-    </li>
-    <li className="flex items-start">
-      <span className="text-emerald-600 mr-2">▶</span> Integrated gasification combined cycle (IGCC)
-    </li>
-  </ul>
-</div>
-          </p>
+            <p className="font-bold text-gray-900 mb-4">The main research topics include:</p>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start">
+                <span className="text-emerald-600 mr-2">▶</span> Hydrogen and ammonia combustion
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-600 mr-2">▶</span> Ammonia cofiring with coal for low-carbon power generation
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-600 mr-2">▶</span> AI-based performance forecast and control of energy processes
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-600 mr-2">▶</span> Hydrogen production by reforming, pyrolysis, and cracking of natural gas, biogas, and ammonia
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-600 mr-2">▶</span> Low NOx combustion and control technologies for industrial boilers and furnaces
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-600 mr-2">▶</span> Design and diagnostics of energy system using computational fluid dynamics (CFD)
+              </li>
+              <li className="flex items-start">
+                <span className="text-emerald-600 mr-2">▶</span> Integrated gasification combined cycle (IGCC)
+              </li>
+            </ul>
+          </div>
+
           <p className="text-gray-400 text-sm italic pt-4">
             We are continuously looking for passionate researchers to join our mission for global sustainability.
           </p>
