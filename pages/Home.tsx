@@ -20,7 +20,6 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
         {/* 아래 이미지 경로의 'main-image.jpg'를 실제 이미지 파일 이름으로 바꾸세요 */}
         <img 
           src="/images/logo.png" 
-          alt="Energy Engineering Lab Main Image" 
           className="max-w-4xl w-full h-auto rounded-xl shadow-lg"
         />
       </section>
