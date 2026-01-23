@@ -29,7 +29,7 @@ const Home: React.FC = () => {
       {/* Simplified, Centered Content Area */}
       <section className="max-w-4xl mx-auto px-6 py-24 text-center">
         <h2 className="text-sm font-black text-emerald-600 uppercase tracking-[0.4em] mb-8">
-          Welcome to Energy Engineering Lab., School of Mechanical Engineering, SKKU
+          Welcome to Energy Engineering Lab
         </h2>
         <div className="prose prose-lg text-gray-600 space-y-8 leading-relaxed mx-auto">
           <p className="text-2xl font-light text-gray-800 leading-snug">
@@ -37,13 +37,13 @@ const Home: React.FC = () => {
           </p>
           <p>
             The main research topics include
-		-Hydrogen and ammonia combustion
-		-Ammonia cofiring with coal for low-carbon power generation
-		-AI-based performance forecast and control of energy processes
-		-Hydrogen production by reforming, pyrolysis, and cracking of natural gas, biogas, and ammonia
-		-Low NOx combustion and control technologies for industrial boilers and furnaces
-		-Design and diagnostics of energy system using computational fluid dynamics (CFD)
-		-Integrated gasification combined cycle (IGCC)
+		▶ Hydrogen and ammonia combustion </n>
+		▶ Ammonia cofiring with coal for low-carbon power generation </n>
+		▶ AI-based performance forecast and control of energy processes </n>
+		▶ Hydrogen production by reforming, pyrolysis, and cracking of natural gas, biogas, and ammonia </n>
+		▶ Low NOx combustion and control technologies for industrial boilers and furnaces </n>
+		▶ Design and diagnostics of energy system using computational fluid dynamics (CFD) </n>
+		▶ Integrated gasification combined cycle (IGCC) </n>
           </p>
           <p className="text-gray-400 text-sm italic pt-4">
             We are continuously looking for passionate researchers to join our mission for global sustainability.
