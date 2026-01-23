@@ -1,6 +1,5 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { LAB_NAME, UNIVERSITY } from '../constants';
 
 const Home: React.FC = () => {
@@ -74,7 +73,7 @@ const Home: React.FC = () => {
         {/* Divider */}
         <div className="my-16 h-px bg-gray-200 w-full mx-auto"></div>
 
-        {/* ================= Korean Section (New) ================= */}
+        {/* ================= Korean Section ================= */}
         <h2 className="text-sm font-black text-emerald-600 uppercase tracking-[0.4em] mb-8">
           에너지공학연구실 소개
         </h2>
@@ -131,14 +130,14 @@ const Home: React.FC = () => {
           </div>
         </div>
         
-        {/* Buttons */}
+        {/* Buttons (Fixed: Using <a> instead of <Link>) */}
         <div className="mt-16 flex justify-center gap-6">
-          <Link to="/research" className="px-8 py-3 bg-emerald-800 text-white rounded-full font-bold hover:bg-emerald-900 transition-all shadow-lg shadow-emerald-900/10 flex items-center">
+          <a href="research" className="px-8 py-3 bg-emerald-800 text-white rounded-full font-bold hover:bg-emerald-900 transition-all shadow-lg shadow-emerald-900/10 flex items-center">
             Our Research Areas <ChevronRight className="ml-2 h-4 w-4" />
-          </Link>
-          <Link to="/contact" className="px-8 py-3 border-2 border-emerald-800 text-emerald-800 rounded-full font-bold hover:bg-emerald-50 transition-all">
+          </a>
+          <a href="contact" className="px-8 py-3 border-2 border-emerald-800 text-emerald-800 rounded-full font-bold hover:bg-emerald-50 transition-all">
             Contact Us
-          </Link>
+          </a>
         </div>
       </section>
 
