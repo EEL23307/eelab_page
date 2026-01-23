@@ -29,14 +29,21 @@ const Home: React.FC = () => {
       {/* Simplified, Centered Content Area */}
       <section className="max-w-4xl mx-auto px-6 py-24 text-center">
         <h2 className="text-sm font-black text-emerald-600 uppercase tracking-[0.4em] mb-8">
-          Welcome to the Laboratory
+          Welcome to Energy Engineering Lab., School of Mechanical Engineering, SKKU
         </h2>
         <div className="prose prose-lg text-gray-600 space-y-8 leading-relaxed mx-auto">
           <p className="text-2xl font-light text-gray-800 leading-snug">
-            The Energy & Environment Laboratory (EEL) at Sungkyunkwan University is dedicated to developing advanced chemical and materials solutions for a sustainable future.
+            We are actively carrying out research on power generation and energy processes using various fuels with high efficiencies and low environmental impacts.
           </p>
           <p>
-            Our research focuses on the intersection of chemical engineering and materials science, specifically in the areas of electrochemical energy storage, environmental remediation, and CO2 utilization. We strive to bridge the gap between fundamental scientific discovery and practical technological applications.
+            The main research topics include
+		-Hydrogen and ammonia combustion
+		-Ammonia cofiring with coal for low-carbon power generation
+		-AI-based performance forecast and control of energy processes
+		-Hydrogen production by reforming, pyrolysis, and cracking of natural gas, biogas, and ammonia
+		-Low NOx combustion and control technologies for industrial boilers and furnaces
+		-Design and diagnostics of energy system using computational fluid dynamics (CFD)
+		-Integrated gasification combined cycle (IGCC)
           </p>
           <p className="text-gray-400 text-sm italic pt-4">
             We are continuously looking for passionate researchers to join our mission for global sustainability.
