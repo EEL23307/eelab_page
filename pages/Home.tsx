@@ -140,19 +140,7 @@ const Home: React.FC = () => {
           </a>
         </div>
       </section>
-
-      {/* Minimal Footer Accent */}
-      <section className="py-12 border-t border-gray-50 opacity-50 grayscale hover:grayscale-0 transition-all">
-        <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center items-center gap-12 text-[10px] font-black text-gray-400 uppercase tracking-[0.3em]">
-          <span>Sungkyunkwan University</span>
-          <div className="h-1 w-1 bg-gray-300 rounded-full"></div>
-          <span>Chemical Engineering</span>
-          <div className="h-1 w-1 bg-gray-300 rounded-full"></div>
-          <span>Sustainable Materials Center</span>
-        </div>
-      </section>
-    </div>
-  );
+);
 };
 
 export default Home;
