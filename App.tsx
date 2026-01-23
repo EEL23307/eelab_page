@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Page } from './types';
 import Navbar from './components/Navbar';
@@ -16,7 +15,8 @@ const App: React.FC = () => {
   const renderContent = () => {
     switch (activeTab) {
       case 'Home':
-        return <Home />;
+        // 핵심 수정: Home에게 탭 변경 도구(setActiveTab)를 전달합니다!
+        return <Home setActiveTab={setActiveTab} />;
       case 'Professor':
         return <Professor />;
       case 'Research':
@@ -28,7 +28,7 @@ const App: React.FC = () => {
       case 'Contact':
         return <Contact />;
       default:
-        return <Home />;
+        return <Home setActiveTab={setActiveTab} />;
     }
   };
 

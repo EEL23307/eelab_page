@@ -1,8 +1,21 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { LAB_NAME, UNIVERSITY } from '../constants';
+import { Page } from '../types'; // Page 타입이 정의된 경로 확인 필요 (Navbar와 동일하게)
 
-const Home: React.FC = () => {
+// Home 컴포넌트가 받을 도구(함수) 정의
+interface HomeProps {
+  setActiveTab: (tab: Page) => void;
+}
+
+const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
+  
+  // 버튼 클릭 시 맨 위로 스크롤을 올리며 탭을 변경하는 함수
+  const handleTabChange = (tabName: Page) => {
+    setActiveTab(tabName);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="bg-white">
       {/* Minimalist Hero Section with Green Overlay */}
@@ -130,14 +143,20 @@ const Home: React.FC = () => {
           </div>
         </div>
         
-{/* Buttons */}
+        {/* Buttons (<a> 태그를 <button>으로 변경하고 onClick 이벤트 연결) */}
         <div className="mt-16 flex justify-center gap-6">
-          <a href="research" className="px-8 py-3 bg-emerald-800 text-white rounded-full font-bold hover:bg-emerald-900 transition-all shadow-lg shadow-emerald-900/10 flex items-center">
+          <button 
+            onClick={() => handleTabChange('Research')}
+            className="px-8 py-3 bg-emerald-800 text-white rounded-full font-bold hover:bg-emerald-900 transition-all shadow-lg shadow-emerald-900/10 flex items-center"
+          >
             Our Research Areas <ChevronRight className="ml-2 h-4 w-4" />
-          </a>
-          <a href="contact" className="px-8 py-3 border-2 border-emerald-800 text-emerald-800 rounded-full font-bold hover:bg-emerald-50 transition-all">
+          </button>
+          <button 
+            onClick={() => handleTabChange('Contact')}
+            className="px-8 py-3 border-2 border-emerald-800 text-emerald-800 rounded-full font-bold hover:bg-emerald-50 transition-all"
+          >
             Contact Us
-          </a>
+          </button>
         </div>
       </section>
     </div>
