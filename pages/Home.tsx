@@ -65,6 +65,8 @@ const Home: React.FC = () => {
 
           <p className="text-gray-400 text-sm italic pt-4">
             We are continuously looking for passionate researchers to join our mission for global sustainability.
+            </li>
+            If you are interested in research on CFD, energy, and advanced use of fuels, please contact us.
           </p>
         </div>
         
