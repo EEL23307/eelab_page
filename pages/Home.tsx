@@ -130,7 +130,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         
-        {/* Buttons (Fixed: Using <a> instead of <Link>) */}
+{/* Buttons */}
         <div className="mt-16 flex justify-center gap-6">
           <a href="research" className="px-8 py-3 bg-emerald-800 text-white rounded-full font-bold hover:bg-emerald-900 transition-all shadow-lg shadow-emerald-900/10 flex items-center">
             Our Research Areas <ChevronRight className="ml-2 h-4 w-4" />
@@ -140,7 +140,8 @@ const Home: React.FC = () => {
           </a>
         </div>
       </section>
-);
+    </div>
+  );
 };
 
 export default Home;
