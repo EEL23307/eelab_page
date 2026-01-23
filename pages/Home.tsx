@@ -1,16 +1,13 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { LAB_NAME, UNIVERSITY } from '../constants';
-import { Page } from '../types'; // Page 타입이 정의된 경로 확인 필요 (Navbar와 동일하게)
+import { Page } from '../types';
 
-// Home 컴포넌트가 받을 도구(함수) 정의
 interface HomeProps {
   setActiveTab: (tab: Page) => void;
 }
 
 const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
   
-  // 버튼 클릭 시 맨 위로 스크롤을 올리며 탭을 변경하는 함수
   const handleTabChange = (tabName: Page) => {
     setActiveTab(tabName);
     window.scrollTo(0, 0);
@@ -18,24 +15,14 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
 
   return (
     <div className="bg-white">
-      {/* Minimalist Hero Section with Green Overlay */}
-      <section className="relative h-[450px] w-full overflow-hidden">
+      {/* ================= 수정된 Hero Section ================= */}
+      <section className="w-full flex justify-center py-12 bg-gray-50">
+        {/* 아래 이미지 경로의 'main-image.jpg'를 실제 이미지 파일 이름으로 바꾸세요 */}
         <img 
-          src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=2000" 
-          alt="Sustainable Energy Background" 
-          className="w-full h-full object-cover grayscale-[0.2]"
+          src="/images/main-image.jpg" 
+          alt="Energy Engineering Lab Main Image" 
+          className="max-w-4xl w-full h-auto rounded-xl shadow-lg"
         />
-        <div className="absolute inset-0 bg-emerald-900/50 flex items-center justify-center text-center">
-          <div className="px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-3 drop-shadow-lg uppercase">
-              {LAB_NAME}
-            </h1>
-            <div className="h-1 w-24 bg-emerald-400 mx-auto mb-4 rounded-full"></div>
-            <p className="text-lg md:text-xl text-emerald-50 font-medium tracking-widest uppercase opacity-90">
-              {UNIVERSITY}
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* Simplified, Centered Content Area */}
@@ -45,6 +32,7 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
         <h2 className="text-sm font-black text-emerald-600 uppercase tracking-[0.4em] mb-8">
           Welcome to Energy Engineering Lab
         </h2>
+        {/* (이하 내용은 이전과 동일) */}
         <div className="prose prose-lg text-gray-600 space-y-8 leading-relaxed mx-auto">
           <p className="text-2xl font-light text-gray-800 leading-snug">
             We are actively carrying out research on power generation and energy processes using various fuels with high efficiencies and low environmental impacts.
@@ -143,7 +131,7 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
           </div>
         </div>
         
-        {/* Buttons (<a> 태그를 <button>으로 변경하고 onClick 이벤트 연결) */}
+        {/* Buttons */}
         <div className="mt-16 flex justify-center gap-6">
           <button 
             onClick={() => handleTabChange('Research')}
