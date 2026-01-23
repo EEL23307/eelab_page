@@ -15,23 +15,19 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
 
   return (
     <div className="bg-white">
-      {/* ================= 수정된 Hero Section ================= */}
-      <section className="w-full flex justify-center py-12 bg-gray-50">
-        {/* 아래 이미지 경로의 'main-image.jpg'를 실제 이미지 파일 이름으로 바꾸세요 */}
-        <img 
-          src="/images/logo" 
-          className="max-w-4xl w-full h-auto rounded-xl shadow-lg"
-        />
+      
+      {/* ================= 제목 섹션 (사진 없이 텍스트만) ================= */}
+      <section className="max-w-4xl mx-auto px-6 pt-32 pb-12 text-center">
+        <h1 className="text-3xl md:text-4xl font-black text-emerald-600 uppercase tracking-widest mb-4">
+          Welcome to Energy Engineering Lab
+        </h1>
+        <div className="h-1.5 w-24 bg-emerald-400 mx-auto rounded-full"></div>
       </section>
 
-      {/* Simplified, Centered Content Area */}
-      <section className="max-w-4xl mx-auto px-6 py-24 text-center">
+      {/* ================= 본문 내용 ================= */}
+      <section className="max-w-4xl mx-auto px-6 pb-24 text-center">
         
-        {/* ================= English Section ================= */}
-        <h2 className="text-sm font-black text-emerald-600 uppercase tracking-[0.4em] mb-8">
-          Welcome to Energy Engineering Lab
-        </h2>
-        {/* (이하 내용은 이전과 동일) */}
+        {/* 영어 소개글 */}
         <div className="prose prose-lg text-gray-600 space-y-8 leading-relaxed mx-auto">
           <p className="text-2xl font-light text-gray-800 leading-snug">
             We are actively carrying out research on power generation and energy processes using various fuels with high efficiencies and low environmental impacts.
@@ -70,10 +66,10 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
           </p>
         </div>
 
-        {/* Divider */}
+        {/* 구분선 */}
         <div className="my-16 h-px bg-gray-200 w-full mx-auto"></div>
 
-        {/* ================= Korean Section ================= */}
+        {/* 한글 소개글 */}
         <h2 className="text-sm font-black text-emerald-600 uppercase tracking-[0.4em] mb-8">
           에너지공학연구실 소개
         </h2>
