@@ -59,7 +59,6 @@ const Photos: React.FC = () => {
       src: "photos/photo2207-2.jpg",
       date: "2022.07"
     },
-    // 여기에 새 사진 추가: { id: 7, src: "photos/새파일명.jpg", date: "..." },
   ];
 
   // ID 역순(최신순) 자동 정렬
@@ -124,16 +123,6 @@ const Photos: React.FC = () => {
     <div className="bg-stone-50 min-h-screen relative">
       
       <div className="max-w-7xl mx-auto px-4 py-20">
-        
-        {/* Header */}
-        <div className="mb-20 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4 tracking-tight font-serif italic">
-            Our Memories
-          </h1>
-          <p className="text-gray-400 font-light text-sm">
-            Snapshots of our journey
-          </p>
-        </div>
 
         {/* Polaroid Grid (sortedPhotos 사용) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16 px-4">
