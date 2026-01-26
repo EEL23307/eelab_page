@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
           <div className="space-y-4 text-gray-600 pl-2">
             <div className="flex items-start gap-4">
               <MapPin className="h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
-              <span>Room 23307 (제1공학관 23307호)</span>
+              <span>제1공학관 23307호</span>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="h-5 w-5 text-emerald-500 shrink-0" />
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
           <div className="space-y-4 text-gray-600 pl-2">
             <div className="flex items-start gap-4">
               <MapPin className="h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
-              <span>Room 23318 (제1공학관 23318호)</span>
+              <span>제1공학관 23318호</span>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="h-5 w-5 text-emerald-500 shrink-0" />
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
       <div className="mb-12 px-2">
         <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
           <MapPin className="h-6 w-6 text-emerald-600" />
-          주소 (Mailing Address)
+          주소
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
