@@ -5,8 +5,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Professor from './pages/Professor';
 import Research from './pages/Research';
-import People from './pages/People';
 import Publications from './pages/Publications';
+import People from './pages/People';
+import Photos from './pages/Photos';
 import Contact from './pages/Contact';
 
 const App: React.FC = () => {
@@ -21,10 +22,10 @@ const App: React.FC = () => {
         return <Professor />;
       case 'Research':
         return <Research />;
-      case 'People':
-        return <People />;
       case 'Publications':
         return <Publications />;
+      case 'People':
+        return <People />;
       case 'Contact':
         return <Contact />;
       default:
