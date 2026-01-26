@@ -18,29 +18,25 @@ const Professor: React.FC = () => {
     { year: '2001.3 - 2002.8', role: 'Postdoc. Researcher', place: 'Dept. of Mechanical Engineering, KAIST' },
   ];
 
-  // 학회 활동 데이터
+  // 학회 활동 데이터 (요청하신 원문 그대로 적용)
   const activities = [
-    { year: '2020.9 - Present', role: 'Department Chair', place: 'Dept. of Smart Power Engineering, SKKU' },
-    { year: '2020.3 - Present', role: 'Editorial Board', place: 'Energies' },
-    { year: '2020.3 - Present', role: 'Editorial Board Member', place: 'Korea Society of Waste Management' },
-    { year: '2019.1 - Present', role: 'Vice President / Director', place: 'Korean Society of Thermal Environment Engineering' },
-    { year: '2014.1 - Present', role: 'Vice President / Director', place: 'The Korean Society of Combustion' },
-    { year: '2016.1 - 2019', role: 'Committee Member', place: 'Energy & Environment Division, KIChE' },
-    { year: '2011.1 - 2013', role: 'Technical Director', place: 'Korea Waste-to-Energy Technology Council' },
-    { year: '2011.1 - 2013', role: 'Editorial Board Member', place: 'The Korean Hydrogen and New Energy Society' },
-    { year: '2010.3 - 2011.12', role: 'Adjunct Researcher', place: 'National Institute of Environmental Research' },
+    { year: '2020.9~현재', content: '성균관대 스마트발전공학과(에너지공기업 석사과정 계약학과) 학과장' },
+    { year: '2020.3~현재', content: 'Energies: Editorial board' },
+    { year: '2020.3~현재', content: '한국폐기물학회 편집위원' },
+    { year: '2019.1~현재', content: '한국열환경공학회 이사, 부회장' },
+    { year: '2014.1~현재', content: '한국연소학회 이사, 부회장' },
+    { year: '2016.1~2019', content: '한국화학공학회 에너지환경부문위원' },
+    { year: '2011.1~2013', content: '한국폐기물에너지화기술협의회 기술이사' },
+    { year: '2011.1~2013', content: '한국수소및신에너지학회 편집위원' },
+    { year: '2010.3~2011.12', content: '국립 환경과학원 겸임 연구관' },
   ];
 
   // 수상 경력 데이터
   const awards = [
-    '2025 한국환경에너지공학회 우수논문상 (박기범 등)',
-    '2024 CEAM Symposium, Best Paper Award Second Prize (박성민 등)',
-    '2024 12th International Freiberg Conference, Award for Outstanding Presentation (남준영 등)',
-    '2022 한국환경에너지공학회 우수논문상(하선교 등)',
-    '2022 한국에너지기후변화학회 우수논문발표상 (박성민 등)',
-    '2022 한국에너지기후변화학회 우수논문발표상 (박지연 등)',
-    '2021 한국열환경공학회 우수논문상 (구윤하 등)',
-    '2021 한국연소학회 최우수논문상(구두발표) (강우석 등)',
+    '2022 한국에너지기후변화학회 우수논문발표상(박성민 등)',
+    '2022 한국에너지기후변화학회 우수논문발표상(박지연 등)',
+    '2021 한국열환경공학회 우수논문상(구윤하 등)',
+    '2021 한국연소학회 최우수논문상(구두발표)(강우석 등)',
     '2020 한국연소학회 최우수연구상',
     '2019 한국열환경공학회 학술상',
     '2019 한국연소학회 최우수논문상 (박정극 등)',
@@ -70,14 +66,13 @@ const Professor: React.FC = () => {
         <div className="lg:col-span-1">
           <div className="sticky top-32">
             
-            {/* 사진 크기를 w-64 (약 256px)로 줄여서 선명하게 보이도록 수정 */}
-            <div className="relative group w-64">
+            <div className="relative group">
               <div className="absolute -inset-2 bg-emerald-100 rounded-3xl opacity-50 blur-xl group-hover:opacity-75 transition-opacity duration-500"></div>
-              {/* 이미지 경로: public/images/prof_1.jpg */}
+              {/* 이미지 경로: 업스케일링 된 이미지 사용 */}
               <img 
-                src="images/1_prof.jpg" 
+                src="images/prof_upscaled.jpg" 
                 alt="Professor Changkook Ryu" 
-                className="relative w-full aspect-[3/4] rounded-2xl object-cover shadow-xl grayscale-[0.1] group-hover:grayscale-0 transition-all"
+                className="relative w-full rounded-2xl object-cover shadow-xl grayscale-[0.1] group-hover:grayscale-0 transition-all"
               />
             </div>
             
@@ -109,7 +104,7 @@ const Professor: React.FC = () => {
                 </a>
               </div>
 
-              {/* 버튼 수정: CV 삭제 및 구글 스칼라 링크 연결 */}
+              {/* Google Scholar 버튼 */}
               <div className="mt-10">
                 <a 
                   href="https://scholar.google.com/citations?user=7IWeWVQAAAAJ&hl=ko&oi=sra"
@@ -165,7 +160,7 @@ const Professor: React.FC = () => {
             </div>
           </section>
 
-          {/* Academic Activities */}
+          {/* Academic Activities (수정됨) */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
               <span className="w-2 h-8 bg-emerald-700 mr-4 rounded-full"></span>
@@ -176,9 +171,8 @@ const Professor: React.FC = () => {
                 <div key={idx} className="flex gap-4 items-start">
                    <BookOpen className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-1" />
                    <div>
-                      <span className="font-bold text-gray-800 mr-2">{act.role},</span>
-                      <span className="text-gray-600">{act.place}</span>
-                      <span className="block text-xs text-gray-400 mt-0.5">{act.year}</span>
+                      <span className="font-bold text-gray-800 mr-2">{act.content}</span>
+                      <span className="block text-xs text-gray-500 mt-0.5">{act.year}</span>
                    </div>
                 </div>
               ))}
