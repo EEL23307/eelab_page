@@ -4,11 +4,11 @@ import { CheckCircle2 } from 'lucide-react';
 const Research: React.FC = () => {
   
   // 연구 분야 데이터
-  // JSX(<sub> 태그 등)를 사용하기 위해 title과 details의 타입을 string이 아닌 ReactNode로 처리합니다.
   const researchData = [
     {
       id: 1,
-      title: "Combustion and power generation from NH<sub>3</sub> and H<sub>2</sub>",
+      // [수정 핵심] 따옴표(")를 제거하고 <span>으로 감싸주었습니다.
+      title: <span>Combustion and power generation from NH<sub>3</sub> and H<sub>2</sub></span>,
       image: "images/r1.bmp", 
       details: [
         <span>Cofiring of ammonia in coal power plants for low carbon electricity production</span>,
@@ -19,7 +19,8 @@ const Research: React.FC = () => {
     },
     {
       id: 2,
-      title: "Hydrogen production by reforming and cracking",
+      // 필요하다면 여기도 <span>으로 감싸서 화학식을 넣을 수 있습니다.
+      title: <span>Hydrogen production by reforming and cracking</span>,
       image: "images/r2.bmp",
       details: [
         <span>Reformer design for hydrogen production from natural gas and biogas</span>,
@@ -50,6 +51,7 @@ const Research: React.FC = () => {
     },
     {
       id: 5,
+      // 여기는 이미 잘 작성하셨습니다! (따옴표 없이 span 사용됨)
       title: <span>Integrated gasification combined cycle (IGCC)</span>,
       image: "images/r5.bmp",
       details: [
@@ -82,10 +84,6 @@ const Research: React.FC = () => {
         </h1>
         <div className="h-1.5 w-24 bg-emerald-500 mx-auto rounded-full mb-12"></div>
         
-        {/* 요약 리스트 박스 수정: 
-            1. max-w-6xl -> w-full (전체 너비 사용)
-            2. truncate 제거 (글자 잘림 방지)
-        */}
         <div className="w-full bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-left">
             {researchData.map((area) => (
@@ -93,7 +91,6 @@ const Research: React.FC = () => {
                 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mr-3 flex-shrink-0 mt-1">
                   {area.id}
                 </span>
-                {/* truncate 클래스를 제거하여 긴 텍스트도 모두 보이게 함 */}
                 <span className="w-full leading-snug">{area.title}</span>
               </li>
             ))}
