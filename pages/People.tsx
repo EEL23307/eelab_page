@@ -198,7 +198,7 @@ const People: React.FC = () => {
       },
       {
         name: '조희성',
-        engName: 'Cho Huisung',
+        engName: 'Jo Huisung',
         year: '2026',
         affiliation: '',
         email: 'wcho1968@skku.edu',
@@ -441,7 +441,7 @@ const People: React.FC = () => {
         year: '2024',
         affiliation: '',
         email: '',
-        image: 'images/SY.jpg'
+        image: 'images/KSY.jpg'
       },
       {
         name: '김경중',
