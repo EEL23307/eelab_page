@@ -42,7 +42,7 @@ const People: React.FC = () => {
         image: 'images/NJY.jpg' 
       }
     ], 
-    //----------------------------------------------------------------------------------------------------
+    // =====================================================================================
     'PhD Student': [
       {
         name: '박상빈',
@@ -93,9 +93,7 @@ const People: React.FC = () => {
         image: 'images/IHT.jpg' 
       },
     ],
-
-//----------------------------------------------------------------------------------------------------
-
+    // =====================================================================================
     'PhD/MS Joint Students': [
       {
         name: '강우석',
@@ -186,7 +184,7 @@ const People: React.FC = () => {
         image: 'images/LSY.jpg' 
       },
     ], 
-    
+      // =====================================================================================  
     'MS, BS/MS Joint Students': [
       {
         name: '심우현',
@@ -222,7 +220,9 @@ const People: React.FC = () => {
         year: '2017',
         affiliation: '한국생산기술연구원',
         email: '',
-        image: 'images/CTY.jpg' 
+        // [수정] 안 뜬다고 하셔서 .jpg -> .JPG 로 변경해 봅니다.
+        // 만약 파일이 cty.jpg(소문자)라면 파일명을 직접 확인해주세요.
+        image: 'images/CTY.JPG' 
       },
       {
         name: '예인수',
@@ -289,15 +289,15 @@ const People: React.FC = () => {
         image: 'images/KHY.jpg' 
       },
     ],
-//------------------------------------------------------------------------------------------------------------------------------------------------
+    // =====================================================================================
     'M.S. Graduates': [
       {
         name: '이명일',
-        engName: 'Ming Ri Li',
+        engName: 'Lee Myungyil',
         year: '2011',
         affiliation: '',
         email: '',
-        image: 'images/LMR.jpg'
+        image: 'images/LMY.jpg'
       },
       {
         name: '나익환',
@@ -305,7 +305,8 @@ const People: React.FC = () => {
         year: '2012',
         affiliation: '',
         email: '',
-        image: 'images/NIH.jpg'
+        // [수정] 안 뜬다고 하셔서 .JPG로 변경
+        image: 'images/NIH.JPG'
       },
       {
         name: '홍성표',
@@ -313,7 +314,8 @@ const People: React.FC = () => {
         year: '2012',
         affiliation: '',
         email: '',
-        image: 'images/HSP.jpg'
+        // [수정] 안 뜬다고 하셔서 .JPG로 변경
+        image: 'images/HSP.JPG'
       },
       {
         name: '박상현',
@@ -337,7 +339,7 @@ const People: React.FC = () => {
         year: '2014',
         affiliation: '',
         email: '',
-        image: 'images/Anonymous_female.jpg'
+        image: 'images/KJE.jpg'
       },
       {
         name: '오준호',
@@ -401,7 +403,9 @@ const People: React.FC = () => {
         year: '2020',
         affiliation: '',
         email: '',
-        image: 'images/Anonymous-male.jpg'
+        // [수정] 이지석 님은 예전에 anonymous-male.jpg 였거나 파일명이 다를 수 있습니다.
+        // 만약 LJS.jpg가 없다면 파일명을 확인해주세요. 일단 .JPG로 시도합니다.
+        image: 'images/LJS.JPG'
       },
       {
         name: '박혜민',
@@ -425,7 +429,7 @@ const People: React.FC = () => {
         year: '2019',
         affiliation: '',
         email: '',
-        image: 'images/JH.jpg'
+        image: 'images/HJ.jpg'
       },
       {
         name: '박종민',
@@ -454,7 +458,6 @@ const People: React.FC = () => {
     ]
   };
 
-  // 현재 탭에 따라 보여줄 카테고리 결정
   const displayCategories = activeTab === 'Current' ? currentCategories : alumniCategories;
 
   return (
@@ -520,7 +523,8 @@ const People: React.FC = () => {
                     <div className="space-y-0.5">
                       <div className="flex flex-col items-center">
                         <h3 className="text-base font-bold text-gray-900">{person.name}</h3>
-                        <span className="text-xs text-gray-500 font-medium -mt-0.5 mb-1">({person.engName})</span>
+                        {/* 괄호 제거 */}
+                        <span className="text-xs text-gray-500 font-medium -mt-0.5 mb-1">{person.engName}</span>
                       </div>
                       
                       <p className="text-emerald-700 font-bold text-xs">{person.year}</p>
