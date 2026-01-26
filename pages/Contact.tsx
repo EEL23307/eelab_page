@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, Phone, Mail, Clock, User, School, ArrowUp, Home } from 'lucide-react'; // Send 아이콘 제거
+import { MapPin, Phone, Mail, User, School, ArrowUp, Home, Train } from 'lucide-react';
 
 const Contact: React.FC = () => {
   // Back to Top & Home 버튼 로직
@@ -20,23 +20,23 @@ const Contact: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-20 relative">
       
-      {/* ================= Header & Intro (Full Width) ================= */}
+      {/* ================= Header & Intro ================= */}
       <div className="mb-20 text-center max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 tracking-tight">Contact Us</h1>
         
-        <div className="space-y-4 text-gray-500 font-light leading-relaxed">
-          <p className="text-xl text-gray-800">
-            If you are interested in research on CFD, energy, and advanced use of fuels, please contact us.
+        <div className="space-y-4 leading-relaxed">
+          <p className="text-2xl font-bold text-gray-800 break-keep">
+            에너지 및 환경 관련 연구에 관심이 있는 분은 언제든지 환영합니다.
           </p>
           <div className="w-16 h-1 bg-emerald-200 mx-auto rounded-full my-6"></div>
-          <p className="text-lg">
-            에너지 및 환경 관련 연구에 관심이 있는 분은 언제든지 환영합니다.
+          <p className="text-lg text-gray-500 font-light">
+            If you are interested in research on CFD, energy, and advanced use of fuels, please contact us.
           </p>
         </div>
       </div>
 
       {/* ================= Main Grid (2 Columns) ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 mb-20">
         
         {/* === [Left Column] Lab Info & Location === */}
         <div className="space-y-12">
@@ -48,8 +48,7 @@ const Contact: React.FC = () => {
                 <School className="h-8 w-8 text-emerald-700 group-hover:text-white transition-colors" />
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 text-2xl">Energy Eng. Lab</h3>
-                <p className="text-sm text-gray-500 font-medium">에너지공학연구실 (일반 문의)</p>
+                <h3 className="font-bold text-gray-900 text-2xl leading-tight">Energy Engineering Lab</h3>
               </div>
             </div>
             
@@ -61,12 +60,6 @@ const Contact: React.FC = () => {
               <div className="flex items-center gap-4">
                 <Phone className="h-5 w-5 text-emerald-500 shrink-0" />
                 <span className="font-bold text-gray-800">031-299-4694</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <Mail className="h-5 w-5 text-emerald-500 shrink-0" />
-                <a href="mailto:eelab@skku.edu" className="hover:text-emerald-700 underline decoration-emerald-200 underline-offset-4">
-                  eelab@skku.edu
-                </a>
               </div>
             </div>
           </div>
@@ -88,7 +81,7 @@ const Contact: React.FC = () => {
 
         </div>
 
-        {/* === [Right Column] Professor Info & Office Hours === */}
+        {/* === [Right Column] Professor Info & Transportation === */}
         <div className="space-y-12">
 
           {/* 3. Professor (교수님) */}
@@ -121,20 +114,45 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* 4. Office Hours */}
+          {/* 4. Public Transport */}
           <div className="flex gap-5 pl-2">
             <div className="bg-gray-50 p-3 rounded-xl h-fit border border-gray-200 shrink-0">
-              <Clock className="h-6 w-6 text-gray-600" />
+              <Train className="h-6 w-6 text-gray-600" />
             </div>
             <div>
-              <h3 className="font-bold text-gray-900 text-lg mb-2">Office Hours</h3>
-              <p className="text-gray-500 font-light text-sm">
-                Mon - Fri: 09:00 AM - 06:00 PM (KST)
+              <h3 className="font-bold text-gray-900 text-lg mb-2">Public Transport</h3>
+              <p className="text-gray-500 font-light text-sm leading-relaxed">
+                <span className="font-bold text-emerald-700">Subway Line 1</span><br/>
+                Sungkyunkwan Univ. Station (Exit 2)<br/>
+                <span className="text-xs text-gray-400 mt-1 block">Walk approx. 10-15 min to Engineering Bldg 1</span>
               </p>
             </div>
           </div>
 
         </div>
+      </div>
+
+      {/* ================= [New] Map Section ================= */}
+      <div className="w-full">
+        <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+          <MapPin className="mr-3 text-emerald-600" /> Location Map
+        </h2>
+        {/* 구글 맵 Iframe */}
+        <div className="w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+          <iframe
+            title="SKKU Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.927646690424!2d126.9749033153063!3d37.29391097985036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b42c638686d1d%3A0x6266a2f3277317!2z7ISx6reg6rSA64yA7ZWZ6rWQIOyequyZZuqwvO2VZlDYqOyKqA!5e0!3m2!1sko!2skr!4v1647834571234!5m2!1sko!2skr"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <p className="text-center text-gray-400 text-sm mt-4">
+          * 성균관대학교 자연과학캠퍼스 제1공학관으로 오시면 됩니다.
+        </p>
       </div>
 
       {/* 플로팅 버튼 (Home + Top) */}
