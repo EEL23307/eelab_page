@@ -405,7 +405,7 @@ const People: React.FC = () => {
         email: '',
         // [수정] 이지석 님은 예전에 anonymous-male.jpg 였거나 파일명이 다를 수 있습니다.
         // 만약 LJS.jpg가 없다면 파일명을 확인해주세요. 일단 .JPG로 시도합니다.
-        image: 'images/Anonymous-male.JPG'
+        image: 'images/LJS.jpg'
       },
       {
         name: '박혜민',
