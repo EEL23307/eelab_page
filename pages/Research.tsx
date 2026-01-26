@@ -4,18 +4,17 @@ import { CheckCircle2 } from 'lucide-react';
 const Research: React.FC = () => {
   
   // 연구 분야 데이터
-  // 주의: public/images 폴더에 r1.jpg, r2.jpg... 파일이 있어야 합니다.
-  // (만약 파일이 .bmp라면 아래 .jpg를 .bmp로 고쳐주세요)
+  // JSX(<sub> 태그 등)를 사용하기 위해 title과 details의 타입을 string이 아닌 ReactNode로 처리합니다.
   const researchData = [
     {
       id: 1,
       title: "Combustion and power generation from ammonia and hydrogen",
       image: "images/r1.bmp", 
       details: [
-        "Cofiring of ammonia in coal power plants for low carbon electricity production",
-        "Development of global reaction mechanism for ammonia-coal cofiring",
-        "CFD analysis on ideal ammonia cofiring and burner retrofit strategy for commercialization in coal power plants and furnaces",
-        "Collaboration with KEPCO, major power producers, and utility companies (Doosan Enerbility, BHI, etc.) in Korea"
+        <span>Cofiring of ammonia in coal power plants for low carbon electricity production</span>,
+        <span>Development of global reaction mechanism for ammonia-coal cofiring</span>,
+        <span>CFD analysis on ideal ammonia cofiring and burner retrofit strategy for commercialization in coal power plants and furnaces</span>,
+        <span>Collaboration with KEPCO, major power producers, and utility companies (Doosan Enerbility, BHI, etc.) in Korea</span>
       ]
     },
     {
@@ -23,9 +22,9 @@ const Research: React.FC = () => {
       title: "Hydrogen production by reforming and cracking",
       image: "images/r2.bmp",
       details: [
-        "Reformer design for hydrogen production from natural gas and biogas",
-        "CH4 pyrolysis in molten catalysts/salts for hydrogen production",
-        "NH3 cracking for hydrogen production"
+        <span>Reformer design for hydrogen production from natural gas and biogas</span>,
+        <span>CH<sub>4</sub> pyrolysis in molten catalysts/salts for hydrogen production</span>,
+        <span>NH<sub>3</sub> cracking for hydrogen production</span>
       ]
     },
     {
@@ -33,9 +32,9 @@ const Research: React.FC = () => {
       title: "Deep learning-based prediction and control of energy process",
       image: "images/r3.bmp",
       details: [
-        "Performance prediction of energy process using domain knowledge and AI-based models",
-        "Suggestion for ideal values of operation variables based on forecast of key performance parameters",
-        "Optimization of system operation using deep learning algorithms"
+        <span>Performance prediction of energy process using domain knowledge and AI-based models</span>,
+        <span>Suggestion for ideal values of operation variables based on forecast of key performance parameters</span>,
+        <span>Optimization of system operation using deep learning algorithms</span>
       ]
     },
     {
@@ -43,22 +42,22 @@ const Research: React.FC = () => {
       title: "Energy production and utilization of biomass",
       image: "images/r4.bmp",
       details: [
-        "Thermochemical conversion (combustion, gasification, and pyrolysis) for biomass",
-        "Torrefaction of biomass for fuel quality upgrading",
-        "Analysis of pyrolysis kinetics and lignocellulosic composition",
-        "Biochar production and utilization for soil/carbon fixation/chemicals"
+        <span>Thermochemical conversion (combustion, gasification, and pyrolysis) for biomass</span>,
+        <span>Torrefaction of biomass for fuel quality upgrading</span>,
+        <span>Analysis of pyrolysis kinetics and lignocellulosic composition</span>,
+        <span>Biochar production and utilization for soil/carbon fixation/chemicals</span>
       ]
     },
     {
       id: 5,
-      title: "Integrated gasification combined cycle (IGCC)",
+      title: <span>Integrated gasification combined cycle (IGCC)</span>,
       image: "images/r5.bmp",
       details: [
-        "IGCC(석탄가스화 복합발전): Coal to CO and H2-rich syngas for combined cycle power generation",
-        "New energy technology for pre-combustion CO2 capture and hydrogen production",
-        "CFD-based flow, reaction, and heat transfer analysis on gasifier and downstream equipment",
-        "Development of dynamic gasifier simulator integrating the wall slag layer model",
-        "Support of Taean IGCC plant for operation diagnostics and coal selection"
+        <span>IGCC(석탄가스화 복합발전): Coal to CO and H<sub>2</sub>-rich syngas for combined cycle power generation</span>,
+        <span>New energy technology for pre-combustion CO<sub>2</sub> capture and hydrogen production</span>,
+        <span>CFD-based flow, reaction, and heat transfer analysis on gasifier and downstream equipment</span>,
+        <span>Development of dynamic gasifier simulator integrating the wall slag layer model</span>,
+        <span>Support of Taean IGCC plant for operation diagnostics and coal selection</span>
       ]
     },
     {
@@ -66,9 +65,9 @@ const Research: React.FC = () => {
       title: "CFD for design and diagnostics of energy process",
       image: "images/r6.bmp",
       details: [
-        "Detailed analysis on flow, heat transfer, reactions, and other key phenomena in various energy processes",
-        "Development of user-subroutines for advanced CFD simulations",
-        "Optimization of new design development and diagnostics of operation issues"
+        <span>Detailed analysis on flow, heat transfer, reactions, and other key phenomena in various energy processes</span>,
+        <span>Development of user-subroutines for advanced CFD simulations</span>,
+        <span>Optimization of new design development and diagnostics of operation issues</span>
       ]
     }
   ];
@@ -83,15 +82,19 @@ const Research: React.FC = () => {
         </h1>
         <div className="h-1.5 w-24 bg-emerald-500 mx-auto rounded-full mb-12"></div>
         
-        {/* 요약 리스트 박스: 너비를 max-w-6xl로 넓혀서 한 줄에 나오도록 함 */}
-        <div className="max-w-6xl mx-auto bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-left">
+        {/* 요약 리스트 박스 수정: 
+            1. max-w-6xl -> w-full (전체 너비 사용)
+            2. truncate 제거 (글자 잘림 방지)
+        */}
+        <div className="w-full bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-left">
             {researchData.map((area) => (
-              <li key={area.id} className="flex items-start text-gray-700 font-medium">
-                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mr-3 flex-shrink-0 mt-0.5">
+              <li key={area.id} className="flex items-start text-gray-700 font-medium text-lg">
+                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mr-3 flex-shrink-0 mt-1">
                   {area.id}
                 </span>
-                <span className="truncate w-full">{area.title}</span>
+                {/* truncate 클래스를 제거하여 긴 텍스트도 모두 보이게 함 */}
+                <span className="w-full leading-snug">{area.title}</span>
               </li>
             ))}
           </ul>
@@ -104,13 +107,12 @@ const Research: React.FC = () => {
           <div key={area.id} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-start`}>
             
             {/* Image Section */}
-            <div className="w-full lg:w-3/5"> {/* 이미지 영역을 좀 더 넓게 (60%) 할당 */}
+            <div className="w-full lg:w-3/5"> 
               <div className="relative group">
                 <div className="absolute -inset-2 bg-emerald-600/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                {/* 수정됨: aspect-ratio 제거 및 h-auto 적용으로 원본 비율 유지 */}
                 <img 
                   src={area.image} 
-                  alt={area.title} 
+                  alt={`Research Topic ${area.id}`} 
                   className="relative w-full h-auto rounded-2xl shadow-lg border border-gray-100"
                 />
               </div>
@@ -133,8 +135,6 @@ const Research: React.FC = () => {
                   </div>
                 ))}
               </div>
-              
-              {/* 버튼이 제거되었습니다 */}
             </div>
           </div>
         ))}
