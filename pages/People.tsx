@@ -23,7 +23,7 @@ const People: React.FC = () => {
     'MS, BS/MS Joint Students'
   ];
 
-  // [수정 포인트 1] Alumni 카테고리 세분화
+  // Alumni 카테고리
   const alumniCategories = [
     'PhD Graduates',
     'M.S. Graduates'
@@ -281,7 +281,166 @@ const People: React.FC = () => {
     ],
 
     'M.S. Graduates': [
-      // 석사 졸업생 데이터를 여기에 추가하세요
+      {
+        name: '이명일',
+        engName: 'Lee Myungyil',
+        year: '2011',
+        affiliation: '',
+        email: '',
+        image: 'images/LMY.jpg'
+      },
+      {
+        name: '나익환',
+        engName: 'Na Ikhwan',
+        year: '2012',
+        affiliation: '',
+        email: '',
+        image: 'images/NIH.jpg'
+      },
+      {
+        name: '홍성표',
+        engName: 'Hong Sungpyo',
+        year: '2012',
+        affiliation: '',
+        email: '',
+        image: 'images/HSP.jpg'
+      },
+      {
+        name: '박상현',
+        engName: 'Park Sanghyun',
+        year: '2013',
+        affiliation: '',
+        email: '',
+        image: 'images/PSH.jpg'
+      },
+      {
+        name: '강기섭',
+        engName: 'Kang Kieseop',
+        year: '2013',
+        affiliation: '',
+        email: '',
+        image: 'images/KKS.jpg'
+      },
+      {
+        name: '김정은',
+        engName: 'Kim Jung Eun',
+        year: '2014',
+        affiliation: '',
+        email: '',
+        image: 'images/KJE.jpg'
+      },
+      {
+        name: '오준호',
+        engName: 'Oh Junho',
+        year: '2015',
+        affiliation: '',
+        email: '',
+        image: 'images/OJH.jpg'
+      },
+      {
+        name: '양주향',
+        engName: 'Yang Joohyang',
+        year: '2016',
+        affiliation: '',
+        email: '',
+        image: 'images/YJH.jpg'
+      },
+      {
+        name: '도윤영',
+        engName: 'Doh Yunyoung',
+        year: '2017',
+        affiliation: '',
+        email: '',
+        image: 'images/DYY.jpg'
+      },
+      {
+        name: '김범종',
+        engName: 'Kim Bumjong',
+        year: '2018',
+        affiliation: '',
+        email: '',
+        image: 'images/KBJ.jpg'
+      },
+      {
+        name: '강별',
+        engName: 'Kang Byeol',
+        year: '2018',
+        affiliation: '',
+        email: '',
+        image: 'images/KB.jpg'
+      },
+      {
+        name: '김성민',
+        engName: 'Kim Sung Min',
+        year: '2018',
+        affiliation: '',
+        email: '',
+        image: 'images/KSM.jpg'
+      },
+      {
+        name: '안성민',
+        engName: 'An Seongmin',
+        year: '2019',
+        affiliation: '',
+        email: '',
+        image: 'images/ASM.jpg'
+      },
+      {
+        name: '이지석',
+        engName: 'Lee Jiseok',
+        year: '2020',
+        affiliation: '',
+        email: '',
+        image: 'images/LJS.jpg'
+      },
+      {
+        name: '박혜민',
+        engName: 'Park Hyemin',
+        year: '2020',
+        affiliation: '',
+        email: '',
+        image: 'images/PHM.jpg'
+      },
+      {
+        name: '최솔비',
+        engName: 'Choi Solbi',
+        year: '2020',
+        affiliation: '',
+        email: '',
+        image: 'images/CSB.jpg'
+      },
+      {
+        name: 'Hamed Jafari',
+        engName: 'Hamed Jafari',
+        year: '2019',
+        affiliation: '',
+        email: '',
+        image: 'images/HJ.jpg'
+      },
+      {
+        name: '박종민',
+        engName: 'Park Jongmin',
+        year: '2023',
+        affiliation: '',
+        email: '',
+        image: 'images/PJM.jpg'
+      },
+      {
+        name: '강서영',
+        engName: 'Kang Seoyoung',
+        year: '2024',
+        affiliation: '',
+        email: '',
+        image: 'images/KSY.jpg'
+      },
+      {
+        name: '김경중',
+        engName: 'Kim Kyungjoong',
+        year: '2025',
+        affiliation: '',
+        email: '',
+        image: 'images/KKJ.jpg'
+      },
     ]
   };
 
@@ -322,12 +481,7 @@ const People: React.FC = () => {
         {displayCategories.map((category) => {
           const members = peopleData[category] || [];
           
-          // 데이터가 없으면 표시 안 함 (Alumni 탭에서 데이터 채우기 전까지는 빈 화면일 수 있음)
-          if (members.length === 0) return (
-             // 데이터가 없을 때 안내 메시지가 필요하면 아래 주석을 푸세요
-             // <div key={category} className="text-center text-gray-400 py-10">Data updating...</div>
-             null
-          );
+          if (members.length === 0) return null;
 
           return (
             <section key={category}>
