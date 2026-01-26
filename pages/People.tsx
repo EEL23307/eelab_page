@@ -75,10 +75,118 @@ const People: React.FC = () => {
         email: 'qkrrlaqa98@skku.edu',
         image: 'images/PGB.jpg' 
       },
+      {
+        name: '임호태',
+        engName: 'Im Hotae',
+        year: '2026',
+        affiliation: '한국에너지기술연구원',
+        email: '9803ht@kier.re.kr',
+        image: 'images/IHT.jpg' 
+      },
     ],
 
-    'PhD/MS Joint Students': [], 
-    'MS, BS/MS Joint Students': [], 
+    'PhD/MS Joint Students': [
+      {
+        name: '강우석',
+        engName: 'Kang Woosuk',
+        year: '2019',
+        affiliation: '',
+        email: 'gigebun2@naver.com',
+        image: 'images/KWS.jpg' 
+      },
+      {
+        name: '구윤하',
+        engName: 'Koo Yunha',
+        year: '2021',
+        affiliation: '',
+        email: 'yhaa1016@skku.edu',
+        image: 'images/KYH.jpg' 
+      },
+      {
+        name: '박성민',
+        engName: 'Park Seongmin',
+        year: '2021',
+        affiliation: '',
+        email: 'padoris94@gmail.com',
+        image: 'images/PSM.jpg' 
+      },
+      {
+        name: '하선교',
+        engName: 'Ha Seonkyo',
+        year: '2022',
+        affiliation: '',
+        email: 'oioup90@skku.edu',
+        image: 'images/HSK2.jpg' 
+      },
+      {
+        name: '최현록',
+        engName: 'Choi Hyeon Rok',
+        year: '2022',
+        affiliation: '한국생산기술연구원',
+        email: 'gusfhr12022@kitech.re.kr',
+        image: 'images/CHR.jpg' 
+      },
+      {
+        name: '이정호',
+        engName: 'Lee Jeong Ho',
+        year: '2023',
+        affiliation: '',
+        email: 'horse52@g.skku.edu',
+        image: 'images/LJH.jpg' 
+      },
+      {
+        name: '이성재',
+        engName: 'Lee Sungjae',
+        year: '2024',
+        affiliation: '',
+        email: 'seromiya23@g.skku.edu',
+        image: 'images/LSJ.jpg' 
+      },
+      {
+        name: '장윤창',
+        engName: 'Jang Yunchang',
+        year: '2025',
+        affiliation: '',
+        email: 'rmagh346@skku.edu',
+        image: 'images/JYC.jpg' 
+      },
+      {
+        name: '안종환',
+        engName: 'An Jonghwan',
+        year: '2025',
+        affiliation: '한국생산기술연구원',
+        email: 'ajh0420@kitech.re.kr',
+        image: 'images/AJH.jpg' 
+      },
+      {
+        name: '김형석',
+        engName: 'Kim Hyungseok',
+        year: '2025',
+        affiliation: '한국생산기술연구원',
+        email: 'k3k153@kitech.re.kr',
+        image: 'images/KHS.jpg' 
+      },
+      {
+        name: '이승연',
+        engName: 'Lee Seongyeon',
+        year: '2025',
+        affiliation: '한국생산기술연구원',
+        email: 'seungyeonlee@kitech.re.kr',
+        image: 'images/LSY.jpg' 
+      },
+
+
+], 
+    'MS, BS/MS Joint Students': [
+      {
+        name: '심우현',
+        engName: 'Sim Woohyn',
+        year: '2024',
+        affiliation: '한국생산기술연구원',
+        email: 'simwoohyun@kitech.re.kr',
+        image: 'images/SWH.jpg' 
+      },
+], 
     'Alumni': [] 
   };
 
