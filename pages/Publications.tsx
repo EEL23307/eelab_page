@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Search, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Search, ExternalLink, ArrowUp } from 'lucide-react';
 
 // 논문 데이터 타입 정의
 interface Publication {
@@ -13,6 +13,28 @@ interface Publication {
 
 const Publications: React.FC = () => {
   // 탭 상태 관리
+  
+  // 1. 버튼이 보일지 말지 결정하는 상태 (기본값: 안 보임)
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  // 2. 스크롤을 감지하는 기능 (스크롤이 300px 넘어가면 버튼이 나타남)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 3. 버튼 누르면 맨 위로 부드럽게 올라가는 함수
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   const [activeTab, setActiveTab] = useState('International Journals');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -3586,7 +3608,7 @@ const Publications: React.FC = () => {
 ]
   };
 
-  // 현재 탭의 데이터 가져오기
+// 현재 탭의 데이터 가져오기
   const currentPubs = publicationsData[activeTab] || [];
 
   // 검색 필터링
@@ -3600,12 +3622,13 @@ const Publications: React.FC = () => {
   const years = Array.from(new Set(filteredPubs.map(p => p.year))).sort((a, b) => b - a);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-20">
+    <div className="max-w-7xl mx-auto px-4 py-20 relative">
       
       {/* 헤더 및 검색 영역 */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
         <div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Publications</h1>
+          <p className="text-gray-500 text-lg font-light">Contributions to international peer-reviewed journals.</p>
         </div>
         
         <div className="relative">
@@ -3683,8 +3706,8 @@ const Publications: React.FC = () => {
                           {pub.journal}
                         </div>
                         
-                        {/* DOI 링크 (데이터가 있을 경우 표시, 현재는 텍스트에 포함되어 있어 숨김 처리 가능) */}
-                        {/* pub.doi && (
+                        {/* DOI 링크 (데이터가 있을 경우 표시) */}
+                        {pub.doi && (
                             <a 
                               href={`https://doi.org/${pub.doi}`} 
                               target="_blank" 
@@ -3694,7 +3717,7 @@ const Publications: React.FC = () => {
                               <ExternalLink className="h-3 w-3 mr-1" /> View Article
                             </a>
                           )
-                        */}
+                        }
                       </div>
                     </div>
                   ))}
@@ -3704,6 +3727,18 @@ const Publications: React.FC = () => {
           })
         )}
       </div>
+
+      {/* [수정 6] Back to Top 버튼 UI */}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 p-3 bg-emerald-600 text-white rounded-full shadow-lg hover:bg-emerald-700 transition-all duration-300 z-50 ${
+          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}
+        aria-label="Back to top"
+      >
+        <ArrowUp className="h-6 w-6" />
+      </button>
+
     </div>
   );
 };
