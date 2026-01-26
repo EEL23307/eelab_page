@@ -42,7 +42,7 @@ const People: React.FC = () => {
         image: 'images/NJY.jpg' 
       }
     ], 
-    
+    //----------------------------------------------------------------------------------------------------
     'PhD Student': [
       {
         name: '박상빈',
@@ -93,6 +93,8 @@ const People: React.FC = () => {
         image: 'images/IHT.jpg' 
       },
     ],
+
+//----------------------------------------------------------------------------------------------------
 
     'PhD/MS Joint Students': [
       {
@@ -279,15 +281,15 @@ const People: React.FC = () => {
         image: 'images/KHY.jpg' 
       },
     ],
-
+//------------------------------------------------------------------------------------------------------------------------------------------------
     'M.S. Graduates': [
       {
         name: '이명일',
-        engName: 'Lee Myungyil',
+        engName: 'Ming Ri Li',
         year: '2011',
         affiliation: '',
         email: '',
-        image: 'images/LMY.jpg'
+        image: 'images/LMR.jpg'
       },
       {
         name: '나익환',
@@ -327,7 +329,7 @@ const People: React.FC = () => {
         year: '2014',
         affiliation: '',
         email: '',
-        image: 'images/KJE.jpg'
+        image: 'images/Anonymous_female.jpg'
       },
       {
         name: '오준호',
@@ -391,7 +393,7 @@ const People: React.FC = () => {
         year: '2020',
         affiliation: '',
         email: '',
-        image: 'images/LJS.jpg'
+        image: 'images/Anonymous-male.jpg'
       },
       {
         name: '박혜민',
@@ -415,7 +417,7 @@ const People: React.FC = () => {
         year: '2019',
         affiliation: '',
         email: '',
-        image: 'images/HJ.jpg'
+        image: 'images/JH.jpg'
       },
       {
         name: '박종민',
@@ -431,7 +433,7 @@ const People: React.FC = () => {
         year: '2024',
         affiliation: '',
         email: '',
-        image: 'images/KSY.jpg'
+        image: 'images/SY.jpg'
       },
       {
         name: '김경중',
