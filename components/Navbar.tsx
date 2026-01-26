@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             />
 
             {/* (옵션) 구분선: 두 로고 사이에 얇은 선을 넣고 싶으면 주석 해제하세요 */}
-            {/* <div className="h-4 w-px bg-gray-300"></div> */}
+          <div className="h-4 w-px bg-gray-300"></div>
 
             {/* 2. 연구실 로고 (오른쪽) */}
             <img 
