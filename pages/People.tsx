@@ -188,7 +188,7 @@ const People: React.FC = () => {
     'MS, BS/MS Joint Students': [
       {
         name: '심우현',
-        engName: 'Sim Woohyn',
+        engName: 'Sim Woohyun',
         year: '2024',
         affiliation: '한국생산기술연구원',
         email: 'simwoohyun@kitech.re.kr',
@@ -198,16 +198,86 @@ const People: React.FC = () => {
     
     // ================= Alumni 데이터 (분리됨) =================
     'PhD Graduates': [
-      // 박사 졸업생 데이터를 여기에 추가하세요
-      // 예시:
-      // {
-      //   name: '홍길동',
-      //   engName: 'Hong Gildong',
-      //   year: '2020',
-      //   affiliation: '삼성전자',
-      //   email: '',
-      //   image: 'images/alumni_1.jpg'
-      // },
+      {
+        name: '이용운',
+        engName: 'Lee Yongwoon',
+        year: '2016',
+        affiliation: '한국생산기술연구원',
+        email: '',
+        image: 'images/LYY.jpg' 
+      },
+      {
+        name: '채태영',
+        engName: 'Chae Taeyeong',
+        year: '2017',
+        affiliation: '한국생산기술연구원',
+        email: '',
+        image: 'images/CTY.jpg' 
+      },
+      {
+        name: '예인수',
+        engName: 'Ye Insoo',
+        year: '2018',
+        affiliation: '포항산업과학연구원(RIST)',
+        email: '',
+        image: 'images/YIS.jpg' 
+      },
+      {
+        name: '김민수',
+        engName: 'Kim Minsoo',
+        year: '2019',
+        affiliation: 'SK에코플랜트',
+        email: '',
+        image: 'images/KMS.jpg' 
+      },
+      {
+        name: '박진제',
+        engName: 'Park Jinje',
+        year: '2020',
+        affiliation: '삼성전자',
+        email: '',
+        image: 'images/PJJ.jpg' 
+      },
+      {
+        name: '김무경',
+        engName: 'Kim Mukyeong',
+        year: '2021',
+        affiliation: '삼성전자',
+        email: '',
+        image: 'images/KMK.jpg' 
+      },
+      {
+        name: '유승한',
+        engName: 'Yu Seunghan',
+        year: '2022',
+        affiliation: 'SK이노베이션',
+        email: '',
+        image: 'images/YSH.jpg' 
+      },
+      {
+        name: '박종근',
+        engName: 'Park Jongkeun',
+        year: '2023',
+        affiliation: '비에이치아이',
+        email: '',
+        image: 'images/PJK.jpg' 
+      },
+      {
+        name: '조현빈',
+        engName: 'Jo Hyunbin',
+        year: '2024',
+        affiliation: '한국에너지기술연구원',
+        email: '',
+        image: 'images/JHB.jpg' 
+      },
+      {
+        name: '김희윤',
+        engName: 'Kim Heeyoon',
+        year: '2025',
+        affiliation: '한국생산기술연구원',
+        email: '',
+        image: 'images/KHY.jpg' 
+      },
     ],
 
     'M.S. Graduates': [
