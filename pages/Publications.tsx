@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Search, ExternalLink, ArrowUp, Home } from 'lucide-react';
 
-// [1] 분리한 데이터와 타입 불러오기
+// [1] 분리한 데이터와 타입 불러오기 (파일 경로가 정확한지 확인해주세요)
 import { Publication } from '../types'; 
 import { internationalJournals } from '../data/internationalJournals';
 import { koreanJournals } from '../data/koreanJournals';
@@ -10,7 +9,6 @@ import { internationalConferences } from '../data/internationalConferences';
 import { koreanConferences } from '../data/koreanConferences';
 
 const Publications: React.FC = () => {
-  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('International Journals');
   const [searchTerm, setSearchTerm] = useState('');
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -33,12 +31,6 @@ const Publications: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // 홈으로 이동
-  const goToHome = () => {
-    navigate('/');
-    window.scrollTo(0, 0);
-  };
-
   const tabs = [
     'International Journals',
     'Korean Journals',
@@ -46,7 +38,7 @@ const Publications: React.FC = () => {
     'Korean Conferences'
   ];
 
-  // [2] 불러온 데이터 연결하기
+  // 데이터 연결하기
   const publicationsData: Record<string, Publication[]> = {
     'International Journals': internationalJournals,
     'Korean Journals': koreanJournals,
@@ -168,14 +160,14 @@ const Publications: React.FC = () => {
           showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}>
         
-        {/* Home Button */}
-        <button
-          onClick={goToHome}
-          className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1"
+        {/* [수정됨] Home Button: a 태그 사용 (설치 필요 없음) */}
+        <a
+          href="/"
+          className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1 flex items-center justify-center"
           aria-label="Go to Home"
         >
           <Home className="h-6 w-6" />
-        </button>
+        </a>
 
         {/* Top Button */}
         <button
