@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Search, ExternalLink, ArrowUp, Home } from 'lucide-react';
 
-// [1] 분리한 데이터와 타입 불러오기 (파일 경로가 정확한지 확인해주세요)
-import { Publication } from '../types'; 
+// [중요] 분리한 데이터 파일들 불러오기
+// 경로가 ../data/.. 인 이유는 pages 폴더에서 한 단계 위로 올라가서 data 폴더를 찾기 때문입니다.
+import { Publication } from '../data/types';
 import { internationalJournals } from '../data/internationalJournals';
 import { koreanJournals } from '../data/koreanJournals';
 import { internationalConferences } from '../data/internationalConferences';
@@ -38,7 +39,7 @@ const Publications: React.FC = () => {
     'Korean Conferences'
   ];
 
-  // 데이터 연결하기
+  // 불러온 데이터들을 탭 이름과 매칭
   const publicationsData: Record<string, Publication[]> = {
     'International Journals': internationalJournals,
     'Korean Journals': koreanJournals,
@@ -46,15 +47,17 @@ const Publications: React.FC = () => {
     'Korean Conferences': koreanConferences
   };
 
-  // 데이터 필터링 로직
+  // 현재 탭의 데이터 가져오기
   const currentPubs = publicationsData[activeTab] || [];
   
+  // 검색 필터링
   const filteredPubs = currentPubs.filter(pub => 
     pub.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     pub.authors.toLowerCase().includes(searchTerm.toLowerCase()) ||
     pub.journal.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // 연도별 정렬
   const years = Array.from(new Set(filteredPubs.map(p => p.year))).sort((a, b) => b - a);
 
   return (
@@ -155,21 +158,21 @@ const Publications: React.FC = () => {
         )}
       </div>
 
-      {/* Floating Action Buttons */}
+      {/* 플로팅 버튼 (Home + Top) */}
       <div className={`fixed bottom-8 right-8 z-50 flex items-end gap-3 transition-all duration-300 ${
           showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}>
         
-        {/* [수정됨] Home Button: a 태그 사용 (설치 필요 없음) */}
+        {/* Home 버튼 (<a> 태그 사용 - 설치 필요 없음) */}
         <a
-          href="/"
+          href="/eelab_page/"
           className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1 flex items-center justify-center"
           aria-label="Go to Home"
         >
           <Home className="h-6 w-6" />
         </a>
 
-        {/* Top Button */}
+        {/* Top 버튼 */}
         <button
           onClick={scrollToTop}
           className="flex flex-col items-center justify-center w-14 h-14 bg-emerald-600 text-white rounded-2xl shadow-lg hover:bg-emerald-700 transition-all duration-300"
