@@ -1289,8 +1289,7 @@ const Publications: React.FC = () => {
   // 데이터 입력 영역
   // =========================================================================================
 
-    'International Conferences': [
-'International Conferences': [
+     'International Conferences': [
       // 2025
       {
         id: 'ic-2025-1',
