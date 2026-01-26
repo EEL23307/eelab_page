@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail } from 'lucide-react';
 
-// 데이터 타입 정의 (id 삭제함)
+// 데이터 타입 정의
 interface Member {
   name: string;
   engName: string;
@@ -12,16 +12,22 @@ interface Member {
 }
 
 const People: React.FC = () => {
+  // [수정 포인트 1] 탭 상태 관리 (기본값: 'Current')
+  const [activeTab, setActiveTab] = useState<'Current' | 'Alumni'>('Current');
   
-  const categories = [
+  // 카테고리 정의
+  const currentCategories = [
     'Post Doc',
     'PhD Student',
     'PhD/MS Joint Students',
-    'MS, BS/MS Joint Students',
-    'Alumni' 
+    'MS, BS/MS Joint Students'
   ];
 
-  // 데이터: 보내주신 남준영 박사님 데이터 포함 완료
+  const alumniCategories = [
+    'Alumni'
+  ];
+
+  // 데이터 리스트
   const peopleData: Record<string, Member[]> = {
     'Post Doc': [
       {
@@ -174,9 +180,8 @@ const People: React.FC = () => {
         email: 'seungyeonlee@kitech.re.kr',
         image: 'images/LSY.jpg' 
       },
-
-
-], 
+    ], 
+    
     'MS, BS/MS Joint Students': [
       {
         name: '심우현',
@@ -186,18 +191,56 @@ const People: React.FC = () => {
         email: 'simwoohyun@kitech.re.kr',
         image: 'images/SWH.jpg' 
       },
-], 
+    ], 
+    
     'Alumni': [] 
   };
+
+  // 현재 탭에 따라 보여줄 카테고리 결정
+  const displayCategories = activeTab === 'Current' ? currentCategories : alumniCategories;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-20">
       
-      <div className="space-y-16">
-        {categories.map((category) => {
+      {/* [수정 포인트 2] 탭 버튼 추가 */}
+      <div className="flex justify-center mb-20">
+        <div className="inline-flex bg-gray-100 p-1 rounded-xl">
+          <button
+            onClick={() => setActiveTab('Current')}
+            className={`px-8 py-3 rounded-lg text-sm font-bold transition-all duration-300 ${
+              activeTab === 'Current'
+                ? 'bg-white text-emerald-800 shadow-sm'
+                : 'text-gray-500 hover:text-gray-700'
+            }`}
+          >
+            Current Members
+          </button>
+          <button
+            onClick={() => setActiveTab('Alumni')}
+            className={`px-8 py-3 rounded-lg text-sm font-bold transition-all duration-300 ${
+              activeTab === 'Alumni'
+                ? 'bg-white text-emerald-800 shadow-sm'
+                : 'text-gray-500 hover:text-gray-700'
+            }`}
+          >
+            Alumni
+          </button>
+        </div>
+      </div>
+      
+      {/* 내용 영역 */}
+      <div className="space-y-16 animate-in fade-in duration-500">
+        {displayCategories.map((category) => {
           const members = peopleData[category] || [];
           
-          if (members.length === 0) return null;
+          if (members.length === 0) return (
+             // 멤버가 없을 때 (Alumni 등) 메시지 표시
+             activeTab === 'Alumni' && category === 'Alumni' ? (
+                <div key={category} className="text-center py-20 text-gray-500">
+                   <p>Coming Soon...</p>
+                </div>
+             ) : null
+          );
 
           return (
             <section key={category}>
@@ -207,18 +250,12 @@ const People: React.FC = () => {
                 <div className="ml-4 flex-grow h-px bg-emerald-100"></div>
               </h2>
               
-              {/* [수정 포인트 1] 그리드 변경 
-                 기존: lg:grid-cols-4 (한 줄에 4명)
-                 변경: lg:grid-cols-6 (한 줄에 6명) -> 사진이 작아졌으므로 더 많이 배치
-              */}
+              {/* 그리드: 6열 배치 (작은 사진용) */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-10">
                 {members.map((person) => (
                   <div key={person.email || person.engName} className="group flex flex-col items-center text-center">
                     
-                    {/* [수정 포인트 2] 사진 크기 축소
-                       기존: max-w-[220px] 
-                       변경: w-32 (128px) -> 약 1/4 면적 느낌으로 축소
-                    */}
+                    {/* 사진 크기: w-32 (약 1/4 크기) */}
                     <div className="relative mb-3 w-32 aspect-[3/4] overflow-hidden rounded-lg shadow-sm border border-gray-100">
                       <div className="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/10 transition-colors duration-300"></div>
                       <img 
@@ -228,10 +265,7 @@ const People: React.FC = () => {
                       />
                     </div>
 
-                    {/* [수정 포인트 3] 글자 크기(Text Size) 전체적 축소 
-                       이름: text-xl -> text-base (보통 크기)
-                       영문이름/기타: text-sm -> text-xs (작은 크기)
-                    */}
+                    {/* 텍스트 정보 */}
                     <div className="space-y-0.5">
                       <div className="flex flex-col items-center">
                         <h3 className="text-base font-bold text-gray-900">{person.name}</h3>
