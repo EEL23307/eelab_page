@@ -21,7 +21,7 @@ const People: React.FC = () => {
     'Alumni' 
   ];
 
-  // id 숫자 다 뺐습니다! 이제 순서 상관없이 추가/삭제 하세요.
+  // 데이터: 보내주신 남준영 박사님 데이터 포함 완료
   const peopleData: Record<string, Member[]> = {
     'Post Doc': [
       {
@@ -32,7 +32,7 @@ const People: React.FC = () => {
         email: 'ppppidori@naver.com',
         image: 'images/NJY.jpg' 
       }
-], 
+    ], 
     
     'PhD Student': [
       {
@@ -56,7 +56,7 @@ const People: React.FC = () => {
         engName: 'Ryu Juyeol',
         year: '2023',
         affiliation: '현대자동차',
-        email: '', // 이메일 없어도 괜찮습니다 (이름으로 구분함)
+        email: '', 
         image: 'images/RJY.jpg' 
       },
       {
@@ -85,7 +85,7 @@ const People: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-20">
       
-      <div className="space-y-20">
+      <div className="space-y-16">
         {categories.map((category) => {
           const members = peopleData[category] || [];
           
@@ -93,18 +93,25 @@ const People: React.FC = () => {
 
           return (
             <section key={category}>
-              <h2 className="text-sm font-black text-emerald-700 uppercase tracking-[0.3em] mb-10 flex items-center">
+              {/* 카테고리 제목 */}
+              <h2 className="text-sm font-black text-emerald-700 uppercase tracking-[0.3em] mb-8 flex items-center">
                 {category}
                 <div className="ml-4 flex-grow h-px bg-emerald-100"></div>
               </h2>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-                {members.map((person, index) => (
-                  // 수정 포인트: key를 id 대신 '이메일' 또는 '영문이름'으로 사용합니다.
-                  // 이메일이 있으면 이메일을 쓰고, 없으면 영문이름을 씁니다.
+              {/* [수정 포인트 1] 그리드 변경 
+                 기존: lg:grid-cols-4 (한 줄에 4명)
+                 변경: lg:grid-cols-6 (한 줄에 6명) -> 사진이 작아졌으므로 더 많이 배치
+              */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-10">
+                {members.map((person) => (
                   <div key={person.email || person.engName} className="group flex flex-col items-center text-center">
                     
-                    <div className="relative mb-5 w-full max-w-[220px] aspect-[3/4] overflow-hidden rounded-2xl shadow-md border border-gray-100">
+                    {/* [수정 포인트 2] 사진 크기 축소
+                       기존: max-w-[220px] 
+                       변경: w-32 (128px) -> 약 1/4 면적 느낌으로 축소
+                    */}
+                    <div className="relative mb-3 w-32 aspect-[3/4] overflow-hidden rounded-lg shadow-sm border border-gray-100">
                       <div className="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/10 transition-colors duration-300"></div>
                       <img 
                         src={person.image} 
@@ -113,24 +120,28 @@ const People: React.FC = () => {
                       />
                     </div>
 
-                    <div className="space-y-1">
-                      <div className="flex items-baseline justify-center gap-2">
-                        <h3 className="text-xl font-bold text-gray-900">{person.name}</h3>
-                        <span className="text-sm text-gray-500 font-medium">({person.engName})</span>
+                    {/* [수정 포인트 3] 글자 크기(Text Size) 전체적 축소 
+                       이름: text-xl -> text-base (보통 크기)
+                       영문이름/기타: text-sm -> text-xs (작은 크기)
+                    */}
+                    <div className="space-y-0.5">
+                      <div className="flex flex-col items-center">
+                        <h3 className="text-base font-bold text-gray-900">{person.name}</h3>
+                        <span className="text-xs text-gray-500 font-medium -mt-0.5 mb-1">({person.engName})</span>
                       </div>
                       
-                      <p className="text-emerald-700 font-bold text-sm">{person.year}</p>
+                      <p className="text-emerald-700 font-bold text-xs">{person.year}</p>
                       
                       {person.affiliation && (
-                        <p className="text-gray-600 text-sm leading-snug px-2 break-keep">
+                        <p className="text-gray-600 text-xs leading-snug px-1 break-keep pt-1">
                           {person.affiliation}
                         </p>
                       )}
 
                       {person.email && (
-                        <div className="pt-2">
-                          <a href={`mailto:${person.email}`} className="inline-flex items-center text-gray-400 hover:text-emerald-600 transition-colors text-sm">
-                            <Mail className="h-3.5 w-3.5 mr-1.5" />
+                        <div className="pt-1.5">
+                          <a href={`mailto:${person.email}`} className="inline-flex items-center text-gray-400 hover:text-emerald-600 transition-colors text-xs">
+                            <Mail className="h-3 w-3 mr-1" />
                             {person.email}
                           </a>
                         </div>
