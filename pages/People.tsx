@@ -12,10 +12,10 @@ interface Member {
 }
 
 const People: React.FC = () => {
-  // [수정 포인트 1] 탭 상태 관리 (기본값: 'Current')
+  // 탭 상태 관리
   const [activeTab, setActiveTab] = useState<'Current' | 'Alumni'>('Current');
   
-  // 카테고리 정의
+  // 카테고리 정의 (Current)
   const currentCategories = [
     'Post Doc',
     'PhD Student',
@@ -23,12 +23,15 @@ const People: React.FC = () => {
     'MS, BS/MS Joint Students'
   ];
 
+  // [수정 포인트 1] Alumni 카테고리 세분화
   const alumniCategories = [
-    'Alumni'
+    'PhD Graduates',
+    'M.S. Graduates'
   ];
 
   // 데이터 리스트
   const peopleData: Record<string, Member[]> = {
+    // ================= Current Members 데이터 =================
     'Post Doc': [
       {
         name: '남준영',
@@ -193,7 +196,23 @@ const People: React.FC = () => {
       },
     ], 
     
-    'Alumni': [] 
+    // ================= Alumni 데이터 (분리됨) =================
+    'PhD Graduates': [
+      // 박사 졸업생 데이터를 여기에 추가하세요
+      // 예시:
+      // {
+      //   name: '홍길동',
+      //   engName: 'Hong Gildong',
+      //   year: '2020',
+      //   affiliation: '삼성전자',
+      //   email: '',
+      //   image: 'images/alumni_1.jpg'
+      // },
+    ],
+
+    'M.S. Graduates': [
+      // 석사 졸업생 데이터를 여기에 추가하세요
+    ]
   };
 
   // 현재 탭에 따라 보여줄 카테고리 결정
@@ -202,7 +221,7 @@ const People: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-20">
       
-      {/* [수정 포인트 2] 탭 버튼 추가 */}
+      {/* 탭 버튼 */}
       <div className="flex justify-center mb-20">
         <div className="inline-flex bg-gray-100 p-1 rounded-xl">
           <button
@@ -233,13 +252,11 @@ const People: React.FC = () => {
         {displayCategories.map((category) => {
           const members = peopleData[category] || [];
           
+          // 데이터가 없으면 표시 안 함 (Alumni 탭에서 데이터 채우기 전까지는 빈 화면일 수 있음)
           if (members.length === 0) return (
-             // 멤버가 없을 때 (Alumni 등) 메시지 표시
-             activeTab === 'Alumni' && category === 'Alumni' ? (
-                <div key={category} className="text-center py-20 text-gray-500">
-                   <p>Coming Soon...</p>
-                </div>
-             ) : null
+             // 데이터가 없을 때 안내 메시지가 필요하면 아래 주석을 푸세요
+             // <div key={category} className="text-center text-gray-400 py-10">Data updating...</div>
+             null
           );
 
           return (
@@ -250,12 +267,12 @@ const People: React.FC = () => {
                 <div className="ml-4 flex-grow h-px bg-emerald-100"></div>
               </h2>
               
-              {/* 그리드: 6열 배치 (작은 사진용) */}
+              {/* 그리드 */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-6 gap-y-10">
                 {members.map((person) => (
                   <div key={person.email || person.engName} className="group flex flex-col items-center text-center">
                     
-                    {/* 사진 크기: w-32 (약 1/4 크기) */}
+                    {/* 사진 */}
                     <div className="relative mb-3 w-32 aspect-[3/4] overflow-hidden rounded-lg shadow-sm border border-gray-100">
                       <div className="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/10 transition-colors duration-300"></div>
                       <img 
@@ -265,7 +282,7 @@ const People: React.FC = () => {
                       />
                     </div>
 
-                    {/* 텍스트 정보 */}
+                    {/* 정보 */}
                     <div className="space-y-0.5">
                       <div className="flex flex-col items-center">
                         <h3 className="text-base font-bold text-gray-900">{person.name}</h3>
