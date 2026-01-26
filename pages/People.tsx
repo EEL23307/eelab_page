@@ -36,7 +36,7 @@ const People: React.FC = () => {
         year: '2014',
         affiliation: '한국전력공사 전력연구원',
         email: 'tabris12@naver.com',
-        image: 'images/phd_sangbin.jpg' // 경로 수정 필요
+        image: 'images/PSB.jpg' // 경로 수정 필요
       },
       {
         id: 2,
@@ -45,7 +45,7 @@ const People: React.FC = () => {
         year: '2018',
         affiliation: '한국생산기술연구원 고온에너지시스템그룹',
         email: 'jypark04@kitech.re.kr',
-        image: 'images/phd_jiyeon.jpg' // 경로 수정 필요
+        image: 'images/PJY.jpg' // 경로 수정 필요
       },
       {
         id: 3,
@@ -54,7 +54,7 @@ const People: React.FC = () => {
         year: '2023',
         affiliation: '현대자동차',
         email: '',
-        image: 'images/phd_juyeol.jpg' // 경로 수정 필요
+        image: 'images/RJY.jpg' // 경로 수정 필요
       },
       {
         id: 4,
@@ -63,7 +63,7 @@ const People: React.FC = () => {
         year: '2024',
         affiliation: '두산에너빌리티',
         email: '',
-        image: 'images/phd_geun.jpg' // 경로 수정 필요
+        image: 'images/SG.jpg' // 경로 수정 필요
       },
       {
         id: 5,
@@ -72,7 +72,7 @@ const People: React.FC = () => {
         year: '2025',
         affiliation: '',
         email: 'qkrrlaqa98@skku.edu',
-        image: 'images/phd_gibeom.jpg' // 경로 수정 필요
+        image: 'images/PGB.jpg' // 경로 수정 필요
       },
     ],
 
