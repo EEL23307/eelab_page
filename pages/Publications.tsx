@@ -67,7 +67,6 @@ const Publications: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
         <div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Publications</h1>
-          <p className="text-gray-500 text-lg font-light">Contributions to international peer-reviewed journals.</p>
         </div>
         
         <div className="relative">
