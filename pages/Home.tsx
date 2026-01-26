@@ -17,12 +17,12 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
     <div className="bg-white">
       
       {/* ================= 제목 섹션 (수정됨) ================= */}
+      {/* max-w-4xl를 max-w-7xl로 넓혀서 한 줄로 나오게 수정했습니다 */}
       <section className="max-w-7xl mx-auto px-6 pt-32 pb-12 text-center">
         <h1 className="text-3xl md:text-5xl font-black text-emerald-600 uppercase tracking-widest mb-4">
           Welcome to Energy Engineering Lab
         </h1>
-        {/* 여기 w-24를 w-2/3로 변경하여 너비를 넓혔습니다 */}
-        <div className="h-1.5 w-2/3 bg-emerald-400 mx-auto rounded-full"></div>
+        <div className="h-1.5 w-24 bg-emerald-400 mx-auto rounded-full"></div>
       </section>
 
       {/* ================= 본문 내용 ================= */}
