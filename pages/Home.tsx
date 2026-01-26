@@ -1,5 +1,5 @@
-import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react'; // [수정] Hooks 추가
+import { ChevronRight, ArrowUp } from 'lucide-react'; // [수정] ArrowUp 아이콘 추가
 import { Page } from '../types';
 
 interface HomeProps {
@@ -13,11 +13,30 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
     window.scrollTo(0, 0);
   };
 
+  // [수정] Back to Top 버튼 상태 및 로직 추가 ==================================
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  // =========================================================================
+
   return (
-    <div className="bg-white">
+    <div className="bg-white relative"> {/* relative 추가 */}
       
-      {/* ================= 제목 섹션 (수정됨) ================= */}
-      {/* max-w-4xl를 max-w-7xl로 넓혀서 한 줄로 나오게 수정했습니다 */}
+      {/* ================= 제목 섹션 ================= */}
       <section className="max-w-7xl mx-auto px-6 pt-32 pb-12 text-center">
         <h1 className="text-3xl md:text-5xl font-black text-emerald-600 uppercase tracking-widest mb-4">
           Welcome to Energy Engineering Lab
@@ -31,8 +50,8 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
         {/* 영어 소개글 */}
         <div className="prose prose-lg text-gray-600 space-y-8 leading-relaxed mx-auto">
           <p className="text-2xl font-light text-gray-800 leading-snug text-balance">
-	We are actively carrying out research on power generation and energy processes using various fuels with high efficiencies and low environmental impacts.
-	  </p>
+            We are actively carrying out research on power generation and energy processes using various fuels with high efficiencies and low environmental impacts.
+          </p>
 
           <div className="mt-8 text-left bg-gray-50 p-6 rounded-xl border border-gray-100">
             <p className="font-bold text-gray-900 mb-4">The main research topics include:</p>
@@ -143,6 +162,19 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
           </button>
         </div>
       </section>
+
+      {/* [수정] Top 버튼만 추가 (Home 버튼 제외) */}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 flex flex-col items-center justify-center w-14 h-14 bg-emerald-600 text-white rounded-2xl shadow-lg hover:bg-emerald-700 transition-all duration-300 z-50 ${
+          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}
+        aria-label="Back to top"
+      >
+        <ArrowUp className="h-5 w-5 mb-0.5" />
+        <span className="text-[10px] font-bold leading-none">TOP</span>
+      </button>
+
     </div>
   );
 };
