@@ -1,15 +1,16 @@
 import React from 'react';
-import { ChevronRight, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 const Research: React.FC = () => {
   
-  // 연구 분야 데이터 (텍스트 및 이미지 경로 설정)
-  // 이미지 파일은 public/images 폴더 안에 r1.jpg, r2.jpg ... 형식으로 있어야 합니다.
+  // 연구 분야 데이터
+  // 주의: public/images 폴더에 r1.jpg, r2.jpg... 파일이 있어야 합니다.
+  // (만약 파일이 .bmp라면 아래 .jpg를 .bmp로 고쳐주세요)
   const researchData = [
     {
       id: 1,
       title: "Combustion and power generation from ammonia and hydrogen",
-      image: "images/r1.bmp", // 파일 확장자가 png라면 .png로 변경하세요
+      image: "images/r1.bmp", 
       details: [
         "Cofiring of ammonia in coal power plants for low carbon electricity production",
         "Development of global reaction mechanism for ammonia-coal cofiring",
@@ -34,7 +35,7 @@ const Research: React.FC = () => {
       details: [
         "Performance prediction of energy process using domain knowledge and AI-based models",
         "Suggestion for ideal values of operation variables based on forecast of key performance parameters",
-        "Optimization of system operation using deep learning algorithms" // 3번 마지막 줄 중복(NH3 cracking) 제거 후 문맥에 맞게 수정함 (혹시 원문 그대로 원하시면 수정해주세요)
+        "Optimization of system operation using deep learning algorithms"
       ]
     },
     {
@@ -82,15 +83,15 @@ const Research: React.FC = () => {
         </h1>
         <div className="h-1.5 w-24 bg-emerald-500 mx-auto rounded-full mb-12"></div>
         
-        {/* 요약 리스트 박스 */}
-        <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-left">
+        {/* 요약 리스트 박스: 너비를 max-w-6xl로 넓혀서 한 줄에 나오도록 함 */}
+        <div className="max-w-6xl mx-auto bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-left">
             {researchData.map((area) => (
               <li key={area.id} className="flex items-start text-gray-700 font-medium">
                 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mr-3 flex-shrink-0 mt-0.5">
                   {area.id}
                 </span>
-                {area.title}
+                <span className="truncate w-full">{area.title}</span>
               </li>
             ))}
           </ul>
@@ -100,23 +101,23 @@ const Research: React.FC = () => {
       {/* ================= Detailed Sections ================= */}
       <div className="space-y-32">
         {researchData.map((area, idx) => (
-          <div key={area.id} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}>
+          <div key={area.id} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-start`}>
             
             {/* Image Section */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-3/5"> {/* 이미지 영역을 좀 더 넓게 (60%) 할당 */}
               <div className="relative group">
-                <div className="absolute -inset-2 bg-emerald-600/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                {/* 이미지 파일 확장자가 jpg가 아니라면 아래 src 경로를 수정해주세요 (예: .png) */}
+                <div className="absolute -inset-2 bg-emerald-600/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                {/* 수정됨: aspect-ratio 제거 및 h-auto 적용으로 원본 비율 유지 */}
                 <img 
                   src={area.image} 
                   alt={area.title} 
-                  className="relative w-full aspect-[4/3] rounded-3xl object-cover shadow-xl grayscale-[0.1] group-hover:grayscale-0 transition-all duration-500"
+                  className="relative w-full h-auto rounded-2xl shadow-lg border border-gray-100"
                 />
               </div>
             </div>
 
             {/* Text Section */}
-            <div className="w-full lg:w-1/2 space-y-6">
+            <div className="w-full lg:w-2/5 space-y-6">
               <div className="text-emerald-600 font-black uppercase tracking-[0.3em] text-xs">
                 Topic 0{area.id}
               </div>
@@ -126,18 +127,14 @@ const Research: React.FC = () => {
               
               <div className="space-y-3 pt-2">
                 {area.details.map((detail, i) => (
-                  <div key={i} className="flex items-start text-gray-600 leading-relaxed">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-500 mr-3 mt-1 flex-shrink-0" />
+                  <div key={i} className="flex items-start text-gray-600 leading-relaxed text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 mr-3 mt-1 flex-shrink-0" />
                     <span>{detail}</span>
                   </div>
                 ))}
               </div>
-
-              <div className="pt-6">
-                <button className="inline-flex items-center text-emerald-800 font-bold hover:translate-x-2 transition-transform border-b-2 border-emerald-100 hover:border-emerald-800 pb-1">
-                  Explore Projects <ChevronRight className="ml-1 h-4 w-4" />
-                </button>
-              </div>
+              
+              {/* 버튼이 제거되었습니다 */}
             </div>
           </div>
         ))}
