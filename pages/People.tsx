@@ -293,11 +293,11 @@ const People: React.FC = () => {
     'M.S. Graduates': [
       {
         name: '이명일',
-        engName: 'Lee Myungyil',
+        engName: 'Ming Ri Li',
         year: '2011',
         affiliation: '',
         email: '',
-        image: 'images/LMY.jpg'
+        image: 'images/LMR.jpg'
       },
       {
         name: '나익환',
@@ -339,7 +339,7 @@ const People: React.FC = () => {
         year: '2014',
         affiliation: '',
         email: '',
-        image: 'images/KJE.jpg'
+        image: 'images/Anonymous_female.jpg'
       },
       {
         name: '오준호',
@@ -405,7 +405,7 @@ const People: React.FC = () => {
         email: '',
         // [수정] 이지석 님은 예전에 anonymous-male.jpg 였거나 파일명이 다를 수 있습니다.
         // 만약 LJS.jpg가 없다면 파일명을 확인해주세요. 일단 .JPG로 시도합니다.
-        image: 'images/LJS.JPG'
+        image: 'images/Anonymous-male.JPG'
       },
       {
         name: '박혜민',
@@ -429,7 +429,7 @@ const People: React.FC = () => {
         year: '2019',
         affiliation: '',
         email: '',
-        image: 'images/HJ.jpg'
+        image: 'images/JH.jpg'
       },
       {
         name: '박종민',
