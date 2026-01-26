@@ -3,7 +3,6 @@ import {
   X, ChevronLeft, ChevronRight, ArrowUp, Home 
 } from 'lucide-react';
 
-// 데이터 타입 정의: 제목, 위치, 설명 제거 -> 날짜만 남김
 interface PhotoItem {
   id: number;
   src: string;
@@ -11,39 +10,45 @@ interface PhotoItem {
 }
 
 const Photos: React.FC = () => {
-  // 데이터: 오직 날짜와 사진만 존재
+  // [데이터 관리]
+  // 경로를 "photos/..." 로 변경했습니다.
+  // public/photos 폴더 안에 해당 파일들이 있어야 합니다.
   const photoData: PhotoItem[] = [
     {
       id: 1,
-      src: "images/photo_2022_summer.jpg",
-      date: "2022.07"
+      src: "photos/photo_2020_survival.jpg",
+      date: "2020.01"
     },
     {
       id: 2,
-      src: "images/photo_2022_cafe.jpg",
-      date: "2022.07"
-    },
-    {
-      id: 3,
-      src: "images/photo_2022_spring.jpg",
-      date: "2022.05"
-    },
-    {
-      id: 4,
-      src: "images/photo_2021_visit.jpg",
+      src: "photos/photo_2021_visit.jpg",
       date: "2021.07"
     },
     {
-      id: 5,
-      src: "images/photo_2021_dinner.jpg",
+      id: 3,
+      src: "photos/photo_2021_dinner.jpg",
       date: "2021.11"
     },
     {
+      id: 4,
+      src: "photos/photo_2022_spring.jpg",
+      date: "2022.05"
+    },
+    {
+      id: 5,
+      src: "photos/photo_2022_cafe.jpg",
+      date: "2022.07"
+    },
+    {
       id: 6,
-      src: "images/photo_2020_survival.jpg",
-      date: "2020.01"
-    }
+      src: "photos/photo_2022_summer.jpg",
+      date: "2022.07"
+    },
+    // 여기에 새 사진 추가: { id: 7, src: "photos/새파일명.jpg", date: "..." },
   ];
+
+  // ID 역순(최신순) 자동 정렬
+  const sortedPhotos = [...photoData].sort((a, b) => b.id - a.id);
 
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -70,19 +75,19 @@ const Photos: React.FC = () => {
     e?.stopPropagation();
     if (selectedPhotoIndex !== null) {
       setSelectedPhotoIndex((prev) => 
-        prev === null || prev === photoData.length - 1 ? 0 : prev + 1
+        prev === null || prev === sortedPhotos.length - 1 ? 0 : prev + 1
       );
     }
-  }, [selectedPhotoIndex, photoData.length]);
+  }, [selectedPhotoIndex, sortedPhotos.length]);
 
   const showPrev = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedPhotoIndex !== null) {
       setSelectedPhotoIndex((prev) => 
-        prev === null || prev === 0 ? photoData.length - 1 : prev - 1
+        prev === null || prev === 0 ? sortedPhotos.length - 1 : prev - 1
       );
     }
-  }, [selectedPhotoIndex, photoData.length]);
+  }, [selectedPhotoIndex, sortedPhotos.length]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -95,7 +100,6 @@ const Photos: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [selectedPhotoIndex, showNext, showPrev]);
 
-  // 폴라로이드 회전 각도 (규칙적 랜덤)
   const getRotationClass = (index: number) => {
     const rotations = ['rotate-1', '-rotate-2', 'rotate-2', '-rotate-1', 'rotate-3', '-rotate-3'];
     return rotations[index % rotations.length];
@@ -116,9 +120,9 @@ const Photos: React.FC = () => {
           </p>
         </div>
 
-        {/* Polaroid Grid */}
+        {/* Polaroid Grid (sortedPhotos 사용) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16 px-4">
-          {photoData.map((photo, index) => (
+          {sortedPhotos.map((photo, index) => (
             <div 
               key={photo.id}
               onClick={() => openModal(index)}
@@ -140,11 +144,6 @@ const Photos: React.FC = () => {
 
               {/* 캡션 영역 (날짜만) */}
               <div className="absolute bottom-0 left-0 w-full h-12 flex items-center justify-center">
-                {/* [수정됨] 
-                  - font-serif: 감성적인 느낌 
-                  - text-gray-600: 너무 진하지 않은 회색
-                  - text-base: 제목처럼 크지 않고 적당한 본문 크기
-                */}
                 <p className="font-serif text-gray-600 text-lg tracking-widest font-medium group-hover:text-emerald-700 transition-colors">
                   {photo.date}
                 </p>
@@ -168,14 +167,14 @@ const Photos: React.FC = () => {
 
           <div className="relative w-full max-w-5xl flex flex-col items-center justify-center" onClick={(e) => e.stopPropagation()}>
             <img 
-              src={photoData[selectedPhotoIndex].src} 
-              alt={photoData[selectedPhotoIndex].date} 
+              src={sortedPhotos[selectedPhotoIndex].src} 
+              alt={sortedPhotos[selectedPhotoIndex].date} 
               className="max-w-full max-h-[80vh] object-contain rounded shadow-2xl"
             />
             
             <div className="mt-4 text-center">
               <p className="text-white/80 font-serif text-xl tracking-widest">
-                {photoData[selectedPhotoIndex].date}
+                {sortedPhotos[selectedPhotoIndex].date}
               </p>
             </div>
 
