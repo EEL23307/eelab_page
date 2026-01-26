@@ -291,6 +291,4 @@ export const koreanJournals: Publication[] = [
         authors: '류창국, 김숭기, 최상민',
         journal: '대한기계학회 논문집, 제18권 제 8호, pp.2184-2193' // 따옴표(') 추가 및 페이지 번호 확인
       },
-],
-
 ];
