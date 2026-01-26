@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react'; // [수정 1] Leaf 제거
 import { Page } from '../types';
-import { LAB_NAME } from '../constants';
+// import { LAB_NAME } from '../constants'; // 사용하지 않는다면 제거 가능
 
 interface NavbarProps {
   activeTab: Page;
@@ -32,14 +31,14 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
-          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleNavClick('Home')}>
-            <div className="bg-emerald-700 p-2 rounded-lg">
-              <Leaf className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <span className="text-xl font-bold text-emerald-900 block leading-tight tracking-tight">EEL</span>
-              <span className="text-[10px] text-gray-400 block uppercase tracking-[0.2em] font-bold">Energy Engineering Lab</span>
-            </div>
+          
+          {/* [수정 2] 로고 이미지로 교체된 부분 */}
+          <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('Home')}>
+            <img 
+              src="images/logo_new.png" 
+              alt="Energy Engineering Lab Logo" 
+              className="h-10 md:h-12 w-auto object-contain" 
+            />
           </div>
 
           {/* Desktop Nav */}
