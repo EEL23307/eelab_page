@@ -70,7 +70,7 @@ const Professor: React.FC = () => {
               <div className="absolute -inset-2 bg-emerald-100 rounded-3xl opacity-50 blur-xl group-hover:opacity-75 transition-opacity duration-500"></div>
               {/* 이미지 경로 */}
               <img 
-                src="images/prof_upscaled.jpg" 
+                src="images/1_prof.jpg" 
                 alt="Professor Changkook Ryu" 
                 className="relative w-full rounded-2xl object-cover shadow-xl grayscale-[0.1] group-hover:grayscale-0 transition-all"
               />
