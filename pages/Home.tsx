@@ -30,9 +30,9 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
         
         {/* 영어 소개글 */}
         <div className="prose prose-lg text-gray-600 space-y-8 leading-relaxed mx-auto">
-          <p className="text-2xl font-light text-gray-800 leading-snug">
-            We are actively carrying out research on power generation and energy processes using various fuels with high efficiencies and low environmental impacts.
-          </p>
+          <p className="text-2xl font-light text-gray-800 leading-snug text-balance">
+	We are actively carrying out research on power generation and energy processes using various fuels with high efficiencies and low environmental impacts.
+	  </p>
 
           <div className="mt-8 text-left bg-gray-50 p-6 rounded-xl border border-gray-100">
             <p className="font-bold text-gray-900 mb-4">The main research topics include:</p>
