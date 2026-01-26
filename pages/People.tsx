@@ -23,7 +23,16 @@ const People: React.FC = () => {
 
   // id 숫자 다 뺐습니다! 이제 순서 상관없이 추가/삭제 하세요.
   const peopleData: Record<string, Member[]> = {
-    'Post Doc': [], 
+    'Post Doc': [
+      {
+        name: '남준영',
+        engName: 'Nam Joonyeong',
+        year: '2026',
+        affiliation: '',
+        email: 'ppppidori@naver.com',
+        image: 'images/NJY.jpg' 
+      }
+], 
     
     'PhD Student': [
       {
