@@ -1,13 +1,31 @@
-import React from 'react';
-import { CheckCircle2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react'; // [수정] Hooks 추가
+import { CheckCircle2, ArrowUp, Home } from 'lucide-react'; // [수정] 아이콘 추가
 
 const Research: React.FC = () => {
+  // [수정] Back to Top & Home 버튼 상태/로직 추가 ==============================
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  // =========================================================================
   
   // 연구 분야 데이터
   const researchData = [
     {
       id: 1,
-      // [수정 핵심] 따옴표(")를 제거하고 <span>으로 감싸주었습니다.
       title: <span>Combustion and power generation from NH<sub>3</sub> and H<sub>2</sub></span>,
       image: "images/r1.bmp", 
       details: [
@@ -19,7 +37,6 @@ const Research: React.FC = () => {
     },
     {
       id: 2,
-      // 필요하다면 여기도 <span>으로 감싸서 화학식을 넣을 수 있습니다.
       title: <span>Hydrogen production by reforming and cracking</span>,
       image: "images/r2.bmp",
       details: [
@@ -51,7 +68,6 @@ const Research: React.FC = () => {
     },
     {
       id: 5,
-      // 여기는 이미 잘 작성하셨습니다! (따옴표 없이 span 사용됨)
       title: <span>Integrated gasification combined cycle (IGCC)</span>,
       image: "images/r5.bmp",
       details: [
@@ -75,7 +91,7 @@ const Research: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-20">
+    <div className="max-w-7xl mx-auto px-4 py-20 relative"> {/* relative 추가 */}
       
       {/* ================= Header Section ================= */}
       <div className="text-center mb-20">
@@ -136,6 +152,33 @@ const Research: React.FC = () => {
           </div>
         ))}
       </div>
+
+      {/* [수정] 플로팅 버튼 (Home + Top) ========================================= */}
+      <div className={`fixed bottom-8 right-8 z-50 flex items-end gap-3 transition-all duration-300 ${
+          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}>
+        
+        {/* Home 버튼 */}
+        <a
+          href={import.meta.env.BASE_URL}
+          className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1 flex items-center justify-center"
+          aria-label="Go to Home"
+        >
+          <Home className="h-6 w-6" />
+        </a>
+
+        {/* Top 버튼 */}
+        <button
+          onClick={scrollToTop}
+          className="flex flex-col items-center justify-center w-14 h-14 bg-emerald-600 text-white rounded-2xl shadow-lg hover:bg-emerald-700 transition-all duration-300"
+          aria-label="Back to top"
+        >
+          <ArrowUp className="h-5 w-5 mb-0.5" />
+          <span className="text-[10px] font-bold leading-none">TOP</span>
+        </button>
+      </div>
+      {/* ========================================================================= */}
+
     </div>
   );
 };

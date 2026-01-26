@@ -1,7 +1,30 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Award, GraduationCap, Briefcase, BookOpen, Printer } from 'lucide-react';
+import React, { useState, useEffect } from 'react'; // [수정] useState, useEffect 추가
+import { 
+  Mail, Phone, MapPin, Award, GraduationCap, Briefcase, BookOpen, Printer,
+  ArrowUp, Home // [수정] ArrowUp, Home 아이콘 추가
+} from 'lucide-react';
 
 const Professor: React.FC = () => {
+  // [수정] Back to Top 버튼 상태 및 로직 추가 ==================================
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  // =========================================================================
+
   // 학력 데이터
   const education = [
     { year: '1995.3 - 2001.2', degree: 'Ph.D. in Mechanical Engineering', school: 'KAIST' },
@@ -63,21 +86,18 @@ const Professor: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-20">
+    <div className="max-w-7xl mx-auto px-4 py-20 relative"> {/* relative 추가 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
         
         {/* ================= Left Profile Sidebar ================= */}
         <div className="lg:col-span-1">
           <div className="sticky top-32">
             
-            {/* === 수정된 부분: w-64 클래스 추가로 너비 제한 (약 1/4 크기) === */}
             <div className="relative group w-64">
               <div className="absolute -inset-2 bg-emerald-100 rounded-3xl opacity-50 blur-xl group-hover:opacity-75 transition-opacity duration-500"></div>
-              {/* 이미지 경로 */}
               <img 
                 src="images/1_prof.jpg" 
                 alt="Professor Changkook Ryu" 
-                /* w-full은 부모(w-64)에 맞춰짐 */
                 className="relative w-full rounded-2xl object-cover shadow-xl grayscale-[0.1] group-hover:grayscale-0 transition-all"
               />
             </div>
@@ -111,8 +131,8 @@ const Professor: React.FC = () => {
 
               <div className="mt-10">
                 <a 
-                  href="https://scholar.google.com/citations?user=7IWeWVQAAAAJ&hl=ko&oi=sra"
-                  target="_blank"
+                  href="https://scholar.google.com/citations?user=7IWeWVQAAAAJ&hl=ko&oi=sra" 
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="block w-full text-center border-2 border-emerald-800 text-emerald-800 px-4 py-3 rounded-lg font-bold hover:bg-emerald-50 transition-colors"
                 >
@@ -183,7 +203,7 @@ const Professor: React.FC = () => {
             </div>
           </section>
 
-          {/* Honors and Awards (수정됨: 박스 제거 및 리스트 형태 적용) */}
+          {/* Honors and Awards */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
               <span className="w-2 h-8 bg-emerald-700 mr-4 rounded-full"></span>
@@ -201,6 +221,33 @@ const Professor: React.FC = () => {
 
         </div>
       </div>
+
+      {/* [수정] 플로팅 버튼 (Home + Top) ========================================= */}
+      <div className={`fixed bottom-8 right-8 z-50 flex items-end gap-3 transition-all duration-300 ${
+          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}>
+        
+        {/* Home 버튼 */}
+        <a
+          href={import.meta.env.BASE_URL}
+          className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1 flex items-center justify-center"
+          aria-label="Go to Home"
+        >
+          <Home className="h-6 w-6" />
+        </a>
+
+        {/* Top 버튼 */}
+        <button
+          onClick={scrollToTop}
+          className="flex flex-col items-center justify-center w-14 h-14 bg-emerald-600 text-white rounded-2xl shadow-lg hover:bg-emerald-700 transition-all duration-300"
+          aria-label="Back to top"
+        >
+          <ArrowUp className="h-5 w-5 mb-0.5" />
+          <span className="text-[10px] font-bold leading-none">TOP</span>
+        </button>
+      </div>
+      {/* ========================================================================= */}
+
     </div>
   );
 };

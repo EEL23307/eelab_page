@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Mail } from 'lucide-react';
+import React, { useState, useEffect } from 'react'; // [수정] useEffect 추가
+import { Mail, ArrowUp, Home } from 'lucide-react'; // [수정] ArrowUp, Home 추가
 
 // 데이터 타입 정의
 interface Member {
@@ -15,6 +15,26 @@ const People: React.FC = () => {
   // 탭 상태 관리
   const [activeTab, setActiveTab] = useState<'Current' | 'Alumni'>('Current');
   
+  // [수정] Back to Top & Home 버튼 상태/로직 추가 ==============================
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  // =========================================================================
+
   // 카테고리 정의 (Current)
   const currentCategories = [
     'Post Doc',
@@ -461,7 +481,7 @@ const People: React.FC = () => {
   const displayCategories = activeTab === 'Current' ? currentCategories : alumniCategories;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-20">
+    <div className="max-w-7xl mx-auto px-4 py-20 relative"> {/* relative 클래스 확인 */}
       
       {/* 탭 버튼 */}
       <div className="flex justify-center mb-20">
@@ -551,6 +571,32 @@ const People: React.FC = () => {
           );
         })}
       </div>
+
+      {/* [추가됨] 플로팅 버튼 (Home + Top) */}
+      <div className={`fixed bottom-8 right-8 z-50 flex items-end gap-3 transition-all duration-300 ${
+          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}>
+        
+        {/* Home 버튼 */}
+        <a
+          href={import.meta.env.BASE_URL}
+          className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1 flex items-center justify-center"
+          aria-label="Go to Home"
+        >
+          <Home className="h-6 w-6" />
+        </a>
+
+        {/* Top 버튼 */}
+        <button
+          onClick={scrollToTop}
+          className="flex flex-col items-center justify-center w-14 h-14 bg-emerald-600 text-white rounded-2xl shadow-lg hover:bg-emerald-700 transition-all duration-300"
+          aria-label="Back to top"
+        >
+          <ArrowUp className="h-5 w-5 mb-0.5" />
+          <span className="text-[10px] font-bold leading-none">TOP</span>
+        </button>
+      </div>
+
     </div>
   );
 };
