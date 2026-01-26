@@ -65,7 +65,9 @@ const Professor: React.FC = () => {
         {/* ================= Left Profile Sidebar ================= */}
         <div className="lg:col-span-1">
           <div className="sticky top-32">
-            <div className="relative group">
+            
+            {/* 사진 크기를 w-64 (약 256px)로 줄여서 선명하게 보이도록 수정 */}
+            <div className="relative group w-64">
               <div className="absolute -inset-2 bg-emerald-100 rounded-3xl opacity-50 blur-xl group-hover:opacity-75 transition-opacity duration-500"></div>
               {/* 이미지 경로: public/images/prof.jpg */}
               <img 
@@ -103,13 +105,16 @@ const Professor: React.FC = () => {
                 </a>
               </div>
 
-              <div className="mt-10 flex space-x-4">
-                <button className="flex-1 bg-emerald-800 text-white px-4 py-3 rounded-lg font-bold hover:bg-emerald-900 transition-colors shadow-lg shadow-emerald-900/10">
-                  CV Download
-                </button>
-                <button className="flex-1 border-2 border-emerald-800 text-emerald-800 px-4 py-3 rounded-lg font-bold hover:bg-emerald-50 transition-colors">
+              {/* 버튼 수정: CV 삭제 및 구글 스칼라 링크 연결 */}
+              <div className="mt-10">
+                <a 
+                  href="https://scholar.google.com/citations?user=7IWeWVQAAAAJ&hl=ko&oi=sra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center border-2 border-emerald-800 text-emerald-800 px-4 py-3 rounded-lg font-bold hover:bg-emerald-50 transition-colors"
+                >
                   Google Scholar
-                </button>
+                </a>
               </div>
             </div>
           </div>
