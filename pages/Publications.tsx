@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Search, ExternalLink, ArrowUp, Home } from 'lucide-react';
 
 // [중요] 분리한 데이터 파일들 불러오기
-// 경로가 ../data/.. 인 이유는 pages 폴더에서 한 단계 위로 올라가서 data 폴더를 찾기 때문입니다.
 import { Publication } from '../data/types';
 import { internationalJournals } from '../data/internationalJournals';
 import { koreanJournals } from '../data/koreanJournals';
@@ -136,14 +135,15 @@ const Publications: React.FC = () => {
                           {pub.journal}
                         </div>
                         
+                        {/* [수정됨] DOI 버튼 스타일 적용 (추천 2번) */}
                         {pub.doi && (
                             <a 
                               href={`https://doi.org/${pub.doi}`} 
                               target="_blank" 
                               rel="noopener noreferrer"
-                              className="inline-flex items-center text-[10px] font-black text-gray-400 hover:text-emerald-800 uppercase tracking-widest transition-all mt-2"
+                              className="inline-flex items-center px-3 py-1.5 mt-3 text-[11px] font-bold text-emerald-700 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition-colors uppercase tracking-wide"
                             >
-                              <ExternalLink className="h-3 w-3 mr-1" /> View Article
+                              <ExternalLink className="h-3 w-3 mr-1.5" /> View Article
                             </a>
                           )
                         }
@@ -162,9 +162,9 @@ const Publications: React.FC = () => {
           showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}>
         
-        {/* Home 버튼 (<a> 태그 사용 - 설치 필요 없음) */}
+        {/* Home 버튼 */}
         <a
-          href="/eelab_page/"
+          href={import.meta.env.BASE_URL}
           className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1 flex items-center justify-center"
           aria-label="Go to Home"
         >
