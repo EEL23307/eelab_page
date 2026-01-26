@@ -25,10 +25,10 @@ export interface Person {
 }
 
 export interface Publication {
-  id: number;
+  id: string;
   year: number;
-  authors: string;
   title: string;
+  authors: string;
   journal: string;
   doi?: string;
 }
