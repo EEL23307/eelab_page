@@ -33,6 +33,10 @@ const Professor: React.FC = () => {
 
   // 수상 경력 데이터
   const awards = [
+    '2025 한국환경에너지공학회 우수논문상(박기범 등)',
+    '2024 International Symposium on Clean Energy and Advanced Materials, Best Paper Award Second Prize(박성민 등)',
+    '2024 12th International Freiberg Conference on Circular Carbon Technologies, Award for Outstanding Presentation(남준영 등)',
+    '2022 한국환경에너지공학회 우수논문상(하선교 등)',
     '2022 한국에너지기후변화학회 우수논문발표상(박성민 등)',
     '2022 한국에너지기후변화학회 우수논문발표상(박지연 등)',
     '2021 한국열환경공학회 우수논문상(구윤하 등)',
@@ -69,9 +73,9 @@ const Professor: React.FC = () => {
             {/* 사진 크기를 w-64 (약 256px)로 줄여서 선명하게 보이도록 수정 */}
             <div className="relative group w-64">
               <div className="absolute -inset-2 bg-emerald-100 rounded-3xl opacity-50 blur-xl group-hover:opacity-75 transition-opacity duration-500"></div>
-              {/* 이미지 경로: public/images/prof.jpg */}
+              {/* 이미지 경로: public/images/prof_1.jpg */}
               <img 
-                src="images/prof_1.jpg" 
+                src="images/1_prof.jpg" 
                 alt="Professor Changkook Ryu" 
                 className="relative w-full aspect-[3/4] rounded-2xl object-cover shadow-xl grayscale-[0.1] group-hover:grayscale-0 transition-all"
               />
