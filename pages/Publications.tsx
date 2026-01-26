@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Search, ExternalLink, ArrowUp } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; // [추가] 홈 이동을 위한 Hook
+import { Search, ExternalLink, ArrowUp, Home } from 'lucide-react'; // [추가] Home 아이콘
 
 // 논문 데이터 타입 정의
 interface Publication {
@@ -8,16 +9,18 @@ interface Publication {
   title: string;
   authors: string;
   journal: string;
-  doi?: string; // 나중에 DOI 링크를 넣을 수 있도록 옵션으로 남겨둠
+  doi?: string;
 }
 
 const Publications: React.FC = () => {
-  // 탭 상태 관리
+  const navigate = useNavigate(); // [추가] 네비게이션 훅
+  const [activeTab, setActiveTab] = useState('International Journals');
+  const [searchTerm, setSearchTerm] = useState('');
   
-  // 1. 버튼이 보일지 말지 결정하는 상태 (기본값: 안 보임)
+  // Back to Top 버튼 상태
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  // 2. 스크롤을 감지하는 기능 (스크롤이 300px 넘어가면 버튼이 나타남)
+  // 스크롤 감지
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -31,13 +34,19 @@ const Publications: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 3. 버튼 누르면 맨 위로 부드럽게 올라가는 함수
+  // 맨 위로 이동
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-  const [activeTab, setActiveTab] = useState('International Journals');
-  const [searchTerm, setSearchTerm] = useState('');
 
+  // 홈으로 이동
+  const goToHome = () => {
+    navigate('/');
+    window.scrollTo(0, 0); // 홈으로 가면서 스크롤도 위로
+  };
   // 탭 목록
   const tabs = [
     'International Journals',
@@ -3608,17 +3617,15 @@ const Publications: React.FC = () => {
 ]
   };
 
-// 현재 탭의 데이터 가져오기
+// 현재 탭 데이터 가져오기 및 검색 필터링
   const currentPubs = publicationsData[activeTab] || [];
-
-  // 검색 필터링
+  
   const filteredPubs = currentPubs.filter(pub => 
     pub.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     pub.authors.toLowerCase().includes(searchTerm.toLowerCase()) ||
     pub.journal.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // 연도별 그룹화 (내림차순 정렬)
   const years = Array.from(new Set(filteredPubs.map(p => p.year))).sort((a, b) => b - a);
 
   return (
@@ -3650,7 +3657,7 @@ const Publications: React.FC = () => {
             key={tab}
             onClick={() => {
               setActiveTab(tab);
-              setSearchTerm(''); // 탭 변경 시 검색어 초기화
+              setSearchTerm('');
             }}
             className={`px-6 py-3 font-bold text-sm uppercase tracking-wide transition-all relative ${
               activeTab === tab
@@ -3679,23 +3686,15 @@ const Publications: React.FC = () => {
 
             return (
               <div key={year} className="relative">
-                {/* 연도 헤더 */}
                 <div className="flex items-center gap-4 mb-8">
                   <h3 className="text-3xl font-bold text-gray-900">{year}</h3>
                   <div className="flex-grow h-px bg-gradient-to-r from-emerald-100 to-transparent"></div>
                 </div>
                 
-                {/* 해당 연도 논문들 */}
                 <div className="space-y-8">
-                  {yearPubs.map((pub, idx) => (
-                    <div key={pub.id} className="group flex gap-6 items-start">
-                      {/* 번호 */}
-                      <div className="flex-shrink-0 text-emerald-300 font-bold text-lg pt-1 w-8">
-                        {String(idx + 1).padStart(2, '0')}
-                      </div>
-                      
-                      {/* 내용 */}
-                      <div className="flex-grow">
+                  {yearPubs.map((pub) => (
+                    <div key={pub.id} className="group">
+                      <div className="w-full">
                         <div className="text-xs font-bold text-emerald-700 mb-1 uppercase tracking-wider leading-relaxed">
                           {pub.authors}
                         </div>
@@ -3706,7 +3705,6 @@ const Publications: React.FC = () => {
                           {pub.journal}
                         </div>
                         
-                        {/* DOI 링크 (데이터가 있을 경우 표시) */}
                         {pub.doi && (
                             <a 
                               href={`https://doi.org/${pub.doi}`} 
@@ -3728,16 +3726,30 @@ const Publications: React.FC = () => {
         )}
       </div>
 
-      {/* [수정 6] Back to Top 버튼 UI */}
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 p-3 bg-emerald-600 text-white rounded-full shadow-lg hover:bg-emerald-700 transition-all duration-300 z-50 ${
+      {/* [수정됨] Floating Action Buttons (Home + Top) */}
+      <div className={`fixed bottom-8 right-8 z-50 flex items-end gap-3 transition-all duration-300 ${
           showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
-        }`}
-        aria-label="Back to top"
-      >
-        <ArrowUp className="h-6 w-6" />
-      </button>
+        }`}>
+        
+        {/* 1. 홈 버튼 (왼쪽) */}
+        <button
+          onClick={goToHome}
+          className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1"
+          aria-label="Go to Home"
+        >
+          <Home className="h-6 w-6" />
+        </button>
+
+        {/* 2. Top 버튼 (오른쪽) */}
+        <button
+          onClick={scrollToTop}
+          className="flex flex-col items-center justify-center w-14 h-14 bg-emerald-600 text-white rounded-2xl shadow-lg hover:bg-emerald-700 transition-all duration-300"
+          aria-label="Back to top"
+        >
+          <ArrowUp className="h-5 w-5 mb-0.5" />
+          <span className="text-[10px] font-bold leading-none">TOP</span>
+        </button>
+      </div>
 
     </div>
   );
