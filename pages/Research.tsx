@@ -8,7 +8,7 @@ const Research: React.FC = () => {
   const researchData = [
     {
       id: 1,
-      title: "Combustion and power generation from ammonia and hydrogen",
+      title: "Combustion and power generation from NH<sub>3</sub> and H<sub>2</sub>",
       image: "images/r1.bmp", 
       details: [
         <span>Cofiring of ammonia in coal power plants for low carbon electricity production</span>,
