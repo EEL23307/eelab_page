@@ -18,7 +18,7 @@ const Professor: React.FC = () => {
     { year: '2001.3 - 2002.8', role: 'Postdoc. Researcher', place: 'Dept. of Mechanical Engineering, KAIST' },
   ];
 
-  // 학회 활동 데이터 (요청하신 원문 그대로 적용)
+  // 학회 활동 데이터
   const activities = [
     { year: '2020.9~현재', content: '성균관대 스마트발전공학과(에너지공기업 석사과정 계약학과) 학과장' },
     { year: '2020.3~현재', content: 'Energies: Editorial board' },
@@ -68,7 +68,7 @@ const Professor: React.FC = () => {
             
             <div className="relative group">
               <div className="absolute -inset-2 bg-emerald-100 rounded-3xl opacity-50 blur-xl group-hover:opacity-75 transition-opacity duration-500"></div>
-              {/* 이미지 경로: 업스케일링 된 이미지 사용 */}
+              {/* 이미지 경로 */}
               <img 
                 src="images/prof_upscaled.jpg" 
                 alt="Professor Changkook Ryu" 
@@ -104,7 +104,6 @@ const Professor: React.FC = () => {
                 </a>
               </div>
 
-              {/* Google Scholar 버튼 */}
               <div className="mt-10">
                 <a 
                   href="https://scholar.google.com/citations?user=7IWeWVQAAAAJ&hl=ko&oi=sra"
@@ -160,7 +159,7 @@ const Professor: React.FC = () => {
             </div>
           </section>
 
-          {/* Academic Activities (수정됨) */}
+          {/* Academic Activities */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
               <span className="w-2 h-8 bg-emerald-700 mr-4 rounded-full"></span>
@@ -179,17 +178,17 @@ const Professor: React.FC = () => {
             </div>
           </section>
 
-          {/* Honors and Awards */}
+          {/* Honors and Awards (수정됨: 박스 제거 및 리스트 형태 적용) */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
               <span className="w-2 h-8 bg-emerald-700 mr-4 rounded-full"></span>
               Honors and Awards
             </h2>
-            <div className="space-y-4 bg-gray-50 p-8 rounded-2xl border border-gray-100">
+            <div className="space-y-4">
               {awards.map((award, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  <Award className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700 leading-relaxed">{award}</span>
+                <div key={idx} className="flex items-start gap-4">
+                  <Award className="h-5 w-5 text-emerald-600 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700 leading-relaxed font-medium">{award}</span>
                 </div>
               ))}
             </div>
