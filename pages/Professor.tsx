@@ -36,6 +36,7 @@ const Professor: React.FC = () => {
     '2025 한국환경에너지공학회 우수논문상 (박기범 등)',
     '2024 CEAM Symposium, Best Paper Award Second Prize (박성민 등)',
     '2024 12th International Freiberg Conference, Award for Outstanding Presentation (남준영 등)',
+    '2022 한국환경에너지공학회 우수논문상 (하선교 등)',
     '2022 한국에너지기후변화학회 우수논문발표상 (박성민 등)',
     '2022 한국에너지기후변화학회 우수논문발표상 (박지연 등)',
     '2021 한국열환경공학회 우수논문상 (구윤하 등)',
@@ -69,12 +70,14 @@ const Professor: React.FC = () => {
         <div className="lg:col-span-1">
           <div className="sticky top-32">
             
-            <div className="relative group">
+            {/* === 수정된 부분: w-64 클래스 추가로 너비 제한 (약 1/4 크기) === */}
+            <div className="relative group w-64">
               <div className="absolute -inset-2 bg-emerald-100 rounded-3xl opacity-50 blur-xl group-hover:opacity-75 transition-opacity duration-500"></div>
               {/* 이미지 경로 */}
               <img 
                 src="images/1_prof.jpg" 
                 alt="Professor Changkook Ryu" 
+                /* w-full은 부모(w-64)에 맞춰짐 */
                 className="relative w-full rounded-2xl object-cover shadow-xl grayscale-[0.1] group-hover:grayscale-0 transition-all"
               />
             </div>
