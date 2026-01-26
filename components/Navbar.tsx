@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // [수정 1] Leaf 제거
+import { Menu, X } from 'lucide-react';
 import { Page } from '../types';
-// import { LAB_NAME } from '../constants'; // 사용하지 않는다면 제거 가능
 
 interface NavbarProps {
   activeTab: Page;
@@ -32,8 +31,21 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           
-          {/* [수정 2] 로고 이미지로 교체된 부분 */}
-          <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('Home')}>
+          {/* [수정됨] 로고 영역: 학교 로고 + 연구실 로고 */}
+          {/* gap-3: 로고 사이 간격, items-center: 수직 중앙 정렬 */}
+          <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNavClick('Home')}>
+            
+            {/* 1. 학교 로고 (왼쪽) */}
+            <img 
+              src="images/school_logo.png" 
+              alt="School Logo" 
+              className="h-9 md:h-11 w-auto object-contain" 
+            />
+
+            {/* (옵션) 구분선: 두 로고 사이에 얇은 선을 넣고 싶으면 주석 해제하세요 */}
+            {/* <div className="h-4 w-px bg-gray-300"></div> */}
+
+            {/* 2. 연구실 로고 (오른쪽) */}
             <img 
               src="images/logo_green.png" 
               alt="Energy Engineering Lab Logo" 
