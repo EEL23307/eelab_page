@@ -196,6 +196,14 @@ const People: React.FC = () => {
         email: 'simwoohyun@kitech.re.kr',
         image: 'images/SWH.jpg' 
       },
+      {
+        name: '조희성',
+        engName: 'Cho Huisung',
+        year: '2026',
+        affiliation: '',
+        email: 'wcho1968@skku.edu',
+        image: 'images/CHS2.jpg' 
+      },
     ], 
     
     // ================= Alumni 데이터 (분리됨) =================
