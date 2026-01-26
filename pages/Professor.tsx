@@ -85,7 +85,6 @@ const Professor: React.FC = () => {
             <div className="mt-8">
               <h1 className="text-3xl font-bold text-gray-900 mb-1">Changkook Ryu</h1>
               <h2 className="text-xl text-gray-500 font-medium mb-4">(류창국)</h2>
-              <p className="text-lg text-emerald-800 font-bold mb-6">Professor</p>
               
               <div className="space-y-4 text-sm text-gray-600">
                 <div className="flex items-start">
