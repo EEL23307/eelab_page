@@ -1,5 +1,5 @@
 
-export type Page = 'Home' | 'Professor' | 'Research' | 'People' | 'Publications' | 'Contact';
+export type Page = 'Home' | 'Professor' | 'Research' | 'Publications' | 'People' | 'Photos' | 'Contact';
 
 export interface NewsItem {
   id: number;
