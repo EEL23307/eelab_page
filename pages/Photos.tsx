@@ -16,32 +16,47 @@ const Photos: React.FC = () => {
   const photoData: PhotoItem[] = [
     {
       id: 1,
-      src: "photos/photo_2020_survival.jpg",
-      date: "2020.01"
+      src: "photos/photo1811.jpg",
+      date: "2018.11"
     },
     {
       id: 2,
-      src: "photos/photo_2021_visit.jpg",
-      date: "2021.07"
+      src: "photos/photo1811-2.jpg",
+      date: "2018.11"
     },
     {
       id: 3,
-      src: "photos/photo_2021_dinner.jpg",
-      date: "2021.11"
+      src: "photos/photo2001.jpg",
+      date: "2020.01"
     },
     {
       id: 4,
-      src: "photos/photo_2022_spring.jpg",
-      date: "2022.05"
+      src: "photos/photo2107.jpg",
+      date: "2021.07"
     },
     {
       id: 5,
-      src: "photos/photo_2022_cafe.jpg",
-      date: "2022.07"
+      src: "photos/photo2111.jpg",
+      date: "2021.11"
     },
     {
       id: 6,
-      src: "photos/photo_2022_summer.jpg",
+      src: "photos/photo2205.jpg",
+      date: "2022.05"
+    },
+    {
+      id: 7,
+      src: "photos/photo2205-2.jpg",
+      date: "2022.05"
+    },
+    {
+      id: 8,
+      src: "photos/photo2207-1.jpg",
+      date: "2022.07"
+    },
+    {
+      id: 9,
+      src: "photos/photo2207-2.jpg",
       date: "2022.07"
     },
     // 여기에 새 사진 추가: { id: 7, src: "photos/새파일명.jpg", date: "..." },
