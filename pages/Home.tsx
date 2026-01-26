@@ -95,7 +95,7 @@ const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
         </h2>
         <div className="prose prose-lg text-gray-600 space-y-8 leading-relaxed mx-auto">
           <p className="text-2xl font-light text-gray-800 leading-snug break-keep">
-            에너지공학 연구실은 수소와 암모니아 등 저탄소 에너지기술, 바이오매스 및 바이오에너지, 에너지 플랜트 공정 설계, 전산유체역학, 화석 연료의 새로운 이용기술 관련 연구를 수행하고 있습니다.
+            에너지공학연구실은 수소와 암모니아 등 저탄소 에너지기술, 바이오매스 및 바이오에너지, 에너지 플랜트 공정 설계, 전산유체역학, 화석 연료의 새로운 이용기술 관련 연구를 수행하고 있습니다.
           </p>
 
           <div className="mt-8 text-left bg-gray-50 p-6 rounded-xl border border-gray-100">
