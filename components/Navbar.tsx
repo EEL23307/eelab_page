@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             
             {/* 1. 학교 로고 (왼쪽) */}
             <img 
-              src="images/school_logo.jpg" 
+              src="images/school_logo_1.jpg" 
               alt="School Logo" 
               className="h-9 md:h-11 w-auto object-contain" 
             />
