@@ -26,6 +26,8 @@ const App: React.FC = () => {
         return <Publications />;
       case 'People':
         return <People />;
+      case 'Photos':
+        return <Photos />;
       case 'Contact':
         return <Contact />;
       default:
