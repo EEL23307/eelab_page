@@ -33,14 +33,14 @@ const Professor: React.FC = () => {
 
   // 수상 경력 데이터
   const awards = [
-    '2025 한국환경에너지공학회 우수논문상(박기범 등)',
-    '2024 International Symposium on Clean Energy and Advanced Materials, Best Paper Award Second Prize(박성민 등)',
-    '2024 12th International Freiberg Conference on Circular Carbon Technologies, Award for Outstanding Presentation(남준영 등)',
+    '2025 한국환경에너지공학회 우수논문상 (박기범 등)',
+    '2024 CEAM Symposium, Best Paper Award Second Prize (박성민 등)',
+    '2024 12th International Freiberg Conference, Award for Outstanding Presentation (남준영 등)',
     '2022 한국환경에너지공학회 우수논문상(하선교 등)',
-    '2022 한국에너지기후변화학회 우수논문발표상(박성민 등)',
-    '2022 한국에너지기후변화학회 우수논문발표상(박지연 등)',
-    '2021 한국열환경공학회 우수논문상(구윤하 등)',
-    '2021 한국연소학회 최우수논문상(구두발표)(강우석 등)',
+    '2022 한국에너지기후변화학회 우수논문발표상 (박성민 등)',
+    '2022 한국에너지기후변화학회 우수논문발표상 (박지연 등)',
+    '2021 한국열환경공학회 우수논문상 (구윤하 등)',
+    '2021 한국연소학회 최우수논문상(구두발표) (강우석 등)',
     '2020 한국연소학회 최우수연구상',
     '2019 한국열환경공학회 학술상',
     '2019 한국연소학회 최우수논문상 (박정극 등)',
