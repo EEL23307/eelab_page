@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
       </div>
 
       {/* ================= Info Cards (Lab & Prof) ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-20">
         
         {/* 1. Energy Engineering Lab (연구실) */}
         <div className="bg-white p-8 rounded-3xl shadow-xl shadow-emerald-900/5 border border-emerald-50 hover:border-emerald-200 transition-all group">
@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
           <div className="space-y-4 text-gray-600 pl-2">
             <div className="flex items-start gap-4">
               <MapPin className="h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
-              <span>Room 23307 (제1공학관 23307호)</span>
+              <span>제1공학관 23307호)</span>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="h-5 w-5 text-emerald-500 shrink-0" />
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
           <div className="space-y-4 text-gray-600 pl-2">
             <div className="flex items-start gap-4">
               <MapPin className="h-5 w-5 text-emerald-500 mt-0.5 shrink-0" />
-              <span>Room 23318 (제1공학관 23318호)</span>
+              <span>제1공학관 23318호</span>
             </div>
             <div className="flex items-center gap-4">
               <Phone className="h-5 w-5 text-emerald-500 shrink-0" />
@@ -92,42 +92,35 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* ================= Address Section ================= */}
-      <div className="mb-8">
-        <div className="bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-lg">
-          <div className="flex items-center gap-3 mb-8 pb-4 border-b border-gray-100">
-             <div className="bg-gray-100 p-2 rounded-full">
-               <MapPin className="h-5 w-5 text-gray-600" />
-             </div>
-             <h2 className="text-xl font-bold text-gray-900">주소 (Mailing Address)</h2>
-          </div>
+      {/* ================= Address Section (박스 제거, 자연스러운 배치) ================= */}
+      <div className="mb-12 px-2">
+        <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+          <MapPin className="h-6 w-6 text-emerald-600" />
+          주소 (Mailing Address)
+        </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Left: Korean Address */}
-            <div className="space-y-3">
-               <p className="text-emerald-700 font-bold text-sm uppercase tracking-wide">Korean</p>
-               <p className="text-gray-900 font-bold text-lg leading-relaxed break-keep">
-                 경기도 수원시 장안구 서부로 2066<br />
-                 성균관대학교 자연과학캠퍼스 제1공학관
-               </p>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+           {/* Left: 한국어 주소 (굵고 진하게) */}
+           <div className="text-left">
+             <p className="text-xl md:text-2xl font-bold text-gray-900 leading-relaxed break-keep">
+               경기도 수원시 장안구 서부로 2066<br />
+               성균관대학교 자연과학캠퍼스 제1공학관
+             </p>
+           </div>
 
-            {/* Right: English Address */}
-            <div className="space-y-3 md:border-l md:border-gray-100 md:pl-10">
-               <p className="text-gray-400 font-bold text-sm uppercase tracking-wide">English</p>
-               <p className="text-gray-400 font-light text-base leading-relaxed">
-                 Engineering Building 1<br />
-                 Sungkyunkwan University (Natural Science Campus)<br />
-                 2066 Seobu-ro, Suwon, 16419, Korea
-               </p>
-            </div>
-          </div>
+           {/* Right: 영어 주소 (얇고 연하게 + 왼쪽 경계선으로 구분) */}
+           <div className="md:border-l-2 md:border-gray-100 md:pl-10">
+             <p className="text-lg text-gray-500 font-light leading-relaxed">
+               Engineering Building 1<br />
+               Sungkyunkwan University (Natural Science Campus)<br />
+               2066 Seobu-ro, Suwon, 16419, Korea
+             </p>
+           </div>
         </div>
       </div>
 
-      {/* ================= Map Section (Wide Rectangle) ================= */}
+      {/* ================= Map Section ================= */}
       <div className="w-full h-[450px] rounded-3xl overflow-hidden shadow-lg border border-gray-200 relative group">
-        {/* 구글 맵 Iframe: 좌표 핀 고정 및 줌인 적용 */}
         <iframe
           title="SKKU Location Map"
           width="100%"
