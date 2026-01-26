@@ -16,8 +16,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
     { label: 'Home', value: 'Home' },
     { label: 'Professor', value: 'Professor' },
     { label: 'Research', value: 'Research' },
-    { label: 'People', value: 'People' },
     { label: 'Publications', value: 'Publications' },
+    { label: 'People', value: 'People' },
+    { label: 'Photos', value: 'Photos' },
     { label: 'Contact', value: 'Contact' },
   ];
 
