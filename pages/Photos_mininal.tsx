@@ -88,27 +88,29 @@ const Photos: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-4 py-20">
         
-        {/* ================= Masonry Layout (Pinterest Style) ================= */}
-        <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4 px-4">
+        {/* ================= Minimal Grid Layout ================= */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
           {sortedPhotos.map((photo, index) => (
             <div 
               key={photo.id}
               onClick={() => openModal(index)}
-              className="break-inside-avoid cursor-pointer group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              className="group relative aspect-square cursor-pointer overflow-hidden bg-gray-200"
             >
               <img 
                 src={photo.src} 
                 alt={photo.date} 
-                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              {/* 호버 시 날짜 오버레이 */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white font-bold tracking-widest">{photo.date}</p>
+              {/* 중앙 날짜 오버레이 */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <p className="text-white font-serif text-lg tracking-widest border-b border-white pb-1">
+                  {photo.date}
+                </p>
               </div>
             </div>
           ))}
         </div>
-        {/* ================= End of Masonry Layout ================= */}
+        {/* ================= End of Minimal Grid ================= */}
 
       </div>
 
