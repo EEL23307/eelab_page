@@ -85,17 +85,6 @@ const Photos: React.FC = () => {
 
   return (
     <div className="bg-stone-50 min-h-screen relative">
-      
-      <div className="max-w-7xl mx-auto px-4 py-20">
-        {/* Header */}
-        <div className="mb-20 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4 tracking-tight font-serif italic">
-            Our Memories
-          </h1>
-          <p className="text-gray-400 font-light text-sm">
-            History of Energy Engineering Lab
-          </p>
-        </div>
 
         {/* ================= Timeline Layout ================= */}
         <div className="max-w-4xl mx-auto px-4 space-y-12 relative">
