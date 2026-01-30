@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             className="group flex items-center text-gray-400 hover:text-white transition-colors text-sm"
           >
-            <span>Sungkyunkwan University</span>
+            <span>성균관대학교 (SKKU)</span>
             <ExternalLink className="ml-2 h-3.5 w-3.5 opacity-50 group-hover:opacity-100 transition-opacity" />
           </a>
 
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             rel="noopener noreferrer"
             className="group flex items-center text-gray-400 hover:text-white transition-colors text-sm"
           >
-            <span>SKKU Mechanical Engineering</span>
+            <span>기계공학과 (SKKU ME)</span>
             <ExternalLink className="ml-2 h-3.5 w-3.5 opacity-50 group-hover:opacity-100 transition-opacity" />
           </a>
         </div>
