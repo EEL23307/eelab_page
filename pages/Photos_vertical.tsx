@@ -88,44 +88,42 @@ const Photos: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-4 py-20">
         
-        {/* ================= Bento Grid Layout ================= */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 auto-rows-[200px]">
-          {sortedPhotos.map((photo, index) => {
-            // 5번째 사진마다(0, 5, 10...) 큰 사이즈(2x2)로 설정하여 리듬감 부여
-            const isLarge = (index % 5 === 0); 
-            
-            return (
-              <div 
-                key={photo.id}
-                onClick={() => openModal(index)}
-                className={`
-                  relative cursor-pointer overflow-hidden rounded-2xl group shadow-md hover:shadow-xl transition-all duration-300
-                  ${isLarge ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1'}
-                `}
-              >
-                <img 
-                  src={photo.src} 
-                  alt={photo.date} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                
-                {/* 하단 그라데이션 및 날짜 오버레이 */}
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <p className="text-white font-bold text-lg tracking-wide border-b border-white/50 pb-1">
-                    {photo.date}
-                  </p>
+        {/* Header 영역 삭제됨 */}
+
+        {/* ================= Timeline Layout ================= */}
+        <div className="max-w-4xl mx-auto px-4 space-y-12 relative">
+          {/* 중앙 수직선 */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 md:-translate-x-1/2"></div>
+
+          {sortedPhotos.map((photo, index) => (
+            <div key={photo.id} className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+              
+              {/* 사진 영역 */}
+              <div className="w-full md:w-1/2 pl-12 md:pl-0" onClick={() => openModal(index)}>
+                <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300 border-4 border-white">
+                  <img src={photo.src} alt={photo.date} className="w-full h-full object-cover" />
                 </div>
               </div>
-            );
-          })}
+
+              {/* 중앙 점 */}
+              <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-white shadow-sm md:-translate-x-1/2 z-10"></div>
+
+              {/* 날짜 영역 (수정됨: 박스 제거, 글씨 확대) */}
+              <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
+                <span className="text-2xl font-bold text-gray-900 font-serif tracking-wide">
+                  {photo.date}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
-        {/* ================= End of Bento Grid ================= */}
+        {/* ================= End of Timeline Layout ================= */}
 
       </div>
 
       {/* Modal (Lightbox) */}
       {selectedPhotoIndex !== null && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4" onClick={closeModal}>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4" onClick={closeModal}>
           
           <button 
             onClick={closeModal}
@@ -138,24 +136,24 @@ const Photos: React.FC = () => {
             <img 
               src={sortedPhotos[selectedPhotoIndex].src} 
               alt={sortedPhotos[selectedPhotoIndex].date} 
-              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+              className="max-w-full max-h-[80vh] object-contain rounded shadow-2xl"
             />
             
-            <div className="mt-6 text-center">
-              <p className="text-white font-bold text-2xl tracking-widest font-serif">
+            <div className="mt-4 text-center">
+              <p className="text-white/80 font-serif text-xl tracking-widest">
                 {sortedPhotos[selectedPhotoIndex].date}
               </p>
             </div>
 
             <button 
               onClick={showPrev}
-              className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-16 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-md transition-all"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-md transition-all"
             >
               <ChevronLeft className="h-8 w-8" />
             </button>
             <button 
               onClick={showNext}
-              className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-16 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-md transition-all"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-md transition-all"
             >
               <ChevronRight className="h-8 w-8" />
             </button>
