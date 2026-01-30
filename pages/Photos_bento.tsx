@@ -193,32 +193,32 @@ const Photos: React.FC = () => {
         </div>
       </div>
 
-{/* Timeline Layout Code Snippet */}
-<div className="max-w-4xl mx-auto px-4 space-y-12 relative">
-  {/* 중앙 수직선 */}
-  <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 md:-translate-x-1/2"></div>
-
-  {sortedPhotos.map((photo, index) => (
-    <div key={photo.id} className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-      
-      {/* 사진 영역 */}
-      <div className="w-full md:w-1/2 pl-12 md:pl-0" onClick={() => openModal(index)}>
-        <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300 border-4 border-white">
-          <img src={photo.src} alt={photo.date} className="w-full h-full object-cover" />
+      {/* Bento Grid Code Snippet */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 auto-rows-[200px]">
+  {sortedPhotos.map((photo, index) => {
+    // 3번째 사진마다 큰 사이즈로 설정 (2x2)
+    const isLarge = (index % 5 === 0) || (index === 0); 
+    
+    return (
+      <div 
+        key={photo.id}
+        onClick={() => openModal(index)}
+        className={`
+          relative cursor-pointer overflow-hidden rounded-2xl group
+          ${isLarge ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1'}
+        `}
+      >
+        <img 
+          src={photo.src} 
+          alt={photo.date} 
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p className="text-white font-bold text-sm">{photo.date}</p>
         </div>
       </div>
-
-      {/* 중앙 점 */}
-      <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-white shadow-sm md:-translate-x-1/2 z-10"></div>
-
-      {/* 날짜 영역 */}
-      <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
-        <span className="inline-block px-4 py-1 bg-white rounded-full text-emerald-800 font-bold shadow-sm text-sm border border-emerald-100">
-          {photo.date}
-        </span>
-      </div>
-    </div>
-  ))}
+    );
+  })}
 </div>
   );
 };

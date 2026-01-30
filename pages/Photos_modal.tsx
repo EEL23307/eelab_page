@@ -193,33 +193,68 @@ const Photos: React.FC = () => {
         </div>
       </div>
 
-{/* Timeline Layout Code Snippet */}
-<div className="max-w-4xl mx-auto px-4 space-y-12 relative">
-  {/* 중앙 수직선 */}
-  <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 md:-translate-x-1/2"></div>
+      {/* Modal (Lightbox) */}
+      {selectedPhotoIndex !== null && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4" onClick={closeModal}>
+          
+          <button 
+            onClick={closeModal}
+            className="absolute top-6 right-6 text-white/50 hover:text-white p-2 transition-colors z-50"
+          >
+            <X className="h-8 w-8" />
+          </button>
 
-  {sortedPhotos.map((photo, index) => (
-    <div key={photo.id} className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-      
-      {/* 사진 영역 */}
-      <div className="w-full md:w-1/2 pl-12 md:pl-0" onClick={() => openModal(index)}>
-        <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300 border-4 border-white">
-          <img src={photo.src} alt={photo.date} className="w-full h-full object-cover" />
+          <div className="relative w-full max-w-5xl flex flex-col items-center justify-center" onClick={(e) => e.stopPropagation()}>
+            <img 
+              src={sortedPhotos[selectedPhotoIndex].src} 
+              alt={sortedPhotos[selectedPhotoIndex].date} 
+              className="max-w-full max-h-[80vh] object-contain rounded shadow-2xl"
+            />
+            
+            <div className="mt-4 text-center">
+              <p className="text-white/80 font-serif text-xl tracking-widest">
+                {sortedPhotos[selectedPhotoIndex].date}
+              </p>
+            </div>
+
+            <button 
+              onClick={showPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-md transition-all"
+            >
+              <ChevronLeft className="h-8 w-8" />
+            </button>
+            <button 
+              onClick={showNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-md transition-all"
+            >
+              <ChevronRight className="h-8 w-8" />
+            </button>
+          </div>
         </div>
+      )}
+
+      {/* Floating Buttons */}
+      <div className={`fixed bottom-8 right-8 z-50 flex items-end gap-3 transition-all duration-300 ${
+          showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+        }`}>
+        <a
+          href={import.meta.env.BASE_URL}
+          className="p-3 bg-white text-emerald-600 border border-emerald-100 rounded-full shadow-lg hover:bg-emerald-50 transition-all duration-300 mb-1 flex items-center justify-center"
+          aria-label="Go to Home"
+        >
+          <Home className="h-6 w-6" />
+        </a>
+        <button
+          onClick={scrollToTop}
+          className="flex flex-col items-center justify-center w-14 h-14 bg-emerald-600 text-white rounded-2xl shadow-lg hover:bg-emerald-700 transition-all duration-300"
+          aria-label="Back to top"
+        >
+          <ArrowUp className="h-5 w-5 mb-0.5" />
+          <span className="text-[10px] font-bold leading-none">TOP</span>
+        </button>
       </div>
 
-      {/* 중앙 점 */}
-      <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-white shadow-sm md:-translate-x-1/2 z-10"></div>
-
-      {/* 날짜 영역 */}
-      <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
-        <span className="inline-block px-4 py-1 bg-white rounded-full text-emerald-800 font-bold shadow-sm text-sm border border-emerald-100">
-          {photo.date}
-        </span>
-      </div>
     </div>
-  ))}
-</div>
   );
 };
 

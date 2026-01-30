@@ -193,29 +193,24 @@ const Photos: React.FC = () => {
         </div>
       </div>
 
-{/* Timeline Layout Code Snippet */}
-<div className="max-w-4xl mx-auto px-4 space-y-12 relative">
-  {/* 중앙 수직선 */}
-  <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 md:-translate-x-1/2"></div>
-
+{/* Minimal Grid Code Snippet */}
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 px-4">
   {sortedPhotos.map((photo, index) => (
-    <div key={photo.id} className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-      
-      {/* 사진 영역 */}
-      <div className="w-full md:w-1/2 pl-12 md:pl-0" onClick={() => openModal(index)}>
-        <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300 border-4 border-white">
-          <img src={photo.src} alt={photo.date} className="w-full h-full object-cover" />
-        </div>
-      </div>
-
-      {/* 중앙 점 */}
-      <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-white shadow-sm md:-translate-x-1/2 z-10"></div>
-
-      {/* 날짜 영역 */}
-      <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
-        <span className="inline-block px-4 py-1 bg-white rounded-full text-emerald-800 font-bold shadow-sm text-sm border border-emerald-100">
+    <div 
+      key={photo.id}
+      onClick={() => openModal(index)}
+      className="group relative aspect-square cursor-pointer overflow-hidden bg-gray-200"
+    >
+      <img 
+        src={photo.src} 
+        alt={photo.date} 
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      {/* 중앙 날짜 오버레이 */}
+      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <p className="text-white font-serif text-lg tracking-widest border-b border-white pb-1">
           {photo.date}
-        </span>
+        </p>
       </div>
     </div>
   ))}

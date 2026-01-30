@@ -193,27 +193,28 @@ const Photos: React.FC = () => {
         </div>
       </div>
 
-{/* Timeline Layout Code Snippet */}
-<div className="max-w-4xl mx-auto px-4 space-y-12 relative">
-  {/* 중앙 수직선 */}
-  <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 md:-translate-x-1/2"></div>
-
+{/* Gallery Style Code Snippet */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 px-8">
   {sortedPhotos.map((photo, index) => (
-    <div key={photo.id} className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-      
-      {/* 사진 영역 */}
-      <div className="w-full md:w-1/2 pl-12 md:pl-0" onClick={() => openModal(index)}>
-        <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg cursor-pointer hover:-translate-y-2 transition-transform duration-300 border-4 border-white">
-          <img src={photo.src} alt={photo.date} className="w-full h-full object-cover" />
-        </div>
+    <div 
+      key={photo.id}
+      onClick={() => openModal(index)}
+      className="group cursor-pointer"
+    >
+      {/* 사진 */}
+      <div className="overflow-hidden rounded-sm shadow-sm aspect-[3/2] mb-4">
+        <img 
+          src={photo.src} 
+          alt={photo.date} 
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105"
+        />
       </div>
-
-      {/* 중앙 점 */}
-      <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-emerald-500 rounded-full border-4 border-white shadow-sm md:-translate-x-1/2 z-10"></div>
-
-      {/* 날짜 영역 */}
-      <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
-        <span className="inline-block px-4 py-1 bg-white rounded-full text-emerald-800 font-bold shadow-sm text-sm border border-emerald-100">
+      {/* 캡션 */}
+      <div className="flex items-center justify-between border-t border-gray-300 pt-3">
+        <span className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] group-hover:text-emerald-600 transition-colors">
+          Date
+        </span>
+        <span className="text-lg font-serif text-gray-800">
           {photo.date}
         </span>
       </div>
