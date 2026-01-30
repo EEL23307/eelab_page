@@ -49,14 +49,14 @@ export const internationalConferences: Publication[] = [
         year: 2024,
         title: 'Effect of combustion temperature and oxygen concentrations of flue gas during NH3/CO/Air/Ar combustion using a lab-scale bubbling fluidized bed reactor',
         authors: 'Hotae Im, Sungjin Park, Sungho Jo, Taeyoung Mun',
-        journal: 'The 2024 International Symposium on Clean Energy and Advanced Materials, 20-23 November, Busan, Koreas (poster)'
+        journal: 'The 2024 International Symposium on Clean Energy and Advanced Materials, 20-23 November, Busan, Korea (poster)'
       },
       {
         id: 'ic-2024-3',
         year: 2024,
         title: 'An Experimental study on optimization of ammonia co-firing in an 1 MWth pulverized coal combustion system',
         authors: 'Woo-hyun Sim, Seong-hwan Hwang, Jae-wook Lee, Chang-hee Byun, Tae-young Chae, Won Yang, Chang-guk Ryu',
-        journal: 'The 2024 International Symposium on Clean Energy and Advanced Materials, 20-23 November, Busan, Koreas'
+        journal: 'The 2024 International Symposium on Clean Energy and Advanced Materials, 20-23 November, Busan, Korea'
       },
       {
         id: 'ic-2024-4',
