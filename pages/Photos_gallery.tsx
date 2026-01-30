@@ -88,29 +88,36 @@ const Photos: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-4 py-20">
         
-        {/* ================= Minimal Grid Layout ================= */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+        {/* ================= Gallery Style Grid ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 px-4 md:px-8">
           {sortedPhotos.map((photo, index) => (
             <div 
               key={photo.id}
               onClick={() => openModal(index)}
-              className="group relative aspect-square cursor-pointer overflow-hidden bg-gray-200"
+              className="group cursor-pointer"
             >
-              <img 
-                src={photo.src} 
-                alt={photo.date} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              {/* 중앙 날짜 오버레이 */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <p className="text-white font-serif text-lg tracking-widest border-b border-white pb-1">
+              {/* 사진 */}
+              <div className="overflow-hidden rounded-sm shadow-sm aspect-[3/2] mb-4">
+                <img 
+                  src={photo.src} 
+                  alt={photo.date} 
+                  // [수정됨] grayscale 제거 -> 기본 컬러로 표시
+                  className="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105"
+                />
+              </div>
+              {/* 캡션 */}
+              <div className="flex items-center justify-between border-t border-gray-300 pt-3">
+                <span className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] group-hover:text-emerald-600 transition-colors">
+                  Date
+                </span>
+                <span className="text-lg font-serif text-gray-800 font-medium">
                   {photo.date}
-                </p>
+                </span>
               </div>
             </div>
           ))}
         </div>
-        {/* ================= End of Minimal Grid ================= */}
+        {/* ================= End of Gallery Grid ================= */}
 
       </div>
 
