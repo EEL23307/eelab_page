@@ -101,8 +101,8 @@ const Photos: React.FC = () => {
                 <img 
                   src={photo.src} 
                   alt={photo.date} 
-                  // 처음엔 흑백(grayscale), 호버시 컬러(grayscale-0) + 확대 효과
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105"
+                  // [수정됨] grayscale 제거 -> 기본 컬러로 표시
+                  className="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105"
                 />
               </div>
               {/* 캡션 */}
