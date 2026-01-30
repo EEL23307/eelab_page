@@ -88,40 +88,42 @@ const Photos: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-4 py-20">
         
-        {/* ================= Gallery Style Grid ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 px-4 md:px-8">
-          {sortedPhotos.map((photo, index) => (
-            <div 
-              key={photo.id}
-              onClick={() => openModal(index)}
-              className="group cursor-pointer"
-            >
-              {/* 사진 */}
-              <div className="overflow-hidden rounded-sm shadow-sm aspect-[3/2] mb-4">
+        {/* ================= Bento Grid Layout ================= */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4 auto-rows-[200px]">
+          {sortedPhotos.map((photo, index) => {
+            // 5번째 사진마다(0, 5, 10...) 큰 사이즈(2x2)로 설정하여 리듬감 부여
+            const isLarge = (index % 5 === 0); 
+            
+            return (
+              <div 
+                key={photo.id}
+                onClick={() => openModal(index)}
+                className={`
+                  relative cursor-pointer overflow-hidden rounded-2xl group shadow-md hover:shadow-xl transition-all duration-300
+                  ${isLarge ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1'}
+                `}
+              >
                 <img 
                   src={photo.src} 
                   alt={photo.date} 
-                  // 처음엔 흑백(grayscale), 호버시 컬러(grayscale-0) + 확대 효과
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                
+                {/* 하단 그라데이션 및 날짜 오버레이 */}
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <p className="text-white font-bold text-lg tracking-wide border-b border-white/50 pb-1">
+                    {photo.date}
+                  </p>
+                </div>
               </div>
-              {/* 캡션 */}
-              <div className="flex items-center justify-between border-t border-gray-300 pt-3">
-                <span className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] group-hover:text-emerald-600 transition-colors">
-                  Date
-                </span>
-                <span className="text-lg font-serif text-gray-800 font-medium">
-                  {photo.date}
-                </span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
-        {/* ================= End of Gallery Grid ================= */}
+        {/* ================= End of Bento Grid ================= */}
 
       </div>
 
-      {/* ================= Modal (Lightbox) ================= */}
+      {/* Modal (Lightbox) */}
       {selectedPhotoIndex !== null && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4" onClick={closeModal}>
           
@@ -161,7 +163,7 @@ const Photos: React.FC = () => {
         </div>
       )}
 
-      {/* ================= Floating Buttons ================= */}
+      {/* Floating Buttons */}
       <div className={`fixed bottom-8 right-8 z-50 flex items-end gap-3 transition-all duration-300 ${
           showBackToTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
         }`}>
