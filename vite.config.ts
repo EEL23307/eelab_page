@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
     // 1. 현재 (GitHub Pages): '/eelab_page/' (반드시 레포지토리 이름과 같아야 함)
     // 2. 나중 (도메인 연결 시): '/' 로 변경 (eelab.skku.edu 연결 후)
     // ========================================================================
-    base: "/",
+    base: "/eelab_page/",
 
     plugins: [react()],
 
