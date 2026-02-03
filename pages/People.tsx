@@ -222,6 +222,14 @@ const People: React.FC = () => {
         email: 'wcho1968@skku.edu',
         image: 'images/CHS2.jpg' 
       },
+      {
+        name: '이경택',
+        engName: 'Lee Gyeongtaek',
+        year: '2026',
+        affiliation: '한국에너지기술연구원',
+        email: 'gyeogn166@skku.edu',
+        image: 'images/LKT.jpg' 
+      },
     ], 
     
     // ================= Alumni 데이터 (분리됨) =================
