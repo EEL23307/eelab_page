@@ -6,7 +6,7 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
     authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
-    journal: 'Fuel 405, under review, 2026.01 (Initial date submitted)',
+    journal: 'Fuel 405, under review, 2026.01',
   },
 
   {
