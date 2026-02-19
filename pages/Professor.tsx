@@ -117,11 +117,11 @@ const Professor: React.FC = () => {
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 mr-3 text-emerald-600 flex-shrink-0" />
-                  <span>Tel: +82-(0)31-299 4841</span>
+                  <span>Tel: +82-(0)31-299-4841</span>
                 </div>
                 <div className="flex items-center">
                   <Printer className="h-5 w-5 mr-3 text-emerald-600 flex-shrink-0" />
-                  <span>Fax: +82-(0)31-290 5889</span>
+                  <span>Fax: +82-(0)31-290-5889</span>
                 </div>
                 <a href="mailto:cryu@skku.edu" className="flex items-center hover:text-emerald-700 transition-colors">
                   <Mail className="h-5 w-5 mr-3 text-emerald-600 flex-shrink-0" />
