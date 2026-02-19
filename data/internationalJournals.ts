@@ -2,6 +2,14 @@ import { Publication } from './types';
 
 export const internationalJournals: Publication[] = [
   {
+    id: 'ij-2026-2',
+    year: 2026,
+    title: 'Development of a Dynamic SNCR Control Strategy for a Small-scale Waste Incinerator with Limited Instrumentation',
+    authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
+    journal: 'Fuel 405, under review, 2026.01 (Initial date submitted)',
+  },
+
+  {
     id: 'ij-2026-1',
     year: 2026,
     title: 'Emission characteristics of CO, NO and N2O from ammonia combustion in a fluidized bed',
@@ -9,6 +17,7 @@ export const internationalJournals: Publication[] = [
     journal: 'Fuel 405, 136445, 2026.02',
     doi: '10.1016/j.fuel.2025.136445'
   },
+
   // 2025
   {
     id: 'ij-2025-1',
