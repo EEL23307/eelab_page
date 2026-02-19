@@ -2,6 +2,13 @@ import { Publication } from '../types';
 
 export const koreanJournals: Publication[] = [
  {
+        id: 'kj-2025-1',
+        year: 2025,
+        title: '산업용 보일러의 무탄소 연료 전환에 따른 열 성능 평가',
+        authors: '안종환, 최현록, 양원, 류창국, 김성일*',
+        journal: '한국연소학회지 Vol.30, No.4, pp.1~18, 2025.12'
+      },
+ {
         id: 'kj-2024-1',
         year: 2024,
         title: '80 kWth급 미분탄 연소 시스템에서 음식 폐기물 기반 고형 연료 혼소시 연소 특성 연구',
