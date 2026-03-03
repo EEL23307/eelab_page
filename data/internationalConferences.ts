@@ -26,7 +26,7 @@ export const internationalConferences: Publication[] = [
         id: 'ic-2025-4',
         year: 2025,
         title: 'Analysis of pyrolysis kinetics and lignocellulosic composition from biomass thermogram using convolutional neural network',
-        authors: 'Heeyoon Kim, Sungmin Park, Changkook Ryu',
+        authors: 'Heeyoon Kim, Seongmin Park, Changkook Ryu',
         journal: '33rd European Biomass Conference & Exhibition, 9-12 June 2025, Valencia, Spain (poster)'
       },
       {
