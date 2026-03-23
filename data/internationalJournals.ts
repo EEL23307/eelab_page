@@ -2,21 +2,37 @@ import { Publication } from './types';
 
 export const internationalJournals: Publication[] = [
   {
-    id: 'ij-2026-2',
+    id: 'ij-2026-4',
     year: 2026,
-    title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
-    authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
-    journal: 'Fuel 405, under review, 2026.01',
-  },
-
+    title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
+    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
+    journal: 'Energy, under review, 2026.03'
+    // Under review 상태라 DOI 없음
+  },  
+{
+    id: 'ij-2026-3',
+    year: 2026,
+    title: 'Development of GRU-TCN hybrid rollout forecasting model of dynamic boiler behaviors under variable operating conditions of a coal-fired boiler',
+    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
+    journal: 'Energy and AI, under review, 2026.02'
+    // Under review 상태라 DOI 없음
+  },  
   {
-    id: 'ij-2026-1',
+    id: 'ij-2026-2',
     year: 2026,
     title: 'Emission characteristics of CO, NO and N2O from ammonia combustion in a fluidized bed',
     authors: 'Im H-T, Pak S-J, Kim S-J, Li D, Lee H, Ra H-W, Yoon S-M, Jo H, Yoon S-J, Ryu C*, Mun T-Y*',
     journal: 'Fuel 405, 136445, 2026.02',
     doi: '10.1016/j.fuel.2025.136445'
   },
+{
+    id: 'ij-2026-1',
+    year: 2026,
+    title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
+    authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
+    journal: 'Fuel 405, under review, 2026.01',
+  },
+
 
   // 2025
   {
@@ -32,17 +48,10 @@ export const internationalJournals: Publication[] = [
     year: 2025,
     title: 'Data-driven prediction and optimization of entrained-flow gasifier performance using reduced-order model and artificial neural network',
     authors: 'Nam J, Park S, Jang Y, Park J, Ryu C*',
-    journal: 'Energy, submitted, 2025.09'
+    journal: 'Energy, under review, 2025.09'
     // Submitted 상태라 DOI 없음
   },
-  {
-    id: 'ij-2025-3',
-    year: 2025,
-    title: 'Scenario-based forecasting and optimization of spray water flow in a coal-fired boiler attemperator using gated recurrent unit networks',
-    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
-    journal: 'Fuel, under review, 2025.09'
-    // Under review 상태라 DOI 없음
-  },
+
   // 2024
   {
     id: 'ij-2024-1',
