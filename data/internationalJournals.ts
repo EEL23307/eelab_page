@@ -22,7 +22,7 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Emission characteristics of CO, NO and N2O from ammonia combustion in a fluidized bed',
     authors: 'Im H-T, Pak S-J, Kim S-J, Li D, Lee H, Ra H-W, Yoon S-M, Jo H, Yoon S-J, Ryu C*, Mun T-Y*',
-    journal: 'Fuel 405, 136445, 2026.02',
+    journal: 'Fuel, Vol. 405, 136445, 2026.02',
     doi: '10.1016/j.fuel.2025.136445'
   },
 {
@@ -30,7 +30,7 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
     authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
-    journal: 'Fuel 405, under review, 2026.01',
+    journal: 'Fuel, under review, 2026.01',
   },
 
 
@@ -58,7 +58,7 @@ export const internationalJournals: Publication[] = [
     year: 2024,
     title: 'Derivation of kinetic parameters and lignocellulosic composition from thermogram of biomass pyrolysis using convolutional neural network',
     authors: 'Kim H, Jo H, Ryu C*',
-    journal: 'International Journal of Energy Research, Vol.2024, 6184508, 2024.12',
+    journal: 'International Journal of Energy Research, Vol. 2024, 6184508, 2024.12',
     doi: '10.1155/er/6184508'
   },
   {
@@ -74,7 +74,7 @@ export const internationalJournals: Publication[] = [
     year: 2024,
     title: 'Dynamic responses of key performance parameters to O2/coal ratio fluctuations in a commercial Shell coal gasifier: Insights from a pseudo-2D reduced order model',
     authors: 'Park S, Nam J, Kim M, Park J, Lee S, Ryu C*',
-    journal: 'Fuel, Vol.372, 132013, 2024.06',
+    journal: 'Fuel, Vol. 372, 132013, 2024.06',
     doi: '10.1016/j.fuel.2024.132013'
   },
   {
@@ -82,7 +82,7 @@ export const internationalJournals: Publication[] = [
     year: 2024,
     title: 'Design optimization of a cylindrical UV-C LED reactor for effective water disinfection with numerical simulations and test reactor fabrication',
     authors: 'Kang S, Bae J, Park S, Kim K, Lee J, Yoon C, Ryu C*',
-    journal: 'Journal of Environmental Chemical Engineering, Vol.12(2), 112366, 2024.04',
+    journal: 'Journal of Environmental Chemical Engineering, Vol. 12(2), 112366, 2024.04',
     doi: '10.1016/j.jece.2024.112366'
   },
   // 2023
@@ -107,7 +107,7 @@ export const internationalJournals: Publication[] = [
     year: 2023,
     title: 'Co-combustion of refuse plastic fuel from marine plastics with wood pellets in a fixed-bed: Identification of minimum cofiring ratio and ideal air flow rate',
     authors: 'Park JK, Yu S, Kim H, Jo H, Min K, Lee J, Heo J, Ryu C*',
-    journal: 'Fuel, Vol.344, 128092, 2023.07',
+    journal: 'Fuel, Vol. 344, 128092, 2023.07',
     doi: '10.1016/j.fuel.2023.128092'
   },
   {
@@ -115,7 +115,7 @@ export const internationalJournals: Publication[] = [
     year: 2023,
     title: 'Numerical modeling of methane pyrolysis in a bubble column of molten catalysts for clean hydrogen production',
     authors: 'Park S, Kim M, Koo Y, Kang D, Kim Y, Park J, Ryu C*',
-    journal: 'International Journal of Hydrogen Energy, Vol.48, pp.7385-7399, 2023.03',
+    journal: 'International Journal of Hydrogen Energy, Vol. 48, pp.7385-7399, 2023.03',
     doi: '10.1016/j.ijhydene.2022.11.068'
   },
   {
@@ -123,7 +123,7 @@ export const internationalJournals: Publication[] = [
     year: 2023,
     title: 'Numerical investigations on overfire air design for improved boiler operation and lower NOx emission in commercial wall-firing coal power plants',
     authors: 'Kang W, Jo H, Lee J, Jang K, Ryu C*',
-    journal: 'Applied Thermal Engineering, Vol.219, Part B, 119604, 2023.01',
+    journal: 'Applied Thermal Engineering, Vol. 219, Part B, 119604, 2023.01',
     doi: '10.1016/j.applthermaleng.2022.119604'
   },
   // 2022
@@ -140,7 +140,7 @@ export const internationalJournals: Publication[] = [
     year: 2022,
     title: 'Relationship between torrefaction severity, product properties, and pyrolysis characteristics of various biomass',
     authors: 'Yu S, Kim H (co-first author), Park J, Lee Y, Park Y-K, Ryu C*',
-    journal: 'International Journal of Energy Research, Vol.46(6), pp.8145-8157, 2022.05',
+    journal: 'International Journal of Energy Research, Vol. 46(6), pp.8145-8157, 2022.05',
     doi: '10.1002/er.7716'
   },
   {
@@ -148,7 +148,7 @@ export const internationalJournals: Publication[] = [
     year: 2022,
     title: 'A novel liquid air energy storage system using a combination of sensible and latent heat storage',
     authors: 'Ryu JY, Alford A, Lewis G, Ding Y, Li Y, Ahmad A, Kim H-J, Park S-H, Park J-P, Branch S, Yu S, Ryu C',
-    journal: 'Applied Thermal Engineering, Vol.203, 117890, 2022.02',
+    journal: 'Applied Thermal Engineering, Vol. 203, 117890, 2022.02',
     doi: '10.1016/j.applthermaleng.2021.117890'
   },
   // 2021
@@ -173,7 +173,7 @@ export const internationalJournals: Publication[] = [
     year: 2021,
     title: 'Mechanistic insights into the (im)mobilization of arsenic, cadmium, lead, and zinc in a multi-contaminated soil treated with different biochars',
     authors: 'El-Naggar A, Chang SX, Cai Y, Lee YH, Wang J, Wang S-L, Ryu C, Rinklebe J*, Ok YS*',
-    journal: 'Environment International, Vol.156, 106638, 2021.11',
+    journal: 'Environment International, Vol. 156, 106638, 2021.11',
     doi: '10.1016/j.envint.2021.106638'
   },
   {
@@ -181,7 +181,7 @@ export const internationalJournals: Publication[] = [
     year: 2021,
     title: 'Evaluation of abnormal burner operation in an entrained flow coal gasifier using numerical modeling',
     authors: 'Nam J, Kim M, Sohn G, Ryu C*, Kim B, Lee J',
-    journal: 'Applied Thermal Engineering, Vol.191, 116859, 2021.06',
+    journal: 'Applied Thermal Engineering, Vol. 191, 116859, 2021.06',
     doi: '10.1016/j.applthermaleng.2021.116859'
   },
   // 2020
@@ -190,7 +190,7 @@ export const internationalJournals: Publication[] = [
     year: 2020,
     title: 'Reduction of unburned carbon and NOx emissions from a pulverized-wood-pellet boiler retrofitted for fuel switching from coal',
     authors: 'Lee J, Yu S (co-first author), Park J, Jo H, Park JK, Ryu C*, Jeong Y',
-    journal: 'Energies, Vol.13, 5077, 2020.09',
+    journal: 'Energies, Vol. 13, 5077, 2020.09',
     doi: '10.3390/en13195077'
   },
   {
@@ -198,7 +198,7 @@ export const internationalJournals: Publication[] = [
     year: 2020,
     title: 'Synergistic effects of CO2 on ex situ catalytic pyrolysis of lignocellulosic biomass over a Ni/SiO2 catalyst',
     authors: 'Cho S, Jung S, Park Y, Tsang Y, Ryu C*, Kwon E',
-    journal: 'Journal of CO2 Utilization, Vol.39, 101182, 2020.07',
+    journal: 'Journal of CO2 Utilization, Vol. 39, 101182, 2020.07',
     doi: '10.1016/j.jcou.2020.101182'
   },
   {
@@ -206,7 +206,7 @@ export const internationalJournals: Publication[] = [
     year: 2020,
     title: 'New reduced-order model optimized for online dynamic simulation of a Shell coal gasifier',
     authors: 'Kim M, Ye I, Jo H, Ryu C*, Kim B, Lee J',
-    journal: 'Applied Energy, Vol.263, 114634, 2020.04',
+    journal: 'Applied Energy, Vol. 263, 114634, 2020.04',
     doi: '10.1016/j.apenergy.2020.114634'
   },
   {
@@ -214,7 +214,7 @@ export const internationalJournals: Publication[] = [
     year: 2020,
     title: 'Evaluation of a distributed combustion concept using 1-D modeling for pressurized oxy-combustion system with low flue gas recirculation',
     authors: 'Jafari H, Yang W*, Ryu C',
-    journal: 'Fuel, Vol.263, p.116723, 2020.03',
+    journal: 'Fuel, Vol. 263, p.116723, 2020.03',
     doi: '10.1016/j.fuel.2019.116723'
   },
   {
@@ -222,7 +222,7 @@ export const internationalJournals: Publication[] = [
     year: 2020,
     title: 'Particle temperature and flue gas emission of a burning single pellet in air and oxy-fuel combustion',
     authors: 'Mock C, Park H, Ryu C, Manovic V, Choi SC*',
-    journal: 'Combustion and Flame, Vol.213, pp.156-171, 2020.03',
+    journal: 'Combustion and Flame, Vol. 213, pp.156-171, 2020.03',
     doi: '10.1016/j.combustflame.2019.11.034'
   },
   {
@@ -230,7 +230,7 @@ export const internationalJournals: Publication[] = [
     year: 2020,
     title: 'Detailed assessment of mesh sensitivity for CFD simulation of coal combustion in a tangential-firing boiler',
     authors: 'Jo H, Kang K, Park JK, Ryu C*, Ahn H, Go Y',
-    journal: 'Journal of Mechanical Science and Technology, Vol.34(2), pp.917-930, 2020.02',
+    journal: 'Journal of Mechanical Science and Technology, Vol. 34(2), pp.917-930, 2020.02',
     doi: '10.1007/s12206-020-0141-4'
   },
   {
@@ -238,7 +238,7 @@ export const internationalJournals: Publication[] = [
     year: 2020,
     title: 'Biochar-induced metal immobilization and soil biogeochemical process: An integrated mechanistic approach',
     authors: 'El-Naggar A, Lee M-H, Hur J, Lee YH, Igalavithana AD, Shaheen SM, Ryu C, Rinklebe J, Tsang DCW*, Ok YS*',
-    journal: 'Science of The Total Environment, Vol.698(1), 134112, 2020.01',
+    journal: 'Science of The Total Environment, Vol. 698(1), 134112, 2020.01',
     doi: '10.1016/j.scitotenv.2019.134112'
   },
   // 2019
@@ -255,7 +255,7 @@ export const internationalJournals: Publication[] = [
     year: 2019,
     title: 'Optimization of air distribution to reduce NOx emission and unburned carbon for the retrofit of a 500 MWe tangential-firing coal boiler',
     authors: 'Jo H, Kang K, Park JK. Ryu C*, Ahn H, Go Y',
-    journal: 'Energies, Vol.12 (17), 3281, 2019.09',
+    journal: 'Energies, Vol. 12 (17), 3281, 2019.09',
     doi: '10.3390/en12173281'
   },
   {
@@ -263,7 +263,7 @@ export const internationalJournals: Publication[] = [
     year: 2019,
     title: 'Improving energy density and grindability of wood pellets by dry torrefaction',
     authors: 'Yu S, Park J, Kim M, Kim H, Ryu C*, Lee Y, Yang W, and Jeong Y',
-    journal: 'Energy & Fuels, Vol.33, pp.8632-8639, 2019.08',
+    journal: 'Energy & Fuels, Vol. 33, pp.8632-8639, 2019.08',
     doi: '10.1021/acs.energyfuels.9b01086'
   },
   {
@@ -271,7 +271,7 @@ export const internationalJournals: Publication[] = [
     year: 2019,
     title: 'Extended flat voltage profile of hard carbon synthesized using a two-step carbonization approach as an anode in sodium ion batteries',
     authors: 'Alvin S, Yoon D, Chandra C, Susanti RF, Chang W, Ryu C, Kim J*',
-    journal: 'Journal of Power Sources, Vol.430, pp.157-168, 2019.08',
+    journal: 'Journal of Power Sources, Vol. 430, pp.157-168, 2019.08',
     doi: '10.1016/j.jpowsour.2019.05.013'
   },
   {
@@ -287,7 +287,7 @@ export const internationalJournals: Publication[] = [
     year: 2019,
     title: 'Design evaluation of diesel-oxygen diffusion flame burner for start-up of high-pressure coal gasifier',
     authors: 'Park JK, Ryu C*, Lee SH, Jung W',
-    journal: 'Korean Journal of Chemical Engineering, Vol.36, pp.404-410, 2019.03.',
+    journal: 'Korean Journal of Chemical Engineering, Vol. 36, pp.404-410, 2019.03.',
     doi: '10.1007/s11814-018-0197-3'
   },
   {
@@ -295,7 +295,7 @@ export const internationalJournals: Publication[] = [
     year: 2019,
     title: 'Determination of effective reaction conditions for char gasification in an entrained flow reactor',
     authors: 'Sohn G, Ye I, Ryu C*, Ra HW, Yoon SM',
-    journal: 'Energy & Fuels, Vol.33, pp.148-158, 2019.01',
+    journal: 'Energy & Fuels, Vol. 33, pp.148-158, 2019.01',
     doi: '10.1021/acs.energyfuels.8b03465'
   },
   {
@@ -303,7 +303,7 @@ export const internationalJournals: Publication[] = [
     year: 2019,
     title: 'Clean and energy-efficient mass production of biochar by process integration: Evaluation of process concept',
     authors: 'Kim M, Park J, Yu S, Ryu C*, Park J',
-    journal: 'Chemical Engineering Journal, Vol.355, pp.840-849, 2019.01',
+    journal: 'Chemical Engineering Journal, Vol. 355, pp.840-849, 2019.01',
     doi: '10.1016/j.cej.2018.08.177'
   },
   {
@@ -311,7 +311,7 @@ export const internationalJournals: Publication[] = [
     year: 2019,
     title: 'Thermal resistance by slagging and its relationship with ash properties for six coal blends in a commercial coal-fired boiler',
     authors: 'Park H, Lee J, Kim H, Park S, Baek S, Ye I, Ryu C*',
-    journal: 'Fuel, Vol.235, pp.1377-1386, 2019.01',
+    journal: 'Fuel, Vol. 235, pp.1377-1386, 2019.01',
     doi: '10.1016/j.fuel.2018.08.134'
   },
   // 2018
@@ -320,7 +320,7 @@ export const internationalJournals: Publication[] = [
     year: 2018,
     title: 'Influence of soil properties and feedstocks on biochar potential for carbon mineralization and improvement of infertile soils',
     authors: 'El-Naggar A, Lee SS, Awad YM, Yang X, Ryu C, Rizwan M, Rinklebe J, Tsang DCW, Ok YS*',
-    journal: 'Geoderma, Vol.332, pp.100-108, 2018.12',
+    journal: 'Geoderma, Vol. 332, pp.100-108, 2018.12',
     doi: '10.1016/j.geoderma.2018.06.017'
   },
   {
@@ -328,7 +328,7 @@ export const internationalJournals: Publication[] = [
     year: 2018,
     title: 'Investigation of flame characteristics for various design parameters in a pulverized coal burner for oxy-fuel retrofitting',
     authors: 'Chae T, Yang W*, Ryu C, Park H',
-    journal: 'International Journal of Energy Research, vol.42, pp.3206-3217, 2018.08',
+    journal: 'International Journal of Energy Research, vol. 42, pp.3206-3217, 2018.08',
     doi: '10.1002/er.4063'
   },
   {
@@ -336,7 +336,7 @@ export const internationalJournals: Publication[] = [
     year: 2018,
     title: 'Effects of solvent participation and controlled product separation on biomass liquefaction: A case study of sewage sludge',
     authors: 'Prajitno H, Park JK, Ryu C, Park HY, Lim HS, Kim J*',
-    journal: 'Applied Energy, Vol.218, pp.402-416, 2018.05',
+    journal: 'Applied Energy, Vol. 218, pp.402-416, 2018.05',
     doi: '10.1016/j.apenergy.2018.03.008'
   },
   {
@@ -344,7 +344,7 @@ export const internationalJournals: Publication[] = [
     year: 2018,
     title: 'Review of the use of activated biochar for energy and environmental applications',
     authors: 'Lee HW, Kim Y-M, Kim S, Ryu C, Park SH, Park Y-K*',
-    journal: 'Carbon Letters, Vol.26, pp.1-10, 2018.04',
+    journal: 'Carbon Letters, Vol. 26, pp.1-10, 2018.04',
     doi: '10.5714/CL.2018.26.001'
   },
   {
@@ -352,7 +352,7 @@ export const internationalJournals: Publication[] = [
     year: 2018,
     title: 'Comparative characterization of a torrefied wood pellet under steam and nitrogen atmospheres',
     authors: 'Lee Y, Won Y*, Chae TY, Kang B, Park J, Ryu C*',
-    journal: 'Energy & Fuels, Vol.32, pp.5109-5114, 2018.04',
+    journal: 'Energy & Fuels, Vol. 32, pp.5109-5114, 2018.04',
     doi: '10.1021/acs.energyfuels.7b03067'
   },
   {
@@ -360,7 +360,7 @@ export const internationalJournals: Publication[] = [
     year: 2018,
     title: 'Effect of slag viscosity model on transient simulations of wall slag flow in an entrained coal gasifier',
     authors: 'Kim M, Ye I, Ryu C*',
-    journal: 'Korean Journal of Chemical Engineering, Vol.35 (5), pp. 1065-1072, 2018.01',
+    journal: 'Korean Journal of Chemical Engineering, Vol. 35 (5), pp. 1065-1072, 2018.01',
     doi: '10.1007/s11814-018-0008-x'
   },
   // 2017
@@ -369,7 +369,7 @@ export const internationalJournals: Publication[] = [
     year: 2017,
     title: 'High-yield bio-oil production from macroalgae (Saccharina japonica) in supercritical ethanol and its combustion behavior',
     authors: 'Zeb H, Park JK, Riaz A, Ryu C, Kim J*',
-    journal: 'Chemical Engineering Journal, Vol.327, pp.79-90, 2017.11',
+    journal: 'Chemical Engineering Journal, Vol. 327, pp.79-90, 2017.11',
     doi: '10.1016/j.cej.2017.06.078'
   },
   {
@@ -385,7 +385,7 @@ export const internationalJournals: Publication[] = [
     year: 2017,
     title: 'Slow pyrolyzed biochar from crop residues for soil metal(loid) immobilization and microbial community abundance in contaminated agricultural soils',
     authors: 'Igalavithana AD, Park J, Ryu C, Lee YH, Hashimoto Y, Huang L, Kwon EE, Ok YS*, Lee SS*',
-    journal: 'Chemosphere, Vol.177, pp.157-166, 2017.06',
+    journal: 'Chemosphere, Vol. 177, pp.157-166, 2017.06',
     doi: '10.1016/j.chemosphere.2017.02.112'
   },
   {
@@ -393,7 +393,7 @@ export const internationalJournals: Publication[] = [
     year: 2017,
     title: 'Numerical analysis on transient behaviors of slag layer in an entrained-flow coal gasifier',
     authors: 'Kim M, Ye I, Ryu C*',
-    journal: 'Fuel, Vol.196, pp.532-542, 2017.05',
+    journal: 'Fuel, Vol. 196, pp.532-542, 2017.05',
     doi: '10.1016/j.fuel.2017.02.002'
   },
   {
@@ -401,7 +401,7 @@ export const internationalJournals: Publication[] = [
     year: 2017,
     title: 'Efficient renewable fuel production from sewage sludge using a supercritical fluid route',
     authors: 'Prajitno H, Zeb H, Park J, Ryu C, Kim J*',
-    journal: 'Fuel, Vol.200, pp.146-152, 2017.03',
+    journal: 'Fuel, Vol. 200, pp.146-152, 2017.03',
     doi: '10.1016/j.fuel.2017.03.061'
   },
   // 2016
@@ -410,7 +410,7 @@ export const internationalJournals: Publication[] = [
     year: 2016,
     title: 'Analysis of performance for centrifugal steam compressor',
     authors: 'Kang S-H, Ryu C, Ko HS*',
-    journal: 'Journal of Mechanical Science and Technology, Vol.30 (12), pp.5521-5527, 2016.12',
+    journal: 'Journal of Mechanical Science and Technology, Vol. 30 (12), pp.5521-5527, 2016.12',
     doi: '10.1007/s12206-016-1120-7'
   },
   {
@@ -418,7 +418,7 @@ export const internationalJournals: Publication[] = [
     year: 2016,
     title: 'Characteristics of syngas reburning in a natural gas firing furnace - Effects of combustible gas species in the syngas',
     authors: 'Chae T, Lee J, Yang W*, Ryu C',
-    journal: 'Journal of Mechanical Science and Technology, Vol.30 (8), pp.3861-3868, 2016.08',
+    journal: 'Journal of Mechanical Science and Technology, Vol. 30 (8), pp.3861-3868, 2016.08',
     doi: '10.1007/s12206-016-0751-z'
   },
   {
@@ -434,7 +434,7 @@ export const internationalJournals: Publication[] = [
     year: 2016,
     title: 'Experimental study of fry-drying and melting system for industrial wastewater sludge',
     authors: 'Chae J-S, Choi S-A, Kim Y-H, Oh S-C, Ryu C, Ohm T-I*',
-    journal: 'Journal of Hazardous Materials, Vol.313, pp.78-84, 2016.08',
+    journal: 'Journal of Hazardous Materials, Vol. 313, pp.78-84, 2016.08',
     doi: '10.1016/j.jhazmat.2016.03.084'
   },
   {
@@ -442,7 +442,7 @@ export const internationalJournals: Publication[] = [
     year: 2016,
     title: 'Reduction of primary tar vapor from biomass by hot char particles in fixed bed gasification',
     authors: 'J Park, Y Lee, C Ryu*',
-    journal: 'Biomass and Bioenergy, Vol.90, pp.114-121, 2016.06',
+    journal: 'Biomass and Bioenergy, Vol. 90, pp.114-121, 2016.06',
     doi: '10.1016/j.biombioe.2016.04.001'
   },
   {
@@ -450,7 +450,7 @@ export const internationalJournals: Publication[] = [
     year: 2016,
     title: 'Non-catalytic upgrading of fast pyrolysis bio-oil in supercritical ethanol and combustion behavior of the upgraded oil',
     authors: 'Prajitno H, Insyani R, Park JK, Ryu C, Kim J*',
-    journal: 'Applied Energy, Vol.172, pp.12-22, 2016.06',
+    journal: 'Applied Energy, Vol. 172, pp.12-22, 2016.06',
     doi: '10.1016/j.apenergy.2016.03.093'
   },
   {
@@ -466,7 +466,7 @@ export const internationalJournals: Publication[] = [
     year: 2016,
     title: 'Partial oxidation of sewage sludge briquettes in a updraft fixed bed',
     authors: 'Kim M, Lee Y, Park J, Ryu C*, Ohm TI',
-    journal: 'Waste Management, Vol.49, pp.204-211, 2016.03',
+    journal: 'Waste Management, Vol. 49, pp.204-211, 2016.03',
     doi: '10.1016/j.wasman.2016.01.040'
   },
   // 2015
@@ -515,7 +515,7 @@ export const internationalJournals: Publication[] = [
     year: 2015,
     title: 'Effects of design/operating parameters and physical properties on slag thickness and heat transfer during coal gasification',
     authors: 'Ye I, Oh J, Ryu C*',
-    journal: 'Energies, Vol.8, pp.3370-3385, 2015.04',
+    journal: 'Energies, Vol. 8, pp.3370-3385, 2015.04',
     doi: '10.3390/en8053370'
   },
   {
@@ -531,7 +531,7 @@ export const internationalJournals: Publication[] = [
     year: 2015,
     title: 'Effects of detailed operating parameters on combustion in two 500 MWe coal-fired boilers of an identical design',
     authors: 'Yang J, Kim JA, Hong J, Kim M, Ryu C*, Kim YJ, Park HY, Baek SH',
-    journal: 'Fuel, Vol.144, pp.145-156, 2015. 03.',
+    journal: 'Fuel, Vol. 144, pp.145-156, 2015. 03.',
     doi: '10.1016/j.fuel.2014.12.017'
   },
   {
@@ -539,7 +539,7 @@ export const internationalJournals: Publication[] = [
     year: 2015,
     title: 'Hydrodeoxygenation of guaiacol over Pt/Al-SBA-15 catalysts',
     authors: 'Yu MJ, Park SH, Jeon JK, Ryu C, Sohn JM, Kim SC, Park Y-K*',
-    journal: 'Journal of Nanoscience and Nanotechnology, Vol.15(1), pp.527-531, 2015.01',
+    journal: 'Journal of Nanoscience and Nanotechnology, Vol. 15(1), pp.527-531, 2015.01',
     doi: '10.1166/jnn.2015.8362'
   },
   // 2014
@@ -548,7 +548,7 @@ export const internationalJournals: Publication[] = [
     year: 2014,
     title: 'Modeling and analysis of a syngas cooler with concentric evaporator channels in a coal gasification process',
     authors: 'Oh J, Ye I, Park S, Ryu C*, Park SK',
-    journal: 'Korean Journal of Chemical Engineering, Volume 31, pp 2136-2144, 2014.12',
+    journal: 'Korean Journal of Chemical Engineering, Vol. 31, pp 2136-2144, 2014.12',
     doi: '10.1007/s11814-014-0164-6'
   },
   {
@@ -572,7 +572,7 @@ export const internationalJournals: Publication[] = [
     year: 2014,
     title: 'Metal-mesh based transparent electrode on a 3-dimensional curved surface by electrohydrodynamic jet printing',
     authors: 'Seong B, Yoo H, Nguyen VD, Jang Y, Ryu C, Byun D*',
-    journal: 'Journal of Micromechanics and Microengineering, Vol.24(9), 097002, 2014.08',
+    journal: 'Journal of Micromechanics and Microengineering, Vol. 24(9), 097002, 2014.08',
     doi: '10.1088/0960-1317/24/9/097002'
   },
   {
@@ -588,7 +588,7 @@ export const internationalJournals: Publication[] = [
     year: 2014,
     title: 'Influence of reaction conditions on bio-oil production from pyrolysis of construction waste wood',
     authors: 'Kim JW, Lee HW, Lee IG, Jeon JK, Ryu C, Park SH, Jeong SC, Park Y-K*',
-    journal: 'Renewable Energy, Vol.65, pp.41-48, 2014.05',
+    journal: 'Renewable Energy, Vol. 65, pp.41-48, 2014.05',
     doi: '10.1016/j.renene.2013.07.009'
   },
   {
@@ -596,7 +596,7 @@ export const internationalJournals: Publication[] = [
     year: 2014,
     title: 'Copyrolysis of block polypropylene with particle board and medium density fiber',
     authors: 'Park HJ, Choi SJ, Heo HS, Yoo KS, Ryu C, Yim JH, Jeon JK, Park Y-K*',
-    journal: 'Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, Vol.36 (9), pp.958-965, 2014.05',
+    journal: 'Energy Sources, Part A: Recovery, Utilization, and Environmental Effects, Vol. 36 (9), pp.958-965, 2014.05',
     doi: '10.1080/15567036.2010.551263'
   },
   {
@@ -620,7 +620,7 @@ export const internationalJournals: Publication[] = [
     year: 2014,
     title: 'Highly stretchable piezoelectric-pyroelectric hybrid nanogenerator',
     authors: 'Lee JH, Lee KY, Gupta MK, Kim TY, Lee DY, Oh J, Ryu C, Yoo WJ, Kang CY, Yoon SJ, Yoo JB, Kim SW*',
-    journal: 'Advanced Materials, Vol.26 (5), pp.765-769, 2014.02',
+    journal: 'Advanced Materials, Vol. 26 (5), pp.765-769, 2014.02',
     doi: '10.1002/adma.201303570'
   },
   // 2013
@@ -637,7 +637,7 @@ export const internationalJournals: Publication[] = [
     year: 2013,
     title: 'Comparison of biochar properties from biomass residues produced by slow pyrolysis at 500 oC',
     authors: 'Lee Y, Park J, Ryu C*, Gang KS, Yang W, Park Y-K, Jung J, Hyun S',
-    journal: 'Bioresource Technology, Vol.148, pp.196-201, 2013.11',
+    journal: 'Bioresource Technology, Vol. 148, pp.196-201, 2013.11',
     doi: '10.1016/j.biortech.2013.08.135'
   },
   {
@@ -645,7 +645,7 @@ export const internationalJournals: Publication[] = [
     year: 2013,
     title: 'Assessment of combustion and heat transfer in Youngdong 100 MWe retrofit boiler for demonstration of oxy-coal combustion',
     authors: 'Kim JA, Ryu C*, Yang W, Kim Y, Park H, Kim HP',
-    journal: 'International Journal of Greenhouse Gas Control, Vol.17: 250-258, 2013.09',
+    journal: 'International Journal of Greenhouse Gas Control, Vol. 17: 250-258, 2013.09',
     doi: '10.1016/j.ijggc.2013.05.015'
   },
   {
@@ -653,7 +653,7 @@ export const internationalJournals: Publication[] = [
     year: 2013,
     title: 'Flow and heat transfer characteristics in the syngas quench system of a 300 MWe IGCC process',
     authors: 'Ye IS, Park S, Ryu C*, Park SK',
-    journal: 'Applied Thermal Engineering, Vol.58: 11-21, 2013.09',
+    journal: 'Applied Thermal Engineering, Vol. 58: 11-21, 2013.09',
     doi: '10.1016/j.applthermaleng.2013.04.006'
   },
   {
@@ -669,7 +669,7 @@ export const internationalJournals: Publication[] = [
     year: 2013,
     title: 'Characterization of cadmium removal from aqueous solution by biochar produced from a giant Miscanthus at different pyrolytic temperatures',
     authors: 'Kim WK, Kim YS, Hyun S, Ryu C, Park Y-K, Jung J*',
-    journal: 'Bioresource Technology, Vol.138:266-270, 2013.06',
+    journal: 'Bioresource Technology, Vol. 138:266-270, 2013.06',
     doi: '10.1016/j.biortech.2013.03.186'
   },
   {
