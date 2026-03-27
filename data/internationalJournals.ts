@@ -48,8 +48,8 @@ export const internationalJournals: Publication[] = [
     year: 2025,
     title: 'Data-driven prediction and optimization of entrained-flow gasifier performance using reduced-order model and artificial neural network',
     authors: 'Nam J, Park S, Jang Y, Park J, Ryu C*',
-    journal: 'Energy, under review, 2025.09'
-    // Submitted 상태라 DOI 없음
+    journal: 'Energy, accepted, 2025.09'
+    // 아직 DOI 없음
   },
 
   // 2024
