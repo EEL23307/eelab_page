@@ -230,6 +230,14 @@ const People: React.FC = () => {
         email: 'gyeogn166@skku.edu',
         image: 'images/LKT.jpg' 
       },
+      {
+        name: '이용우',
+        engName: 'Lee Yongwoo',
+        year: '2026',
+        affiliation: '',
+        email: 'hsjoa12121@skku.edu',
+        image: 'images/LYW.jpg' 
+      },
     ], 
     
     // ================= Alumni 데이터 (분리됨) =================
