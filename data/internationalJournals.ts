@@ -2,6 +2,15 @@ import { Publication } from './types';
 
 export const internationalJournals: Publication[] = [
   {
+    id: 'ij-2026-5',
+    year: 2026,
+    title: 'Data-driven prediction and optimization of entrained-flow gasifier performance using reduced-order model and artificial neural network',
+    authors: 'Nam J, Park S, Jang Y, Park J, Ryu C*',
+    journal: 'Energy, Vol. 351, 140895, 2026.05'
+    doi: '10.1016/j.energy.2026.140895'
+  },
+  
+{
     id: 'ij-2026-4',
     year: 2026,
     title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
@@ -42,16 +51,6 @@ export const internationalJournals: Publication[] = [
     authors: 'Choi H, Lee Y, Yang W, Ryu C, Kim S*',
     journal: 'Energy Conversion and Management, Vol. 341, 120051, 2025.10',
     doi: '10.1016/j.enconman.2025.120051'
-  },
-  {
-    id: 'ij-2025-2',
-    year: 2025,
-    title: 'Data-driven prediction and optimization of entrained-flow gasifier performance using reduced-order model and artificial neural network',
-    authors: 'Nam J, Park S, Jang Y, Park J, Ryu C*',
-    journal: 'Energy, Vol. 351, 140895, 2026.05'
-    doi: '10.1016/j.energy.2026.140895'
-
-
   },
 
   // 2024
