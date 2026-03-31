@@ -40,7 +40,7 @@ export const internationalJournals: Publication[] = [
     year: 2025,
     title: 'Performance evaluation of the natural gas combined cycle with various hydrogen co-firing rates',
     authors: 'Choi H, Lee Y, Yang W, Ryu C, Kim S*',
-    journal: 'Energy Conversion and Management 341, 120051, 2025.10',
+    journal: 'Energy Conversion and Management, Vol. 341, 120051, 2025.10',
     doi: '10.1016/j.enconman.2025.120051'
   },
   {
@@ -48,8 +48,10 @@ export const internationalJournals: Publication[] = [
     year: 2025,
     title: 'Data-driven prediction and optimization of entrained-flow gasifier performance using reduced-order model and artificial neural network',
     authors: 'Nam J, Park S, Jang Y, Park J, Ryu C*',
-    journal: 'Energy, accepted, 2025.09'
-    // 아직 DOI 없음
+    journal: 'Energy, Vol. 351, 140895, 2026.05'
+    doi: '10.1016/j.energy.2026.140895'
+
+
   },
 
   // 2024
