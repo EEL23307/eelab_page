@@ -9,23 +9,23 @@ export const internationalJournals: Publication[] = [
     journal: 'Energy, Vol. 351, 140895, 2026.05',
     doi: '10.1016/j.energy.2026.140895'
   },
-  
-{
+  {
     id: 'ij-2026-4',
+    year: 2026,
+    title: 'Development of a GRU-TCN hybrid forecasting model of dynamic steam behaviors under variable operating conditions of a coal-fired boiler',
+    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
+    journal: 'Energy, Submitted, 2026.04'
+    // Under review 상태라 DOI 없음
+  },  
+{
+    id: 'ij-2026-3',
     year: 2026,
     title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
     journal: 'Energy, under review, 2026.03'
     // Under review 상태라 DOI 없음
   },  
-{
-    id: 'ij-2026-3',
-    year: 2026,
-    title: 'Development of GRU-TCN hybrid rollout forecasting model of dynamic boiler behaviors under variable operating conditions of a coal-fired boiler',
-    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
-    journal: 'Energy and AI, under review, 2026.02'
-    // Under review 상태라 DOI 없음
-  },  
+
   {
     id: 'ij-2026-2',
     year: 2026,
