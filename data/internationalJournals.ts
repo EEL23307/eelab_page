@@ -14,7 +14,7 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Development of a GRU-TCN hybrid forecasting model of dynamic steam behaviors under variable operating conditions of a coal-fired boiler',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
-    journal: 'Energy, Submitted, 2026.04'
+    journal: 'Energy, under review, 2026.04'
     // Under review 상태라 DOI 없음
   },  
 {
