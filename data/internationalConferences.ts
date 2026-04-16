@@ -1,10 +1,32 @@
 import { Publication } from '../types';
 
 export const internationalConferences: Publication[] = [
-{
+	{
+        id: 'ic-2026-1',
+        year: 2026,
+        title: 'Numerical evaluation of ammonia co-firing strategies with coal in a 1000 MWe wall-firing boiler',
+        authors: 'SEONKYO HA, WOOSUK KANG, YUNHA KOO, SUNGJAE LEE,  CHANGKOOK RYU, DONGGYU KIM, KYOUNGIL PARK, SEHYUN BAEK',
+        journal: '15th European Conference on Industrial Furnaces and Boilers, 7-10 April 2026, Porto, Portugal (poster)'
+      },
+	{
+        id: 'ic-2026-2',
+        year: 2026,
+        title: 'Development of a scenario-based forecasting model using deep learning for optimizing attemperator spray water flow in a coal-fired boiler',
+        authors: 'YUNHA KOO, HYUNBIN JO, ARONG JANG, CHANGKOOK RYU',
+        journal: '15th European Conference on Industrial Furnace and Boilers, 7-10 April 2026, Porto, Portugal'
+      },
+	{
+        id: 'ic-2026-3',
+        year: 2026,
+        title: 'Development of global reaction mechanism of ammonia for CFD simulations on cofiring with pulverized coal',
+        authors: 'WOOSUK KANG, CHANGKOOK RYU',
+        journal: '15th European Conference on Industrial Furnaces and Boilers, 7-10 April 2026, Porto, Portugal'
+      },
+
+	{
         id: 'ic-2025-1',
         year: 2025,
-        title: 'Numerical study on Replacing COG with Low-Calorific LDG via Pure Oxygen Combustion in a Ladle for the Steelmaking Process',
+        title: 'Numerical study on replacing COG with low-calorific LDG via pure oxygen combustion in a Ladle for the steelmaking process',
         authors: 'Jeongho Lee, Yunchang Jang, Changkook Ryu, Taeyoung Kim',
         journal: 'The 2025 International Symposium on Clean Energy and Advanced Materials, 28 Nov-2 Dec 2025, Melbourne, Australia (poster)'
       },
@@ -18,7 +40,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2025-3',
         year: 2025,
-        title: 'AI-Enhanced Predictive Modeling for Operational Efficiency in Waste Incineration',
+        title: 'AI-enhanced predictive modeling for operational efficiency in waste incineration',
         authors: 'Seongmin Park, Heeyoon Kim, Hyunbin Jo, Dongmin Shin, Jaeho Lee, Jihoon Son , Yongkeun Yun , Changkook Ryu',
         journal: '33rd European Biomass Conference & Exhibition, 9-12 June 2025, Valencia, Spain (poster)'
       },
@@ -32,7 +54,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2025-5',
         year: 2025,
-        title: 'Numerical Investigation of Ammonia Co-firing Strategy in a 1000 MWe Opposed Wall-firing Coal Boiler',
+        title: 'Numerical investigation of ammonia co-firing strategy in a 1000 MWe opposed wall-firing coal boiler',
         authors: 'Seonkyo Ha, Woosuk Kang, Yunha Koo, Changkook Ryu, Donggyu Kim, Kyoungil Park, Sehyun Baek',
         journal: '15th Asia-Pacific Conference on Combustion, 18-22 May 2025, Singapore, Singapore'
       },
@@ -54,7 +76,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2024-3',
         year: 2024,
-        title: 'An Experimental study on optimization of ammonia co-firing in an 1 MWth pulverized coal combustion system',
+        title: 'An experimental study on optimization of ammonia co-firing in an 1 MWth pulverized coal combustion system',
         authors: 'Woo-hyun Sim, Seong-hwan Hwang, Jae-wook Lee, Chang-hee Byun, Tae-young Chae, Won Yang, Chang-guk Ryu',
         journal: 'The 2024 International Symposium on Clean Energy and Advanced Materials, 20-23 November, Busan, Korea'
       },
@@ -82,7 +104,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2024-7',
         year: 2024,
-        title: 'Numerical Analysis on NH3-Coal Cofiring Strategy in a 1000 MWe Opposed Wall-firing Boiler',
+        title: 'Numerical analysis on NH3-coal cofiring strategy in a 1000 MWe opposed wall-firing boiler',
         authors: 'Seonkyo Ha, Woosuk Kang, Yunha Koo, Changkook Ryu, Donggyu Kim, Kyoungil Park, Sehyun baek',
         journal: 'The 2024 International Symposium on Clean Energy and Advanced Materials, 20-23 November, Busan, Korea'
       },
@@ -110,7 +132,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2024-11',
         year: 2024,
-        title: 'CFD Evaluation of Ammonia Co-firing Strategy in a 1000 MWe Wall-firing Coal Boiler',
+        title: 'CFD evaluation of ammonia co-firing strategy in a 1000 MWe wall-firing coal boiler',
         authors: 'Seonkyo Ha, Woosuk Kang, Yunha Koo, Changkook Ryu, Donggyu Kim, Kyoungil Park, Sehyun Baek',
         journal: '3rd Symposium on Ammonia Energy, 23-26 September 2024, Shanghai, China'
       },
@@ -160,14 +182,14 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2023-5',
         year: 2023,
-        title: 'CFD Evaluation of NH3 Cofiring with Pulverized Coal in a Commercial Tangential-firing Boiler',
+        title: 'CFD evaluation of NH3 cofiring with pulverized coal in a commercial tangential-firing boiler',
         authors: 'Yunha Koo, Hyunbin Jo, Seonkyo Ha, Woosuk Kang, Jongmin Park, Sangbin Park, Jongmin Lee, Sehyun Baek, Changkook Ryu',
         journal: '14th Asia-Pacific Conference on Combustion, 14-18 May 2023, Kaohsiung, Taiwan'
       },
       {
         id: 'ic-2023-6',
         year: 2023,
-        title: 'Development of Global Combustion Mechanism of NH3 for Computational Fluid Dynamics on Cofiring with Pulverized Coal',
+        title: 'Development of global combustion mechanism of NH3 for computational fluid dynamics on cofiring with pulverized coal',
         authors: 'Woosuk Kang, Jongmin Park, Changkook Ryu',
         journal: '14th Asia-Pacific Conference on Combustion, 14-18 May 2023, Kaohsiung, Taiwan'
       },
@@ -212,7 +234,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2020-1',
         year: 2020,
-        title: 'Process Development for Large-scale Biochar Production by integration of Pyrolysis and Large Combustion Plant',
+        title: 'Process development for large-scale biochar production by integration of pyrolysis and large combustion plant',
         authors: 'Seunghan Yu, Heeyun Kim, Changkook Ryu, Minsu Kim',
         journal: '4th International Converence on Bioresources, Energy, Environment, and Materials Technology (BEEM 2020), 6-9 September 2020, Incheon, South Korea(Best student oral presentation)'
       },
@@ -447,7 +469,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2016-7',
         year: 2016,
-        title: 'Numerical Analysis of Bioliquid Combustion in a 400 MWe Oil-Fired Boiler',
+        title: 'Numerical analysis of bioliquid combustion in a 400 MWe oil-fired boiler',
         authors: 'Jongkeun Park, Sangbin Park, Changkook Ryu, Se Hyun Baek, Young Ju Kim, Ho Young Park',
         journal: 'The 9th International Conference on Combustion, Incineration-Pyrosis, Emission and Climate Change, 20-23, Sept., 2016, Kyoto, Japan'
       },
@@ -518,14 +540,14 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2015-7',
         year: 2015,
-        title: 'Field Demonstration and Numerical Simulations for Combustion of Bioliquids in Two Commercial Oil-Fired Power Plants',
+        title: 'Field demonstration and numerical simulations for combustion of bioliquids in two commercial oil-fired power plants',
         authors: 'C. Ryu, J-K. Park, S. Park, M-K. Kim, S-H. Beak, Y-J. Kim, H-Y. Park',
         journal: 'EUBCE 2015 - 23rd European Biomass Conference & Exhibition, 1-4 Jun., 2015, Vienna, Austria'
       },
       {
         id: 'ic-2015-8',
         year: 2015,
-        title: 'Combustion Characteristics of Sewage Sludge Pellets in a Fixed Bed Reactor',
+        title: 'Combustion characteristics of sewage sludge pellets in a fixed bed reactor',
         authors: 'M. Kim, C. Ryu, T. Ohm',
         journal: 'International Conference on Solid waste 2015, 19-23 May, 2015, Hongkong, China'
       },
@@ -555,21 +577,21 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2013-2',
         year: 2013,
-        title: 'Numerical Approaches to Retrofit of a Conventional Pulverized Coal Burner to an Oxy-Firing Burner',
+        title: 'Numerical approaches to retrofit of a conventional pulverized coal burner to an oxy-firing burner',
         authors: 'Chae T, Yang W, Ryu C',
         journal: '30th Annual International Pittsburgh Coal Conference, 15-18 Sept., 2013, Beijing, China (Poster)'
       },
       {
         id: 'ic-2013-3',
         year: 2013,
-        title: 'An Experimental Study on Slagging/Fouling Characteristics for Various Coals Using a 50kWth Pulverized Coal Combustion System',
+        title: 'An experimental study on slagging/fouling characteristics for various coals using a 50kWth pulverized coal combustion system',
         authors: 'Lee J,Kang K, Chae T, Na I, Yang W, Ryu C',
         journal: '30th Annual International Pittsburgh Coal Conference, 15-18 Sept., 2013, Beijing, China (Poster)'
       },
       {
         id: 'ic-2013-4',
         year: 2013,
-        title: 'Numerical Simulations of Oxy-Coal Combustion in Youngdong 100 MWe Retrofit Boiler',
+        title: 'Numerical simulations of oxy-coal combustion in youngdong 100 MWe retrofit boiler',
         authors: 'Kim JA, Park S, Ryu C, Yang W, Kim Y, Park H, Kim H',
         journal: '3rd Oxyfuel Combustion Conference, 9-13 Sept., 2013, Ponferrada, Spain'
       },
@@ -676,7 +698,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2011-4',
         year: 2011,
-        title: 'Numerical Simulations of a large scale oxy-coal burner',
+        title: 'Numerical simulations of a large scale oxy-coal burner',
         authors: 'Chae T, Park S, Ryu C, Yang W',
         journal: '7th Int. Symp. on Coal Combustion, 17-20 July, 2011, Harbin, China'
       },
@@ -720,7 +742,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2008-1',
         year: 2008,
-        title: 'Homogeneous and Heterogeneous Reactions of Pyrolysis Vapour from Biomass Gasification over a Bed of Hot Char',
+        title: 'Homogeneous and heterogeneous reactions of pyrolysis vapour from biomass gasification over a bed of hot char',
         authors: 'Gilbert P, Ryu C, Sharifi VN, Swithenbank J',
         journal: 'Second International Symposium on Energy from Biomass and Waste, 17-20, November 2008, Venice, Italy.'
       },
@@ -744,7 +766,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2005-1',
         year: 2005,
-        title: 'Fundamental Study of Biomass Thermal Technologies',
+        title: 'Fundamental study of biomass thermal technologies',
         authors: 'C Ryu, YB Yang, A Khor, V N Sharifi and J Swithenbank',
         journal: '14th European Biomass Conference and Exhibition, Palais des Congress, Paris, France, 17-21 October 2005.'
       },
@@ -766,7 +788,7 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2004-1',
         year: 2004,
-        title: 'Waste Pyrolysis, Generation and Exploitation of Storable Fuel Profit from Waste VII',
+        title: 'Waste pyrolysis, generation and exploitation of storable fuel profit from waste VII',
         authors: 'C Ryu, V N Sharifi and J Swithenbank',
         journal: 'IMechE, 27-28, October, 2004, London, UK'
       },
@@ -781,42 +803,42 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-2003-1',
         year: 2003,
-        title: 'Biomass Combustion (Plenary Lecture)',
+        title: 'Biomass combustion (Plenary Lecture)',
         authors: 'J Swithenbank, YB Yang, C Ryu, J Goodfellow, S Shabangu, N V Russell, F M Lewis, V N Sharifi',
         journal: 'European Combustion Meeting (ECM2003), Orléans, France October 25-28, 2003.'
       },
       {
         id: 'ic-2001-1',
         year: 2001,
-        title: 'Combined Bed Combustion and Gas Flow Simulation for a Grate Type Incinerator',
+        title: 'Combined bed combustion and gas flow simulation for a grate type incinerator',
         authors: 'C. Ryu, D. Shin & S. Choi',
         journal: 'The 3rd Int. Symp. on Incineration & Flue Gas Treatment Technologies, Bruselles, Belgium, 2001.7. 2-4'
       },
       {
         id: 'ic-2001-2',
         year: 2001,
-        title: 'Bed Combustion in a Furnace Enclosure - A Model for the MSW Incinerator',
+        title: 'Bed combustion in a furnace enclosure - A model for the MSW incinerator',
         authors: 'C. Ryu, D. Shin & S. Choi',
         journal: 'The 3rd Asian-Pacific Conference on Combustion, Seoul, Korea, 2001. 6.24-27'
       },
       {
         id: 'ic-2000-1',
         year: 2000,
-        title: 'Combined Bed Combustion and Gas Flow Simulation for a Grate Type Incinerator',
+        title: 'Combined bed combustion and gas flow simulation for a grate type incinerator',
         authors: 'C. Ryu, D. Shin & S. Choi',
         journal: '4th JSME-KSME Thermal Engineering Conference, Kobe, Japan, 2000'
       },
       {
         id: 'ic-1999-1',
         year: 1999,
-        title: 'Simulation of Waste Bed Combustion in the Municipal Solid Waste Incinerator',
+        title: 'Simulation of waste bed combustion in the municipal solid waste incinerator',
         authors: 'C. Ryu, D. Shin and S. Choi',
         journal: 'The 2nd Int. Symp. on Incineration & Flue Gas Treatment Technologies, Sheffield Univ., UK, 1999.'
       },
       {
         id: 'ic-1999-2',
         year: 1999,
-        title: 'Influence of Operation Parameters of MSW Incinerator on Dioxin/Furan Emission and Optimisation of Operaing Condition',
+        title: 'Influence of operation parameters of MSW incinerator on dioxin/furan emission and optimisation of operaing condition',
         authors: 'J. H. Choi, C. Ryu, W. Yang and S. Choi',
         journal: 'The 2nd Int. Symp. on Incineration & Flue Gas Treatment Technologies, Sheffield Univ., UK, 1999.'
       },
@@ -837,14 +859,14 @@ export const internationalConferences: Publication[] = [
       {
         id: 'ic-1996-2',
         year: 1996,
-        title: 'Numerical Simulation on the Mixing Characteristics of the Cross Jets Interaction as Applied to the MSW Incinerators',
+        title: 'Numerical simulation on the mixing characteristics of the cross jets interaction as applied to the MSW incinerators',
         authors: 'C. Ryu and S. Choi',
         journal: '1st KSME-JSME Thermal Engineering Conference, Kyung-ju, Korea, 1996.'
       },
       {
         id: 'ic-1995-1',
         year: 1995,
-        title: 'Design Consideration for the Cross Jet Air Mixing in the MSW Incinerators',
+        title: 'Design consideration for the cross jet air mixing in the MSW incinerators',
         authors: 'C. Ryu and S. Choi',
         journal: 'ASME IMECE Symp.; Fire and Combustion Systems, pp.205-212, 1995.'
       }

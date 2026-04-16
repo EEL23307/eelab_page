@@ -2,15 +2,15 @@ import { Publication } from './types';
 
 export const internationalJournals: Publication[] = [
   {
-    id: 'ij-2026-5',
+    id: 'ij-2026-6',
     year: 2026,
-    title: 'Data-driven prediction and optimization of entrained-flow gasifier performance using reduced-order model and artificial neural network',
-    authors: 'Nam J, Park S, Jang Y, Park J, Ryu C*',
-    journal: 'Energy, Vol. 351, 140895, 2026.05',
-    doi: '10.1016/j.energy.2026.140895'
-  },
+    title: 'Development of an optimized global NH3 mechanism and one-step CFD framework for accurate NO prediction in coal–NH3 cofiring',
+    authors: 'KANG W, HA S, JANG Y, KOO Y, PARK K, BAEK S, RYU C*',
+    journal: 'Energy, submitted, 2026.04'
+    // Under review 상태라 DOI 없음
+  },  
   {
-    id: 'ij-2026-4',
+    id: 'ij-2026-5',
     year: 2026,
     title: 'Development of a GRU-TCN hybrid forecasting model of dynamic steam behaviors under variable operating conditions of a coal-fired boiler',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
@@ -18,29 +18,38 @@ export const internationalJournals: Publication[] = [
     // Under review 상태라 DOI 없음
   },  
 {
-    id: 'ij-2026-3',
+    id: 'ij-2026-4',
     year: 2026,
     title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
     journal: 'Energy, under review, 2026.03'
     // Under review 상태라 DOI 없음
   },  
-
+{
+    id: 'ij-2026-3',
+    year: 2026,
+    title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
+    authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
+    journal: 'Fuel, accepted, 2026.01',
+   // 아직 publish 안됐음
+  },
   {
     id: 'ij-2026-2',
+    year: 2026,
+    title: 'Data-driven prediction and optimization of entrained-flow gasifier performance using reduced-order model and artificial neural network',
+    authors: 'Nam J, Park S, Jang Y, Park J, Ryu C*',
+    journal: 'Energy, Vol. 351, 140895, 2026.05',
+    doi: '10.1016/j.energy.2026.140895'
+  },
+  {
+    id: 'ij-2026-1',
     year: 2026,
     title: 'Emission characteristics of CO, NO and N2O from ammonia combustion in a fluidized bed',
     authors: 'Im H-T, Pak S-J, Kim S-J, Li D, Lee H, Ra H-W, Yoon S-M, Jo H, Yoon S-J, Ryu C*, Mun T-Y*',
     journal: 'Fuel, Vol. 405, 136445, 2026.02',
     doi: '10.1016/j.fuel.2025.136445'
   },
-{
-    id: 'ij-2026-1',
-    year: 2026,
-    title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
-    authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
-    journal: 'Fuel, under review, 2026.01',
-  },
+
 
 
   // 2025
@@ -873,7 +882,7 @@ export const internationalJournals: Publication[] = [
   {
     id: 'ij-2008-1',
     year: 2008,
-    title: 'Pelletised Fuel Production from Coal Tailings and Spent Mushroom Compost - Part I. Identification of Pelletisation Parameters',
+    title: 'Pelletised fuel production from coal tailings and spent mushroom compost - Part I. Identification of pelletisation parameters',
     authors: 'Ryu C*, Finney K, Sharifi V N and Swithenbank J',
     journal: 'Fuel Processing Technology, Vol.89(3): 269-275, 2008.3',
     doi: '10.1016/j.fuproc.2007.11.035'
@@ -881,7 +890,7 @@ export const internationalJournals: Publication[] = [
   {
     id: 'ij-2008-2',
     year: 2008,
-    title: 'Pelletised Fuel Production from Coal Tailings and Spent Mushroom Compost - Part II. Economic Feasibility Based on Cost Analysis',
+    title: 'Pelletised fuel production from coal tailings and spent mushroom compost - Part II. Economic feasibility based on cost analysis',
     authors: 'Ryu C*, Khor A, Sharifi V N and Swithenbank J',
     journal: 'Fuel Processing Technology, Vol.89(3): 276-283, 2008.3',
     doi: '10.1016/j.fuproc.2007.11.027'
@@ -889,7 +898,7 @@ export const internationalJournals: Publication[] = [
   {
     id: 'ij-2008-3',
     year: 2008,
-    title: 'Characterisation of Slow Pyrolysis Products from Segregated Wastes for Energy Production',
+    title: 'Characterisation of slow pyrolysis products from segregated wastes for energy production',
     authors: 'Phan NA, Ryu C*, Sharifi V N and Swithenbank J',
     journal: 'Journal of Analytical and Applied Pyrolysis, Vol.81(1): 65-71, 2008.1',
     doi: '10.1016/j.jaap.2007.09.001'
