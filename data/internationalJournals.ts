@@ -6,7 +6,7 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Development of an optimized global NH3 mechanism and one-step CFD framework for accurate NO prediction in coal–NH3 cofiring',
     authors: 'KANG W, HA S, JANG Y, KOO Y, PARK K, BAEK S, RYU C*',
-    journal: 'Energy, submitted, 2026.04'
+    journal: 'Applied thermal engineering, under review, 2026.04'
     // Under review 상태라 DOI 없음
   },  
   {
@@ -30,8 +30,8 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
     authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
-    journal: 'Fuel, accepted, 2026.01',
-   // 아직 publish 안됐음
+    journal: 'Fuel, Vol. 426, 139484, 2026.12',
+    doi: '10.1016/j.fuel.2026.139484'
   },
   {
     id: 'ij-2026-2',
