@@ -101,7 +101,7 @@ const People: React.FC = () => {
         engName: 'Park Gibeom',
         year: '2025',
         affiliation: '',
-        email: 'qkrrlaqa98@skku.edu',
+        email: 'qkrrlqja98@skku.edu',
         image: 'images/PGB.jpg' 
       },
       {
