@@ -311,7 +311,7 @@ const People: React.FC = () => {
       {
         name: '조현빈',
         engName: 'Jo Hyunbin',
-        year: '2024',
+        year: '2023',
         affiliation: '한국에너지기술연구원',
         email: '',
         image: 'images/JHB.jpg' 
@@ -319,7 +319,7 @@ const People: React.FC = () => {
       {
         name: '김희윤',
         engName: 'Kim Heeyoon',
-        year: '2025',
+        year: '2024',
         affiliation: '한국생산기술연구원',
         email: '',
         image: 'images/KHY.jpg' 
