@@ -172,28 +172,12 @@ const People: React.FC = () => {
         image: 'images/LSJ.jpg' 
       },
       {
-        name: '장윤창',
-        engName: 'Jang Yunchang',
-        year: '2025',
-        affiliation: '',
-        email: 'rmagh346@skku.edu',
-        image: 'images/JYC.jpg' 
-      },
-      {
         name: '안종환',
         engName: 'An Jonghwan',
         year: '2025',
         affiliation: '한국생산기술연구원',
         email: 'ajh0420@kitech.re.kr',
         image: 'images/AJH.jpg' 
-      },
-      {
-        name: '김형석',
-        engName: 'Kim Hyungseok',
-        year: '2025',
-        affiliation: '한국생산기술연구원',
-        email: 'k3k153@kitech.re.kr',
-        image: 'images/KHS.jpg' 
       },
       {
         name: '이승연',
@@ -213,6 +197,22 @@ const People: React.FC = () => {
         affiliation: '한국생산기술연구원',
         email: 'simwoohyun@kitech.re.kr',
         image: 'images/SWH.jpg' 
+      },
+      {
+        name: '장윤창',
+        engName: 'Jang Yunchang',
+        year: '2025',
+        affiliation: '',
+        email: 'rmagh346@skku.edu',
+        image: 'images/JYC.jpg' 
+      },
+      {
+        name: '김형석',
+        engName: 'Kim Hyungseok',
+        year: '2025',
+        affiliation: '한국생산기술연구원',
+        email: 'k3k153@kitech.re.kr',
+        image: 'images/KHS.jpg' 
       },
       {
         name: '조희성',
