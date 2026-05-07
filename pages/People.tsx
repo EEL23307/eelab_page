@@ -426,6 +426,14 @@ const People: React.FC = () => {
         image: 'images/KSM.jpg'
       },
       {
+        name: 'Hamed Jafari',
+        engName: 'Hamed Jafari',
+        year: '2019',
+        affiliation: '',
+        email: '',
+        image: 'images/JH.jpg'
+      },
+      {
         name: '안성민',
         engName: 'An Seongmin',
         year: '2019',
@@ -459,14 +467,7 @@ const People: React.FC = () => {
         email: '',
         image: 'images/CSB.jpg'
       },
-      {
-        name: 'Hamed Jafari',
-        engName: 'Hamed Jafari',
-        year: '2019',
-        affiliation: '',
-        email: '',
-        image: 'images/JH.jpg'
-      },
+
       {
         name: '박종민',
         engName: 'Park Jongmin',
