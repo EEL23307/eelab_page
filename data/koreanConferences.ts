@@ -2,7 +2,21 @@ import { Publication } from '../types';
 
 export const koreanConferences: Publication[] = [
 {
-  id: 'kc-2026-1',
+  id: 'kc-2026-5',
+  year: 2026,
+  title: 'AI를 활용한 석탄화력 보일러 NOx 및 성능 예측 모델과 운전 최적화 기법 개발',
+  authors: '구윤하, 조현빈, 장아롱, 류창국',
+  journal: '2026 한국에너지기후변화학회 춘계학술대회, 2026.5.20-22, 대전'
+},
+{
+  id: 'kc-2026-4',
+  year: 2026,
+  title: '전산해석을 통한 배열회수보일러 증발기 수관 내·외부 유동 및 열전달 특성 분석',
+  authors: '이성재, 이창민, 전민정, 김범신, 류창국',
+  journal: '2026 한국에너지기후변화학회 춘계학술대회, 2026.5.20-22, 대전'
+},
+{
+  id: 'kc-2026-3',
   year: 2026,
   title: '고로 Raceway 형상 인자에 따른 내부 연소 및 반응 특성에 대한 전산해석 연구',
   authors: '이정호, 남준영, 류창국, 신민수, 이승문',
@@ -16,7 +30,7 @@ export const koreanConferences: Publication[] = [
   journal: '2026 한국연소학회 춘계학술대회, 2026.5.13-15, 부산'
 },
 {
-  id: 'kc-2026-3',
+  id: 'kc-2026-1',
   year: 2026,
   title: '고로 레이스웨이 형상에 따른 연소 및 입자 거동 특성에 대한 전산해석 연구',
   authors: '이정호, 남준영, 류창국, 신민수, 이승문',
