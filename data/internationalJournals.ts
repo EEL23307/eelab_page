@@ -1,11 +1,23 @@
 import { Publication } from './types';
 
 export const internationalJournals: Publication[] = [
+ 
+
   {
+    id: 'ij-2027-1',
+    year: 2027,
+    title: 'Experimental investigation of coal–ammonia co-firing in an 80 kWth air-staged furnace: Effects of fuel type and air staging',
+    authors: 'Sim W, Hwang S, Lee J, Chae T*, Yang W*, Ryu C',
+    journal: 'Fuel, Vol. 427, 140019, 2027.01',
+    doi: '10.1016/j.fuel.2026.140019'
+  },
+
+
+ {
     id: 'ij-2026-6',
     year: 2026,
     title: 'Development of an optimized global NH3 mechanism and one-step CFD framework for accurate NO prediction in coal–NH3 cofiring',
-    authors: 'KANG W, HA S, JANG Y, KOO Y, PARK K, BAEK S, RYU C*',
+    authors: 'Kang W, Ha S, Jang Y, Koo Y, Park K, Baek S, Ryu C*',
     journal: 'Applied thermal engineering, under review, 2026.04'
     // Under review 상태라 DOI 없음
   },  
