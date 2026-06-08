@@ -2,7 +2,14 @@ import { Publication } from '../types';
 
 export const internationalConferences: Publication[] = [
 	{
-        id: 'ic-2026-1',
+        id: 'ic-2026-4',
+        year: 2026,
+        title: 'AI applications in combustion power plants: From performance prediction to operational optimization',
+        authors: 'CHANGKOOK RYU',
+        journal: '14th Korea-China Clean Energy Workshop. June 2 2026, Jeju (Keynote)'
+      },
+	{
+        id: 'ic-2026-3',
         year: 2026,
         title: 'Numerical evaluation of ammonia co-firing strategies with coal in a 1000 MWe wall-firing boiler',
         authors: 'SEONKYO HA, WOOSUK KANG, YUNHA KOO, SUNGJAE LEE,  CHANGKOOK RYU, DONGGYU KIM, KYOUNGIL PARK, SEHYUN BAEK',
@@ -16,22 +23,28 @@ export const internationalConferences: Publication[] = [
         journal: '15th European Conference on Industrial Furnace and Boilers, 7-10 April 2026, Porto, Portugal'
       },
 	{
-        id: 'ic-2026-3',
+        id: 'ic-2026-1',
         year: 2026,
         title: 'Development of global reaction mechanism of ammonia for CFD simulations on cofiring with pulverized coal',
         authors: 'WOOSUK KANG, CHANGKOOK RYU',
         journal: '15th European Conference on Industrial Furnaces and Boilers, 7-10 April 2026, Porto, Portugal'
       },
-
 	{
-        id: 'ic-2025-1',
+        id: 'ic-2025-6',
+        year: 2025,
+        title: 'CFD-based evaluation of full-scale ammonia combustion in a 1000 MWe opposed wall-fired coal boiler',
+        authors: 'Changkook Ryu',
+        journal: 'The 2025 International Symposium on Clean Energy and Advanced Materials, 28 Nov-2 Dec 2025, Melbourne, Australia (keynote)'
+      },
+	{
+        id: 'ic-2025-5',
         year: 2025,
         title: 'Numerical study on replacing COG with low-calorific LDG via pure oxygen combustion in a Ladle for the steelmaking process',
         authors: 'Jeongho Lee, Yunchang Jang, Changkook Ryu, Taeyoung Kim',
         journal: 'The 2025 International Symposium on Clean Energy and Advanced Materials, 28 Nov-2 Dec 2025, Melbourne, Australia (poster)'
       },
       {
-        id: 'ic-2025-2',
+        id: 'ic-2025-4',
         year: 2025,
         title: 'Forecasting and scenario-based analysis of attemperating spray water flows in a coal-fired boiler using deep learning models',
         authors: 'Yunha Koo, Yunchang Jang, Hyunbin Jo, Arong Jang, Changkook Ryu',
@@ -45,14 +58,14 @@ export const internationalConferences: Publication[] = [
         journal: '33rd European Biomass Conference & Exhibition, 9-12 June 2025, Valencia, Spain (poster)'
       },
       {
-        id: 'ic-2025-4',
+        id: 'ic-2025-2',
         year: 2025,
         title: 'Analysis of pyrolysis kinetics and lignocellulosic composition from biomass thermogram using convolutional neural network',
         authors: 'Heeyoon Kim, Seongmin Park, Changkook Ryu',
         journal: '33rd European Biomass Conference & Exhibition, 9-12 June 2025, Valencia, Spain (poster)'
       },
       {
-        id: 'ic-2025-5',
+        id: 'ic-2025-1',
         year: 2025,
         title: 'Numerical investigation of ammonia co-firing strategy in a 1000 MWe opposed wall-firing coal boiler',
         authors: 'Seonkyo Ha, Woosuk Kang, Yunha Koo, Changkook Ryu, Donggyu Kim, Kyoungil Park, Sehyun Baek',
