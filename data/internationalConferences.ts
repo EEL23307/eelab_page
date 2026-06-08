@@ -6,7 +6,7 @@ export const internationalConferences: Publication[] = [
         year: 2026,
         title: 'AI applications in combustion power plants: From performance prediction to operational optimization',
         authors: 'CHANGKOOK RYU',
-        journal: '14th Korea-China Clean Energy Workshop. June 2 2026, Jeju (Keynote)'
+        journal: '14th Korea-China Clean Energy Workshop, 2 June 2026, Jeju, Korea (Keynote)'
       },
 	{
         id: 'ic-2026-3',
