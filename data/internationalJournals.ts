@@ -40,7 +40,7 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
-    journal: 'Energy, Vol. 360, 141578, 2026.09'
+    journal: 'Energy, Vol. 360, 141578, 2026.09',
     doi: '10.1016/j.energy.2026.141578'
   },  
   {
