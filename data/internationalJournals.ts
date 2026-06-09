@@ -1,8 +1,6 @@
 import { Publication } from './types';
 
 export const internationalJournals: Publication[] = [
-
-
   {
     id: 'ij-2027-1',
     year: 2027,
@@ -11,7 +9,6 @@ export const internationalJournals: Publication[] = [
     journal: 'Fuel, Vol. 427, 140019, 2027.01',
     doi: '10.1016/j.fuel.2026.140019'
   },
-
 
  {
     id: 'ij-2026-6',
