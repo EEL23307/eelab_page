@@ -9,7 +9,22 @@ export const internationalJournals: Publication[] = [
     journal: 'Fuel, Vol. 427, 140019, 2027.01',
     doi: '10.1016/j.fuel.2026.140019'
   },
-
+  {
+    id: 'ij-2026-8',
+    year: 2026,
+    title: 'Quantitative Diagnostics of Hydroxyl (OH) Radicals inMethane–Air Flames Using Wavelength ModulationSpectroscopy with Correction for Water SpectralInterference',
+    authors: 'Park J, Song A, Ryu C, Kim D, Yoo M*, Lee C*',
+    journal: 'Applied Spectroscopy, in press, 2026.05'
+    // DOI가 최종본이 아님
+  },
+  {
+    id: 'ij-2026-7',
+    year: 2026,
+    title: 'Thermodynamic evaluation of abandoned-tunnel-based compressed air energy storage under variable- and constant-pressure operation',
+    authors: 'Ryu J, Hwang S, Park S, Kim H, Kim HR, Kim T, Ha C, Ryu C*',
+    journal: 'Applied thermal engineering, under review, 2026.05'
+    // Under review 상태라 DOI 없음
+  },
  {
     id: 'ij-2026-6',
     year: 2026,
@@ -18,6 +33,7 @@ export const internationalJournals: Publication[] = [
     journal: 'Applied thermal engineering, under review, 2026.04'
     // Under review 상태라 DOI 없음
   },  
+
   {
     id: 'ij-2026-5',
     year: 2026,
