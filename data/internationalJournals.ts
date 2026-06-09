@@ -5,7 +5,7 @@ export const internationalJournals: Publication[] = [
     id: 'ij-2027-1',
     year: 2027,
     title: 'Experimental investigation of coal–ammonia co-firing in an 80 kWth air-staged furnace: Effects of fuel type and air staging',
-    authors: 'Sim W, Hwang S, Lee J, Chae T*, Yang W*, Ryu C',
+    authors: 'Sim W, Hwang S, Lee J, Ryu C, Chae T*, Yang W*',
     journal: 'Fuel, Vol. 427, 140019, 2027.01',
     doi: '10.1016/j.fuel.2026.140019'
   },
