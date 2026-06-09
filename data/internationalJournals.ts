@@ -1,7 +1,7 @@
 import { Publication } from './types';
 
 export const internationalJournals: Publication[] = [
- 
+
 
   {
     id: 'ij-2027-1',
@@ -29,22 +29,23 @@ export const internationalJournals: Publication[] = [
     journal: 'Energy, under review, 2026.04'
     // Under review 상태라 DOI 없음
   },  
+
 {
     id: 'ij-2026-4',
-    year: 2026,
-    title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
-    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
-    journal: 'Energy, under review, 2026.03'
-    // Under review 상태라 DOI 없음
-  },  
-{
-    id: 'ij-2026-3',
     year: 2026,
     title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
     authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
     journal: 'Fuel, Vol. 426, 139484, 2026.12',
     doi: '10.1016/j.fuel.2026.139484'
   },
+{
+    id: 'ij-2026-3',
+    year: 2026,
+    title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
+    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
+    journal: 'Energy, Vol. 360, 141578, 2026.09'
+    doi: '10.1016/j.energy.2026.141578'
+  },  
   {
     id: 'ij-2026-2',
     year: 2026,
