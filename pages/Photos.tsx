@@ -94,6 +94,11 @@ const Photos: React.FC = () => {
       src: "photos/photo2601.jpg",
       date: "2026.01"
     },
+    {
+      id: 17,
+      src: "photos/photo2605.jpg",
+      date: "2026.05"
+    },
   ];
 
   // ID 역순(최신순) 자동 정렬
