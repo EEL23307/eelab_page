@@ -2,6 +2,20 @@ import { Publication } from '../types';
 
 export const koreanConferences: Publication[] = [
 {
+  id: 'kc-2026-7',
+  year: 2026,
+  title: 'AI를 활용한 석탄화력 보일러 NOx 및 성능 예측 모델과 운전 최적화 기법 개발',
+  authors: '구윤하, 조현빈, 장아롱, 류창국',
+  journal: '2026 한국환경에너지공회 춘계학술대회, 2026.6.17-19, 익산'
+},
+{
+  id: 'kc-2026-6',
+  year: 2026,
+  title: '배열회수보일러 증발기 수관의 유동가속부식 개선을 위한 열유동 특성 해석',
+  authors: '이성재, 류창국, 이창민, 전민정, 김범신',
+  journal: '2026 한국환경에너지공회 춘계학술대회, 2026.6.17-19, 익산'
+},
+{
   id: 'kc-2026-5',
   year: 2026,
   title: 'AI를 활용한 석탄화력 보일러 NOx 및 성능 예측 모델과 운전 최적화 기법 개발',
