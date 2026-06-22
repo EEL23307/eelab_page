@@ -56,6 +56,9 @@ const Professor: React.FC = () => {
 
   // 수상 경력 데이터
   const awards = [
+    '2026 한국환경에너지공학회 우수논문상 (장윤창 등)',
+    '2026 한국에너지기후변화학회 우수발표상 (구윤하 등)',
+    '2026 한국에너지기후변화학회 우수발표상 (이성재 등)',
     '2025 한국환경에너지공학회 우수논문상 (박기범 등)',
     '2024 CEAM Symposium, Best Paper Award Second Prize (박성민 등)',
     '2024 12th International Freiberg Conference, Award for Outstanding Presentation (남준영 등)',
