@@ -14,8 +14,8 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Quantitative Diagnostics of Hydroxyl (OH) Radicals inMethane–Air Flames Using Wavelength ModulationSpectroscopy with Correction for Water SpectralInterference',
     authors: 'Park J, Song A, Ryu C, Kim D, Yoo M*, Lee C*',
-    journal: 'Applied Spectroscopy, in press, 2026.05'
-    // DOI가 최종본이 아님
+    journal: 'Applied Spectroscopy, in press, 2026.05',
+    doi: '10.1177/00037028261450621'
   },
   {
     id: 'ij-2026-7',
