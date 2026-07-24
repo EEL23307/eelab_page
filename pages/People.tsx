@@ -322,7 +322,7 @@ const People: React.FC = () => {
         engName: 'Nam Joonyeong',
         year: '2026',
         affiliation: '한국생산기술연구원',
-        email: 'ppppidori@naver.com',
+        email: '',
         image: 'images/NJY.jpg' 
       }
     ],
