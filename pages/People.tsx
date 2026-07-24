@@ -54,13 +54,13 @@ const People: React.FC = () => {
     // ================= Current Members 데이터 =================
     'Post Doc': [
       {
-        name: '남준영',
-        engName: 'Nam Joonyeong',
+        name: '구윤하',
+        engName: 'Koo Yunha',
         year: '2026',
         affiliation: '',
-        email: 'ppppidori@naver.com',
-        image: 'images/NJY.jpg' 
-      }
+        email: 'yhaa1016@skku.edu',
+        image: 'images/KYH.jpg' 
+      },
     ], 
     // =====================================================================================
     'PhD Student': [
@@ -124,14 +124,6 @@ const People: React.FC = () => {
         image: 'images/KWS.jpg' 
       },
       {
-        name: '구윤하',
-        engName: 'Koo Yunha',
-        year: '2021',
-        affiliation: '',
-        email: 'yhaa1016@skku.edu',
-        image: 'images/KYH.jpg' 
-      },
-      {
         name: '박성민',
         engName: 'Park Seongmin',
         year: '2021',
@@ -179,14 +171,7 @@ const People: React.FC = () => {
         email: 'ajh0420@kitech.re.kr',
         image: 'images/AJH.jpg' 
       },
-      {
-        name: '이승연',
-        engName: 'Lee Seongyeon',
-        year: '2025',
-        affiliation: '한국생산기술연구원',
-        email: 'seungyeonlee@kitech.re.kr',
-        image: 'images/LSY.jpg' 
-      },
+
     ], 
       // =====================================================================================  
     'MS, BS/MS Joint Students': [
@@ -213,6 +198,14 @@ const People: React.FC = () => {
         affiliation: '한국생산기술연구원',
         email: 'k3k153@kitech.re.kr',
         image: 'images/KHS.jpg' 
+      },
+      {
+        name: '이승연',
+        engName: 'Lee Seongyeon',
+        year: '2025',
+        affiliation: '한국생산기술연구원',
+        email: 'seungyeonlee@kitech.re.kr',
+        image: 'images/LSY.jpg' 
       },
       {
         name: '조희성',
@@ -324,6 +317,14 @@ const People: React.FC = () => {
         email: '',
         image: 'images/KHY.jpg' 
       },
+      {
+        name: '남준영',
+        engName: 'Nam Joonyeong',
+        year: '2026',
+        affiliation: '한국생산기술연구원',
+        email: 'ppppidori@naver.com',
+        image: 'images/NJY.jpg' 
+      }
     ],
     // =====================================================================================
     'M.S. Graduates': [
