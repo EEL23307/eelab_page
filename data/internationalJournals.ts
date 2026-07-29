@@ -9,22 +9,23 @@ export const internationalJournals: Publication[] = [
     journal: 'Fuel, Vol. 427, 140019, 2027.01',
     doi: '10.1016/j.fuel.2026.140019'
   },
+
   {
     id: 'ij-2026-8',
-    year: 2026,
-    title: 'Quantitative Diagnostics of Hydroxyl (OH) Radicals inMethane–Air Flames Using Wavelength ModulationSpectroscopy with Correction for Water SpectralInterference',
-    authors: 'Park J, Song A, Ryu C, Kim D, Yoo M*, Lee C*',
-    journal: 'Applied Spectroscopy, in press, 2026.05',
-    doi: '10.1177/00037028261450621'
-  },
-  {
-    id: 'ij-2026-7',
     year: 2026,
     title: 'Thermodynamic evaluation of abandoned-tunnel-based compressed air energy storage under variable- and constant-pressure operation',
     authors: 'Ryu J, Hwang S, Park S, Kim H, Kim HR, Kim T, Ha C, Ryu C*',
     journal: 'Applied thermal engineering, under review, 2026.05'
     // Under review 상태라 DOI 없음
   },
+  {
+    id: 'ij-2026-7',
+    year: 2026,
+    title: 'Operation-conditioned forecasting and optimization of steam-side dynamic responses in a coal-fired boiler using a state-operation two-branch framework',
+    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
+    journal: 'Fuel, under review, 2026.07'
+    // Under review 상태라 DOI 없음
+  },  
  {
     id: 'ij-2026-6',
     year: 2026,
@@ -34,17 +35,8 @@ export const internationalJournals: Publication[] = [
     // Under review 상태라 DOI 없음
   },  
 
-  {
-    id: 'ij-2026-5',
-    year: 2026,
-    title: 'Development of a GRU-TCN hybrid forecasting model of dynamic steam behaviors under variable operating conditions of a coal-fired boiler',
-    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
-    journal: 'Energy, under review, 2026.04'
-    // Under review 상태라 DOI 없음
-  },  
-
 {
-    id: 'ij-2026-4',
+    id: 'ij-2026-5',
     year: 2026,
     title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
     authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
@@ -52,13 +44,21 @@ export const internationalJournals: Publication[] = [
     doi: '10.1016/j.fuel.2026.139484'
   },
 {
-    id: 'ij-2026-3',
+    id: 'ij-2026-4',
     year: 2026,
     title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
     journal: 'Energy, Vol. 360, 141578, 2026.09',
     doi: '10.1016/j.energy.2026.141578'
-  },  
+  }, 
+  {
+    id: 'ij-2026-3',
+    year: 2026,
+    title: 'Quantitative Diagnostics of Hydroxyl (OH) Radicals inMethane–Air Flames Using Wavelength ModulationSpectroscopy with Correction for Water SpectralInterference',
+    authors: 'Park J, Song A, Ryu C, Kim D, Yoo M*, Lee C*',
+    journal: 'Applied Spectroscopy, Vol. 80, Issue 7, 2026.07',
+    doi: '10.1177/00037028261450621'
+  },
   {
     id: 'ij-2026-2',
     year: 2026,
