@@ -14,8 +14,8 @@ export const internationalJournals: Publication[] = [
     id: 'ij-2026-8',
     year: 2026,
     title: 'Thermodynamic evaluation of abandoned-tunnel-based compressed air energy storage under variable- and constant-pressure operation',
-    authors: 'Ryu J, Hwang S, Park S, Kim H, Kim HR, Kim T, Ha C, Ryu C*',
-    journal: 'Applied thermal engineering, under review, 2026.05'
+    authors: 'Ryu J, Hwang S, Park SH, Ryu C*, Kim H, Kim H, Kim TS, Ha C',
+    journal: 'Applied thermal engineering, Vol.306, Part 2, 133161, 2026.10'
     // Under review 상태라 DOI 없음
   },
   {
@@ -23,7 +23,7 @@ export const internationalJournals: Publication[] = [
     year: 2026,
     title: 'Operation-conditioned forecasting and optimization of steam-side dynamic responses in a coal-fired boiler using a state-operation two-branch framework',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
-    journal: 'Fuel, under review, 2026.07'
+    journal: 'International Journal of Electrical Power and Energy Systems, under review, 2026.08'
     // Under review 상태라 DOI 없음
   },  
  {
