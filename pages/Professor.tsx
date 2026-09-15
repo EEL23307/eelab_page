@@ -62,6 +62,7 @@ const Professor: React.FC = () => {
     '2025 한국환경에너지공학회 우수논문상 (박기범 등)',
     '2024 CEAM Symposium, Best Paper Award Second Prize (박성민 등)',
     '2024 12th International Freiberg Conference, Award for Outstanding Presentation (남준영 등)',
+    '2024 한국연소학회 우수논문발표상 (강우석 등)',
     '2022 한국환경에너지공학회 우수논문상 (하선교 등)',
     '2022 한국에너지기후변화학회 우수논문발표상 (박성민 등)',
     '2022 한국에너지기후변화학회 우수논문발표상 (박지연 등)',
