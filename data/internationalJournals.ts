@@ -13,37 +13,36 @@ export const internationalJournals: Publication[] = [
   {
     id: 'ij-2026-8',
     year: 2026,
-    title: 'Thermodynamic evaluation of abandoned-tunnel-based compressed air energy storage under variable- and constant-pressure operation',
-    authors: 'Ryu J, Hwang S, Park SH, Ryu C*, Kim H, Kim H, Kim TS, Ha C',
-    journal: 'Applied thermal engineering, Vol.306, Part 2, 133161, 2026.10'
-    // Under review 상태라 DOI 없음
-  },
-  {
-    id: 'ij-2026-7',
-    year: 2026,
     title: 'Operation-conditioned forecasting and optimization of steam-side dynamic responses in a coal-fired boiler using a state-operation two-branch framework',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
     journal: 'International Journal of Electrical Power and Energy Systems, under review, 2026.08'
     // Under review 상태라 DOI 없음
   },  
  {
-    id: 'ij-2026-6',
+    id: 'ij-2026-7',
     year: 2026,
     title: 'Development of an optimized global NH3 mechanism and one-step CFD framework for accurate NO prediction in coal–NH3 cofiring',
     authors: 'Kang W, Ha S, Jang Y, Koo Y, Park K, Baek S, Ryu C*',
-    journal: 'Applied thermal engineering, under review, 2026.04'
+    journal: 'Fuel, under review, 2026.04'
     // Under review 상태라 DOI 없음
   },  
-
-{
-    id: 'ij-2026-5',
+  {
+    id: 'ij-2026-6',
     year: 2026,
     title: 'Development of a dynamic SNCR control strategy for a small-scale waste incinerator with limited instrumentation',
     authors: 'Park S, Kim H, Cho K, Lee Y, Park K-H, Choi Y-G, Son J, Lee J, Shin D, Ryu C*',
     journal: 'Fuel, Vol. 426, 139484, 2026.12',
     doi: '10.1016/j.fuel.2026.139484'
   },
-{
+  {
+    id: 'ij-2026-5',
+    year: 2026,
+    title: 'Thermodynamic evaluation of abandoned-tunnel-based compressed air energy storage under variable- and constant-pressure operation',
+    authors: 'Ryu J, Hwang S, Park SH, Ryu C*, Kim H, Kim H, Kim TS, Ha C',
+    journal: 'Applied Thermal Engineering, Vol.306, Part 2, 133161, 2026.10',
+    doi: '10.1016/j.applthermaleng.2026.133161'
+  },
+  {
     id: 'ij-2026-4',
     year: 2026,
     title: 'Long-horizon prediction of NOx emissions and boiler performance for operational optimization using a guided rollout hybrid forecasting network',
@@ -900,7 +899,7 @@ export const internationalJournals: Publication[] = [
     id: 'ij-2009-6',
     year: 2009,
     title: 'The reuse of spent mushroom compost and coal tailings for energy recovery: Comparison of thermal treatment technologies',
-    authors: 'Karen N. Finney, Changkook Ryu, Vida N. Sharifi, Jim Swithenbank',
+    authors: 'Finney KN, Ryu C, Sharifi VN, Swithenbank J',
     journal: 'Bioresource Technology, Vol. 100(1): 310-315, 2009.01',
     doi: '10.1016/j.biortech.2008.05.054'
   },
