@@ -11,7 +11,7 @@ export const internationalJournals: Publication[] = [
   },
 
   {
-    id: 'ij-2026-8',
+    id: 'ij-2026-9',
     year: 2026,
     title: 'Operation-conditioned forecasting and optimization of steam-side dynamic responses in a coal-fired boiler using a state-operation two-branch framework',
     authors: 'Koo Y, Jo H, Jang A, Ryu C*',
@@ -19,13 +19,21 @@ export const internationalJournals: Publication[] = [
     // Under review 상태라 DOI 없음
   },  
  {
-    id: 'ij-2026-7',
+    id: 'ij-2026-8',
     year: 2026,
     title: 'Development of an optimized global NH3 mechanism and one-step CFD framework for accurate NO prediction in coal–NH3 cofiring',
     authors: 'Kang W, Ha S, Jang Y, Koo Y, Park K, Baek S, Ryu C*',
     journal: 'Fuel, under review, 2026.04'
     // Under review 상태라 DOI 없음
-  },  
+  }, 
+  {
+    id: 'ij-2026-7',
+    year: 2026,
+    title: 'Multi-objective optimization of production allocation and operating conditions for energy, CO₂, and cost reduction in aluminum cold rolling using a physics-integrated hybrid surrogate',
+    authors: 'Choi H, Park J, Yang W, Ryu C, Kim S*',
+    journal: 'Journal of Manufacturing Processes, Vol. 179, pp.135-153, 2026.12',
+    doi: '10.1016/j.jmapro.2026.10.061'
+  },
   {
     id: 'ij-2026-6',
     year: 2026,
