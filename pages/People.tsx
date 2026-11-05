@@ -176,14 +176,6 @@ const People: React.FC = () => {
       // =====================================================================================  
     'MS, BS/MS Joint Students': [
       {
-        name: '심우현',
-        engName: 'Sim Woohyun',
-        year: '2024',
-        affiliation: '한국생산기술연구원',
-        email: 'simwoohyun@kitech.re.kr',
-        image: 'images/SWH.jpg' 
-      },
-      {
         name: '장윤창',
         engName: 'Jang Yunchang',
         year: '2025',
@@ -492,6 +484,14 @@ const People: React.FC = () => {
         affiliation: '',
         email: '',
         image: 'images/KKJ.jpg'
+      },
+      {
+        name: '심우현',
+        engName: 'Sim Woohyun',
+        year: '2026',
+        affiliation: '',
+        email: '',
+        image: 'images/SWH.jpg' 
       },
     ]
   };
