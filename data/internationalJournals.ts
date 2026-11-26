@@ -1,6 +1,15 @@
 import { Publication } from './types';
 
 export const internationalJournals: Publication[] = [
+ {
+    id: 'ij-2027-2',
+    year: 2027,
+    title: 'Development of an optimized global NH3 mechanism and one-step CFD framework for accurate NO prediction in coal–NH3 cofiring',
+    authors: 'Kang W, Ha S, Jang Y, Koo Y, Park K, Baek S, Ryu C*',
+    journal: 'Fuel, Vol. 431, 142031, 2027.03',
+    doi: '10.1016/j.fuel.2026.142031'
+  }, 
+
   {
     id: 'ij-2027-1',
     year: 2027,
@@ -11,21 +20,13 @@ export const internationalJournals: Publication[] = [
   },
 
   {
-    id: 'ij-2026-9',
-    year: 2026,
-    title: 'Operation-conditioned forecasting and optimization of steam-side dynamic responses in a coal-fired boiler using a state-operation two-branch framework',
-    authors: 'Koo Y, Jo H, Jang A, Ryu C*',
-    journal: 'International Journal of Electrical Power and Energy Systems, under review, 2026.08'
-    // Under review 상태라 DOI 없음
-  },  
- {
     id: 'ij-2026-8',
     year: 2026,
-    title: 'Development of an optimized global NH3 mechanism and one-step CFD framework for accurate NO prediction in coal–NH3 cofiring',
-    authors: 'Kang W, Ha S, Jang Y, Koo Y, Park K, Baek S, Ryu C*',
-    journal: 'Fuel, under review, 2026.04'
+    title: 'Online estimation of fuel feed rate and composition in a 105 MWe biomass CFB boiler using a physics-constrained ANN',
+    authors: 'Jang Y, Kim S, Ryu C*',
+    journal: 'Applied Thermal Engineering, under review, 2026.11'
     // Under review 상태라 DOI 없음
-  }, 
+  },  
   {
     id: 'ij-2026-7',
     year: 2026,
