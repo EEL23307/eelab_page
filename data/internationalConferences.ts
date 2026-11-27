@@ -2,6 +2,62 @@ import { Publication } from '../types';
 
 export const internationalConferences: Publication[] = [
 	{
+        id: 'ic-2026-',
+        year: 2026,
+        title: 'Physics-Guided Multi-Step NOx Forecasting for Predictive SNCR Operation in a Small-Scale Waste Incinerator',
+        authors: 'SEONGMIN PARK, HEEYOON KIM, HYUNBIN JO, DONGMIN SHIN, CAHNGKOOK RYU',
+        journal: 'The 2026 International Symposium on Clean Energy and Advanced Materials, 20-24 November 2026, Xuzhou, China'
+      },
+	{
+        id: 'ic-2026-11',
+        year: 2026,
+        title: 'Physics-Constrained Artificial Neural Network for Online Estimation of Fuel Throughput and Properties in a 100 MWe Biomass Boiler',
+        authors: 'Yunchang Jang, Sungmoon Kim, Changkook Ryu',
+        journal: 'The 2026 International Symposium on Clean Energy and Advanced Materials, 20-24 November 2026, Xuzhou, China'
+      },
+	{
+        id: 'ic-2026-10',
+        year: 2026,
+        title: 'Evaluation of Flow Control Structures for Alleviation of FAC in the IP Evaporator of a HRSG',
+        authors: 'Sungjae Lee, Changkook Ryu, Changmin Lee, Minjeong Jeon, Bumshin Kim',
+        journal: 'The 2026 International Symposium on Clean Energy and Advanced Materials, 20-24 November 2026, Xuzhou, China'
+      },
+	{
+        id: 'ic-2026-9',
+        year: 2026,
+        title: 'Hybrid Physics-Data-Driven Multi-Step NOx Forecasting for SNCR Control in a Small-Scale Waste Incinerator',
+        authors: 'SEONGMIN PARK, HEEYOON KIM, HYUNBIN JO, DONGMIN SHIN, CAHNGKOOK RYU',
+        journal: '12th International Conference on Combustion, Incineration/Pyrolysis, Emission and Climate Change, 14-17 October 2026, Pohang-Gyeongju, Korea'
+      },
+	{
+        id: 'ic-2026-8',
+        year: 2026,
+        title: 'Numerical Investigation of Burner Design Optimization for Low-NOx Combustion in a 100 kW Pure-Ammonia Burner',
+        authors: 'Gibeom Park, Seonkyo Ha, Jeongho Lee, Sungjae Lee, Won Yang, Taeyoung Chae, Seonghwan Hwang, Changkook Ryu',
+        journal: '12th International Conference on Combustion, Incineration/Pyrolysis, Emission and Climate Change, 14-17 October 2026, Pohang-Gyeongju, Korea'
+      },
+	{
+        id: 'ic-2026-7',
+        year: 2026,
+        title: 'Online Estimation of Fuel Throughput and Properties in a 105 MWe Biomass Boiler Using a Physics-Constrained Artificial Neural Network',
+        authors: 'Yunchang Jang, Sungmoon Kim, Changkook Ryu',
+        journal: '12th International Conference on Combustion, Incineration/Pyrolysis, Emission and Climate Change, 14-17 October 2026, Pohang-Gyeongju, Korea'
+      },
+	{
+        id: 'ic-2026-6',
+        year: 2026,
+        title: 'Efficiency Enhancement of a Bioliquid Boiler for Low-Load Operation Using Numerical Analysis and Field Tests',
+        authors: 'JEONGHO LEE, CHANGKOOK RYU, SEHYUN BAEK, DONGKYU KIM',
+        journal: '12th International Conference on Combustion, Incineration/Pyrolysis, Emission and Climate Change, 14-17 October 2026, Pohang-Gyeongju, Korea (poster)'
+      },
+	{
+        id: 'ic-2026-5',
+        year: 2026,
+        title: 'Development of a guided rollout hybrid network for forecasting and optimization of NOx emissions and boiler performance',
+        authors: 'YUNHA KOO, HYUNBIN JO, ARONG JANG, CHANGKOOK RYU',
+        journal: '12th International Conference on Combustion, Incineration/Pyrolysis, Emission and Climate Change, 14-17 October 2026, Pohang-Gyeongju, Korea (poster)'
+      },
+	{
         id: 'ic-2026-4',
         year: 2026,
         title: 'AI applications in combustion power plants: From performance prediction to operational optimization',
